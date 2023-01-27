@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280F5E5A2983B25F000A30B3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E552983B25E000A30B3 /* HeaderView.swift */; };
+		280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E562983B25E000A30B3 /* MyPageViewController.swift */; };
+		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
+		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
+		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
 		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280F5E552983B25E000A30B3 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		280F5E562983B25E000A30B3 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
+		280F5E582983B25F000A30B3 /* ProfileEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
+		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +73,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280F5E542983B23A000A30B3 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				280F5E552983B25E000A30B3 /* HeaderView.swift */,
+				280F5E572983B25F000A30B3 /* MyPageCell.swift */,
+				280F5E562983B25E000A30B3 /* MyPageViewController.swift */,
+				280F5E582983B25F000A30B3 /* ProfileEditController.swift */,
+				280F5E592983B25F000A30B3 /* PWEditController.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		BECC4B2C296C3AB60037807F = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,7 @@
 				BEF940BD2972827900D0F1FD /* Habit.swift */,
 				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
 				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
+				280F5E542983B23A000A30B3 /* MyPage */,
 			);
 			path = "Better-me-iOS";
 			sourceTree = "<group>";
@@ -178,11 +201,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
+				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
+				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
+				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
+				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
+				280F5E5A2983B25F000A30B3 /* HeaderView.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
 				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
