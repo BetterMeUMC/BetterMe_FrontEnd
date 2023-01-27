@@ -1,6 +1,0 @@
-framework module Pods_Better_me {
-  umbrella header "Pods-Better me-umbrella.h"
-
-  export *
-  module * { export * }
-}
