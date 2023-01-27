@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
+		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
+		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
+		BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC3296D9E080064A93C /* Quote.swift */; };
+		BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */; };
+		BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */; };
+		BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7F1296ED62400C236F8 /* Friend.swift */; };
+		BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B38296C3AB60037807F /* AppDelegate.swift */; };
+		BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3A296C3AB60037807F /* SceneDelegate.swift */; };
+		BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3C296C3AB60037807F /* HomeViewController.swift */; };
+		BECC4B40296C3AB60037807F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B3E296C3AB60037807F /* Main.storyboard */; };
+		BECC4B42296C3AB80037807F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B41296C3AB80037807F /* Assets.xcassets */; };
+		BECC4B45296C3AB80037807F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B43296C3AB80037807F /* LaunchScreen.storyboard */; };
+		BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */; };
+		BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B61296C6B010037807F /* EmojiTextField.swift */; };
+		BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */; };
+		BEF940BE2972827900D0F1FD /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BD2972827900D0F1FD /* Habit.swift */; };
+		BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */; };
+		BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
+		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
+		BE5F4EC3296D9E080064A93C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
+		BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		BE6AF7F1296ED62400C236F8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		BECC4B35296C3AB60037807F /* Better-me-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better-me-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECC4B38296C3AB60037807F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BECC4B3A296C3AB60037807F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BECC4B3C296C3AB60037807F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BECC4B3F296C3AB60037807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BECC4B41296C3AB80037807F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECC4B44296C3AB80037807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BECC4B46296C3AB80037807F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoodHabitViewController.swift; sourceTree = "<group>"; };
+		BECC4B61296C6B010037807F /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
+		BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitCell.swift; sourceTree = "<group>"; };
+		BEF940BD2972827900D0F1FD /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitDetailViewController.swift; sourceTree = "<group>"; };
+		BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BECC4B32296C3AB60037807F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BECC4B2C296C3AB60037807F = {
+			isa = PBXGroup;
+			children = (
+				BECC4B37296C3AB60037807F /* Better-me-iOS */,
+				BECC4B36296C3AB60037807F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BECC4B36296C3AB60037807F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BECC4B35296C3AB60037807F /* Better-me-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BECC4B37296C3AB60037807F /* Better-me-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BECC4B38296C3AB60037807F /* AppDelegate.swift */,
+				BECC4B3A296C3AB60037807F /* SceneDelegate.swift */,
+				BECC4B3C296C3AB60037807F /* HomeViewController.swift */,
+				BECC4B3E296C3AB60037807F /* Main.storyboard */,
+				BECC4B41296C3AB80037807F /* Assets.xcassets */,
+				BECC4B43296C3AB80037807F /* LaunchScreen.storyboard */,
+				BECC4B46296C3AB80037807F /* Info.plist */,
+				BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */,
+				BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */,
+				BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */,
+				BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */,
+				BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */,
+				BECC4B61296C6B010037807F /* EmojiTextField.swift */,
+				BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */,
+				BE6AF7F1296ED62400C236F8 /* Friend.swift */,
+				BE5F4EC3296D9E080064A93C /* Quote.swift */,
+				BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */,
+				BEF940BD2972827900D0F1FD /* Habit.swift */,
+				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
+				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
+			);
+			path = "Better-me-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BECC4B34296C3AB60037807F /* Better-me-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECC4B49296C3AB80037807F /* Build configuration list for PBXNativeTarget "Better-me-iOS" */;
+			buildPhases = (
+				BECC4B31296C3AB60037807F /* Sources */,
+				BECC4B32296C3AB60037807F /* Frameworks */,
+				BECC4B33296C3AB60037807F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Better-me-iOS";
+			productName = "Better-me-iOS";
+			productReference = BECC4B35296C3AB60037807F /* Better-me-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BECC4B2D296C3AB60037807F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BECC4B34296C3AB60037807F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = BECC4B30296C3AB60037807F /* Build configuration list for PBXProject "Better-me-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BECC4B2C296C3AB60037807F;
+			productRefGroup = BECC4B36296C3AB60037807F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BECC4B34296C3AB60037807F /* Better-me-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BECC4B33296C3AB60037807F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECC4B45296C3AB80037807F /* LaunchScreen.storyboard in Resources */,
+				BECC4B42296C3AB80037807F /* Assets.xcassets in Resources */,
+				BECC4B40296C3AB60037807F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BECC4B31296C3AB60037807F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
+				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
+				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
+				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
+				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
+				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
+				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
+				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
+				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
+				BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */,
+				BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */,
+				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
+				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
+				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
+				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
+				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BECC4B3E296C3AB60037807F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECC4B3F296C3AB60037807F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BECC4B43296C3AB80037807F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECC4B44296C3AB80037807F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BECC4B47296C3AB80037807F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BECC4B48296C3AB80037807F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BECC4B4A296C3AB80037807F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S44MNK86W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Better-me-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taewoo.Better-me-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BECC4B4B296C3AB80037807F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S44MNK86W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Better-me-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taewoo.Better-me-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BECC4B30296C3AB60037807F /* Build configuration list for PBXProject "Better-me-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECC4B47296C3AB80037807F /* Debug */,
+				BECC4B48296C3AB80037807F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECC4B49296C3AB80037807F /* Build configuration list for PBXNativeTarget "Better-me-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECC4B4A296C3AB80037807F /* Debug */,
+				BECC4B4B296C3AB80037807F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BECC4B2D296C3AB60037807F /* Project object */;
+}
