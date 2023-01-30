@@ -56,14 +56,7 @@ class ProfileEditController: UIViewController{
         self.imagePickerController.delegate = self
         
         navigationBarUI()
-        shadowing(view: profileView)
-        profileView.layer.cornerRadius = profileView.frame.height/2
-        
-        userCommentImageView.layer.cornerRadius = userCommentImageView.frame.height/2
-        userCommentImageView.layer.borderWidth = 1
-        userCommentImageView.clipsToBounds = true
-        userCommentImageView.layer.borderColor = UIColor.clear.cgColor
-        userCommentImageView.clipsToBounds = true
+        configureProfileUI()
 
         textFieldCustom(textField: nameTextField)
         textFieldCustom(textField: messageTextField)
@@ -77,8 +70,18 @@ class ProfileEditController: UIViewController{
         self.title = "프로필 수정"
         self.navigationItem.rightBarButtonItem = self.saveBtn
     }
+    func configureProfileUI(){
+        shadowing(view: profileView)
+        profileView.layer.cornerRadius = profileView.frame.height/2
+        
+        userCommentImageView.layer.cornerRadius = userCommentImageView.frame.height/2
+        userCommentImageView.layer.borderWidth = 1
+        userCommentImageView.clipsToBounds = true
+        userCommentImageView.layer.borderColor = UIColor.clear.cgColor
+        userCommentImageView.clipsToBounds = true
+    }
     func textFieldCustom (textField: UITextField) {
-        textField.clearsOnBeginEditing = true
+        textField.clearsOnBeginEditing = false
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
@@ -126,18 +129,6 @@ class ProfileEditController: UIViewController{
         }
 
     
-    //이미지를 탭해서 프로필사진을 변경할 경우
-//    func addGestureRecognizer() {
-//            let tapGestureRecognizer
-//      = UITapGestureRecognizer(target: self,
-//                               action: #selector(self.tappedUIImageView(_:)))
-//            self.userCommentImageView.addGestureRecognizer(tapGestureRecognizer)
-//            self.userCommentImageView.isUserInteractionEnabled = true
-//    }
-
-//    @objc func tappedUIImageView(_ gesture: UITapGestureRecognizer) {
-//            self.present(alertController, animated: true, completion: nil)
-//    }
 }
 
 

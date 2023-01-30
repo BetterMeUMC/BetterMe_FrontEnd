@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var tapView: UIView!
     
     let tableView =  UITableView(frame: .zero, style: .grouped)
-    let myPageMenu = ["비밀번호 변경", "이용 가이드","자주 묻는 질문","1:1 문의","푸시알림 설정"]
+    let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -91,11 +91,18 @@ extension MyPageViewController: UITableViewDataSource {
 }
 
 extension MyPageViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = HeaderView()
         
         return header
     }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = FooterView()
+        
+        return footer
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 176
     }
@@ -120,4 +127,18 @@ func shadowing(view : UIView) {
     view.layer.shadowOpacity = 1
     view.layer.shadowRadius = 5
     view.layer.shadowOffset = CGSize(width: 1, height: 1)
+}
+
+extension UIButton {
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+        UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.setFillColor(color.cgColor)
+        context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
+        
+        let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+         
+        self.setBackgroundImage(backgroundImage, for: state)
+    }
 }

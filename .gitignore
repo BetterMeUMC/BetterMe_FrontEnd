@@ -109,7 +109,5 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/xcode,swift,cocoapods
-Better-me-iOS.xcodeproj/project.xcworkspace/xcuserdata/abc.xcuserdatad/UserInterfaceState.xcuserstate
-*.xcuserstate
-*.xcuserstate
-*.xcuserstate
+
+

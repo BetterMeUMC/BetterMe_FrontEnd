@@ -45,6 +45,7 @@ class PWEditController: UIViewController{
         textField.layer.cornerRadius = 17
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
+        textField.textAlignment = .center
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
      
