@@ -113,6 +113,10 @@ extension MyPageViewController: UITableViewDelegate {
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PWEditController"){
             self.navigationController?.pushViewController(controller, animated: true)
         }
+        case 1:
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "FeedBackController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
             
         default:
             
@@ -129,16 +133,3 @@ func shadowing(view : UIView) {
     view.layer.shadowOffset = CGSize(width: 1, height: 1)
 }
 
-extension UIButton {
-    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
-        UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        context.setFillColor(color.cgColor)
-        context.fill(CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0))
-        
-        let backgroundImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-         
-        self.setBackgroundImage(backgroundImage, for: state)
-    }
-}
