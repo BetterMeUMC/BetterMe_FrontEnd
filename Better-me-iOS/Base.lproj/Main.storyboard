@@ -20,8 +20,8 @@
                     <connections>
                         <segue destination="4B7-ny-myh" kind="relationship" relationship="viewControllers" id="pKc-Es-a5n"/>
                         <segue destination="2vo-o3-c7f" kind="relationship" relationship="viewControllers" id="1gX-2v-0Ra"/>
-                        <segue destination="ywY-CR-tTA" kind="relationship" relationship="viewControllers" id="ahE-cM-Zji"/>
-                        <segue destination="POv-AM-R8S" kind="relationship" relationship="viewControllers" id="XNN-NR-9CC"/>
+                        <segue destination="ywY-CR-tTA" kind="relationship" relationship="viewControllers" id="ChR-Pu-RLP"/>
+                        <segue destination="POv-AM-R8S" kind="relationship" relationship="viewControllers" id="HVN-68-wr5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-KN-x5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -474,7 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-11" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-13" y="59" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -640,17 +640,14 @@
                                                                 <constraint firstAttribute="width" constant="60" id="m54-oT-n80"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
-                                                                <attributedString key="attributedTitle">
-                                                                    <fragment content="초대">
-                                                                        <attributes>
-                                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
-                                                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                                <color key="baseBackgroundColor" red="0.98431372549019602" green="0.078431372549019607" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <buttonConfiguration key="configuration" style="filled" image="InviteButton" cornerStyle="capsule">
+                                                                <backgroundConfiguration key="background"/>
+                                                                <attributedString key="attributedTitle"/>
+                                                                <color key="baseBackgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="tapInviteButton:" destination="Dze-k6-EMf" eventType="touchUpInside" id="Qfg-UF-3QP"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -672,6 +669,7 @@
                                                 <connections>
                                                     <outlet property="friendCellView" destination="0qD-D2-Zs6" id="XVs-YU-fQ9"/>
                                                     <outlet property="hNumLabel" destination="HIY-z4-Gsp" id="3OP-x9-i5c"/>
+                                                    <outlet property="inviteButton" destination="Puh-aZ-a0N" id="a8R-V1-IHF"/>
                                                     <outlet property="nameLabel" destination="IUu-oy-cNs" id="DcO-PS-btY"/>
                                                     <outlet property="profileImageView" destination="Jqv-Jk-Wzl" id="vxn-fF-Krk"/>
                                                 </connections>
@@ -834,7 +832,9 @@
         <scene sceneID="vP7-Z2-nqZ">
             <objects>
                 <navigationController id="2vo-o3-c7f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="AwardButton" selectedImage="AwardButton.fill" id="LnD-mQ-FYb"/>
+                    <tabBarItem key="tabBarItem" title="" image="AwardButton" selectedImage="AwardButton.fill" id="LnD-mQ-FYb">
+                        <color key="badgeColor" red="0.98431372549999996" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HBM-7l-bqY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -867,7 +867,7 @@
         <scene sceneID="K5I-fQ-Ex3">
             <objects>
                 <navigationController id="ywY-CR-tTA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="WorldButton" id="RHH-XD-bpC"/>
+                    <tabBarItem key="tabBarItem" title="" image="WorldButton" selectedImage="WorldButton.fill" id="RHH-XD-bpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eR4-oP-gt1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -884,7 +884,7 @@
         <scene sceneID="KA1-EF-DJK">
             <objects>
                 <navigationController id="POv-AM-R8S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="FriendButton" id="cqp-jY-3ef"/>
+                    <tabBarItem key="tabBarItem" title="" image="FriendButton" selectedImage="FriendButton.fill" id="cqp-jY-3ef"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bex-G9-A1E">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1147,7 +1147,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-11" y="59" width="395" height="44"/>
+                                <rect key="frame" x="-14" y="59" width="396" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1304,7 +1304,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-10" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-12" y="59" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1693,9 +1693,12 @@
         <image name="AwardButton" width="21.666666030883789" height="28.333333969116211"/>
         <image name="AwardButton.fill" width="21.666666030883789" height="28.333333969116211"/>
         <image name="FriendButton" width="18.333333969116211" height="25"/>
+        <image name="FriendButton.fill" width="18.333333969116211" height="25"/>
         <image name="HomeButton" width="24" height="27"/>
         <image name="HomeButton.fill" width="24" height="27"/>
+        <image name="InviteButton" width="60" height="29"/>
         <image name="WorldButton" width="27.333333969116211" height="27.333333969116211"/>
+        <image name="WorldButton.fill" width="27.333333969116211" height="27.333333969116211"/>
         <image name="YellowStar" width="18.333333969116211" height="17.333333969116211"/>
         <image name="image 11" width="126.66666412353516" height="128"/>
         <image name="image 6" width="127" height="28"/>
