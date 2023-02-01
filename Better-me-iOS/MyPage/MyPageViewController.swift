@@ -110,20 +110,21 @@ extension MyPageViewController: UITableViewDelegate {
             
         case 0:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PWEditController"){
-            self.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
         }
             
         case 1:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "FeedBackController"){
-            self.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
         }
     
         case 2:
-            return
-            
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PushAlertViewController"){
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
         case 3:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "WithdrawalViewController"){
-            self.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
         }
             
         default:

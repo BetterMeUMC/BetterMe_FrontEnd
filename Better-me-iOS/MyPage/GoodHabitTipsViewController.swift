@@ -33,4 +33,5 @@ class GoodHabitTipsViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.title = "좋은습관 잘 만드는 법"
     }
+    
 }
