@@ -91,12 +91,12 @@ extension MyPageViewController: UITableViewDataSource {
 extension MyPageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = HeaderView()
+        let header = MyPageTableHeaderView()
         
         return header
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = FooterView()
+        let footer = MyPageTableFooterView()
         
         return footer
     }

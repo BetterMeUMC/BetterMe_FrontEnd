@@ -32,7 +32,7 @@ class ProfileEditController: UIViewController{
     let imagePickerController = UIImagePickerController()
     let alertController = UIAlertController(title: "올릴 방식을 선택하세요", message: "사진 찍기 또는 앨범에서 선택", preferredStyle: .actionSheet)
 
-    let saveBtn : UIBarButtonItem = {
+    lazy var saveBtn : UIBarButtonItem = {
         let view = UIButton()
         view.backgroundColor = UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1)
         view.layer.cornerRadius = 15
@@ -42,6 +42,8 @@ class ProfileEditController: UIViewController{
         NSLayoutConstraint.activate([
             view.widthAnchor.constraint(equalToConstant: 55),
             view.heightAnchor.constraint(equalToConstant: 31)])
+        
+        view.addTarget(self, action: #selector(clickedSavedBtn), for: .touchUpInside)
         
         
         return UIBarButtonItem(customView: view)
@@ -64,6 +66,16 @@ class ProfileEditController: UIViewController{
     }
     
     //MARK: - Helpers
+    @objc func clickedSavedBtn(_ sender: UIButton) {
+        let alret = UIAlertController(title: "저장!", message: "프로필이 수정되었습니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+
+        alret.addAction(ok)
+        present(alret, animated: true, completion: nil)
+        print("저장")
+    }
+    
+    
     func navigationBarUI() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -86,6 +98,9 @@ class ProfileEditController: UIViewController{
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
     }
+    
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
      
           self.view.endEditing(true)
@@ -162,6 +177,8 @@ extension ProfileEditController: UIImagePickerControllerDelegate, UINavigationCo
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
         
     }
+    
+    
 
 }
 

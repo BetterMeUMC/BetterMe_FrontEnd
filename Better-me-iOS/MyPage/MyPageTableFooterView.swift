@@ -4,7 +4,7 @@
 
 import UIKit
 
-class FooterView: UIView {
+class MyPageTableFooterView: UIView {
 
     //MARK: - Properties
 
