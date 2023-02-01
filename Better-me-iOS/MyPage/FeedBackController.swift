@@ -10,6 +10,12 @@ import UIKit
 class FeedBackController: UIViewController {
 
     //MARK: - Properties
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextField!
+    
+    
+    
     let button : UIButton = {
         let view = UIButton()
         view.backgroundColor = .white
@@ -31,6 +37,9 @@ class FeedBackController: UIViewController {
         super.viewDidLoad()
         navigationBarUI()
         configureButtonUI()
+        
+        titleTextField.clearsOnBeginEditing = true
+        contentTextField.clearsOnBeginEditing = true
     }
     //MARK: - Helpers
     

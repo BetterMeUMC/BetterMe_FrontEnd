@@ -23,8 +23,6 @@ class MyPageViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var tapView: UIView!
-    
     let tableView =  UITableView(frame: .zero, style: .grouped)
     let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
     
