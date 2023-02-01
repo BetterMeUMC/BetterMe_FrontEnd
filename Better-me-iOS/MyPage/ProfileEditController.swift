@@ -36,8 +36,8 @@ class ProfileEditController: UIViewController{
         let view = UIButton()
         view.backgroundColor = UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1)
         view.layer.cornerRadius = 15
-        view.setTitle("저장", for: .normal)
-//        view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
+        view.setTitle("완료", for: .normal)
+        view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
         view.setTitleColor(.white, for: .normal)
         NSLayoutConstraint.activate([
             view.widthAnchor.constraint(equalToConstant: 55),

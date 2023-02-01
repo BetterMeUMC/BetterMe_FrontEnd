@@ -107,12 +107,22 @@ extension MyPageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
+            
         case 0:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PWEditController"){
             self.navigationController?.pushViewController(controller, animated: true)
         }
+            
         case 1:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "FeedBackController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    
+        case 2:
+            return
+            
+        case 3:
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "WithdrawalViewController"){
             self.navigationController?.pushViewController(controller, animated: true)
         }
             

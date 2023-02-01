@@ -30,14 +30,18 @@ class PWEditController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "비밀번호 변경"
-        
-        self.navigationItem.rightBarButtonItem = self.saveBtn
+        navigationBarUI()
         textFieldCustom(textField:oldPWTextField)
         textFieldCustom(textField:newPWTextField)
         textFieldCustom(textField:newPWTextField2)
+    }
+    
+    func navigationBarUI() {
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.title = "비밀번호 변경"
+        self.navigationItem.rightBarButtonItem = self.saveBtn
+        
     }
     
     func textFieldCustom (textField: UITextField) {

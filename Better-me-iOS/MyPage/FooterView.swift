@@ -43,7 +43,6 @@ class FooterView: UIView {
                                      button1.leftAnchor.constraint(equalTo: leftAnchor, constant: 18),
                                      button1.rightAnchor.constraint(equalTo: rightAnchor, constant: -18),
                                      button1.heightAnchor.constraint(equalToConstant: 43)])
-        
     }
 
     
