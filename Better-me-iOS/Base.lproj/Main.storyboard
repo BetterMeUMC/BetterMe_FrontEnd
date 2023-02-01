@@ -474,7 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-15" y="59" width="390" height="44"/>
+                                <rect key="frame" x="-15" y="59" width="389" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1147,7 +1147,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-16" y="59" width="392" height="44"/>
+                                <rect key="frame" x="-17" y="59" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1304,7 +1304,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-14" y="59" width="390" height="44"/>
+                                <rect key="frame" x="-14" y="59" width="389" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1840,25 +1840,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-ST-shO">
-                                                    <rect key="frame" x="312" y="32" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-7P-RCS">
-                                                    <rect key="frame" x="33" y="50" width="255" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Label">
-                                                            <attributes>
-                                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdn-Wz-VZc">
-                                                    <rect key="frame" x="33" y="22" width="255" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdn-Wz-VZc">
+                                                    <rect key="frame" x="19" y="26" width="37" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
@@ -1868,7 +1851,31 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhD-7P-RCS">
+                                                    <rect key="frame" x="19" y="53" width="37" height="13.333333333333329"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-ST-shO">
+                                                    <rect key="frame" x="326" y="36" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.98431372549999996" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </switch>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EhD-7P-RCS" firstAttribute="leading" secondItem="Wdn-Wz-VZc" secondAttribute="leading" id="12k-Bb-ehZ"/>
+                                                <constraint firstItem="Wdn-Wz-VZc" firstAttribute="top" secondItem="bAl-aB-uar" secondAttribute="topMargin" constant="15" id="EYl-ho-mcf"/>
+                                                <constraint firstItem="EhD-7P-RCS" firstAttribute="top" secondItem="Wdn-Wz-VZc" secondAttribute="bottom" constant="7" id="LEy-ZC-cy0"/>
+                                                <constraint firstAttribute="trailing" secondItem="XaS-ST-shO" secondAttribute="trailing" constant="18" id="adt-ou-ahs"/>
+                                                <constraint firstItem="XaS-ST-shO" firstAttribute="top" secondItem="bAl-aB-uar" secondAttribute="top" constant="36" id="eL3-SV-S9e"/>
+                                                <constraint firstItem="Wdn-Wz-VZc" firstAttribute="trailing" secondItem="EhD-7P-RCS" secondAttribute="trailing" id="fYt-O5-JBb"/>
+                                                <constraint firstItem="Wdn-Wz-VZc" firstAttribute="leading" secondItem="bAl-aB-uar" secondAttribute="leadingMargin" constant="-1" id="oQY-Rk-SlS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="alertSubTitleLabel" destination="EhD-7P-RCS" id="PRa-5B-jMs"/>

@@ -62,12 +62,18 @@ class MyPageViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(MyPageCell.self, forCellReuseIdentifier: cellID)
         
-        NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo:    profileView.bottomAnchor, constant: 28),
+        NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 28),
                                      tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
                                      tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-        
     }
+    
+    func btn1Clicked() {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "GoodHabitTipsViewController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+
 
 }
 

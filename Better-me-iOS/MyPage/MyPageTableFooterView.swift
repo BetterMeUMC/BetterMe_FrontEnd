@@ -20,6 +20,7 @@ class MyPageTableFooterView: UIView {
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1), for: .normal)
         
+        view.addTarget(self, action: #selector(logOutButtonClicked), for: .touchUpInside)
         
         return view
     }()
@@ -43,6 +44,14 @@ class MyPageTableFooterView: UIView {
                                      button1.leftAnchor.constraint(equalTo: leftAnchor, constant: 18),
                                      button1.rightAnchor.constraint(equalTo: rightAnchor, constant: -18),
                                      button1.heightAnchor.constraint(equalToConstant: 43)])
+    }
+   @objc func logOutButtonClicked() {
+       let alret = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+       let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
+       let no = UIAlertAction(title: "취소", style: .default, handler: nil)
+       alret.addAction(yes)
+       alret.addAction(no)
+//       present(alret, animated: true, completion: nil)
     }
 
     

@@ -24,7 +24,7 @@ class GoodHabitTipsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarUI()
-        
+        configureUI()
     }
     //MARK: - Helpers
     
@@ -32,6 +32,13 @@ class GoodHabitTipsViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.title = "좋은습관 잘 만드는 법"
+    }
+    func configureUI() {
+        view.addSubview(handImageView)
+        handImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([handImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 126),
+                handImageView.widthAnchor.constraint(equalToConstant: 68),
+                                     handImageView.heightAnchor.constraint(equalToConstant: 68)])
     }
     
 }

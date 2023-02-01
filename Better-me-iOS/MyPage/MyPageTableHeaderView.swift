@@ -58,11 +58,11 @@ class MyPageTableHeaderView: UIView {
     
     //MARK: - Helpers
     
-    @objc func btn1Clicked (_ sender: UIButton) {
-        if let controller = MyPageViewController().storyboard?.instantiateViewController(withIdentifier: "GoodHabitTipsViewController"){
-            MyPageViewController().navigationController?.pushViewController(controller, animated: true)
-        }
+    @objc func btn1Clicked(_ sender: UIButton) {
+        let VC = MyPageViewController()
+        VC.btn1Clicked()
     }
+    
     func configureLabel() {
         
         addSubview(headLabel)
@@ -72,7 +72,7 @@ class MyPageTableHeaderView: UIView {
         
     }
     func configureButton() {
-        button1.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
+    
         addSubview(button1)
         button1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([button1.topAnchor.constraint(equalTo: headLabel.bottomAnchor, constant: 22),
