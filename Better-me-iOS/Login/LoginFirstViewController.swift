@@ -105,10 +105,11 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         // navigationBar
         let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
         naviBar.isTranslucent = false
-        naviBar.backgroundColor = .systemBackground
+        naviBar.backgroundColor = .clear
+        naviBar.shadowImage = UIImage()
 
-        let naviItem = UINavigationItem(title: "title")
-        naviItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapDoneButton))
+        let naviItem = UINavigationItem(title: "")
+        naviItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapDoneButton))
         naviBar.items = [naviItem]
         view.addSubview(naviBar)
     }
