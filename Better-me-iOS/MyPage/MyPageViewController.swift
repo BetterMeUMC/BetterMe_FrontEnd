@@ -68,12 +68,21 @@ class MyPageViewController: UIViewController {
                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
     
-    func btn1Clicked() {
+    @objc func btn1Clicked(_ sender: UIButton) {
+        
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "GoodHabitTipsViewController"){
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
-
+    
+    @objc func logOutButtonClicked(_ sender: UIButton) {
+        let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let no = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(yes)
+        alert.addAction(no)
+        self.present(alert, animated: true, completion: nil)
+     }
 
 }
 
@@ -98,12 +107,12 @@ extension MyPageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MyPageTableHeaderView()
-        
+        header.button1.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
         return header
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = MyPageTableFooterView()
-        
+        footer.button.addTarget(self, action: #selector(logOutButtonClicked), for: .touchUpInside)
         return footer
     }
     

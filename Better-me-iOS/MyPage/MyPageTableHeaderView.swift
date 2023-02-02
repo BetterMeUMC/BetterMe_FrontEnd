@@ -28,9 +28,7 @@ class MyPageTableHeaderView: UIView {
         view.setTitle("좋은 습관 잘 만드는 법", for: .normal)
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(.black, for: .normal)
-        
-        view.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
-        
+
         return view
     }()
     
@@ -57,11 +55,6 @@ class MyPageTableHeaderView: UIView {
     }
     
     //MARK: - Helpers
-    
-    @objc func btn1Clicked(_ sender: UIButton) {
-        let VC = MyPageViewController()
-        VC.btn1Clicked()
-    }
     
     func configureLabel() {
         
