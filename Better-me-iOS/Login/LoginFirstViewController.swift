@@ -95,6 +95,7 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+    @IBOutlet weak var item: UINavigationItem!
     private func addNaviBar() {
 
         // safe area
@@ -110,8 +111,18 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         naviBar.tintColor = .black
 
         let naviItem = UINavigationItem(title: "")
+   
+        //우선 이미지로 대체
+        let customImage = UIImage(named: "backIcon")
+        let newWidth = 13
+        let newHeight = 20
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        customImage?.draw(in: newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
         
-        naviItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapDoneButton))
+        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
         naviBar.items = [naviItem]
         view.addSubview(naviBar)
     }

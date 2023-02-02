@@ -2167,7 +2167,6 @@
                             <constraint firstItem="eOc-ck-oL8" firstAttribute="centerX" secondItem="9Ou-hP-Eun" secondAttribute="centerX" id="zze-TG-1OL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gZw-ei-qgp"/>
                     <connections>
                         <outlet property="joinBtn" destination="b92-zP-Hf8" id="gPs-b1-ykt"/>
                     </connections>
@@ -2176,7 +2175,7 @@
             </objects>
             <point key="canvasLocation" x="-6517" y="544"/>
         </scene>
-        <!--Login First View Controller-->
+        <!--Title-->
         <scene sceneID="9vr-Cz-V04">
             <objects>
                 <viewController storyboardIdentifier="LoginFirstViewController" modalPresentationStyle="fullScreen" id="94b-2A-IG4" customClass="LoginFirstViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -2283,7 +2282,7 @@
                             <constraint firstItem="dU0-9L-ejj" firstAttribute="top" secondItem="yZe-cZ-JeG" secondAttribute="bottom" constant="96" id="rmU-9e-pax"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mr4-Hk-0gb"/>
+                    <navigationItem key="navigationItem" title="Title" id="ewc-Gx-Jzf"/>
                     <connections>
                         <outlet property="alertLabel" destination="uN8-vo-k2E" id="jxG-fY-j1g"/>
                         <outlet property="emailField" destination="OOI-2S-Wpf" id="owI-wV-iPb"/>
