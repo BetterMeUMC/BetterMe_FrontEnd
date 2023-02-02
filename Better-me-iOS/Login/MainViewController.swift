@@ -24,8 +24,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func LoginBtn(_ sender: Any) {
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginFirstViewController")
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+        performSegue(withIdentifier: "loginView", sender: self)
         
     }
     
