@@ -30,22 +30,32 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
     
     //MARK: - Helpers
+    func configureNaviBar() {
+        let HomeVC = HomeViewController()
+        let image = UIImage(named: "BetterMeLogo")
+        let date = HomeVC.dateToString(date: Date())
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: date, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = .black
+    }
+    
     func configureProfileViewUI() {
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
@@ -71,6 +81,12 @@ class MyPageViewController: UIViewController {
     @objc func btn1Clicked(_ sender: UIButton) {
         
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "GoodHabitTipsViewController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    @objc func btn2Clicked(_ sender: UIButton) {
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "BadHabitTipsViewController"){
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
@@ -110,6 +126,7 @@ extension MyPageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MyPageTableHeaderView()
         header.button1.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
+        header.button2.addTarget(self, action: #selector(btn2Clicked), for: .touchUpInside)
         return header
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

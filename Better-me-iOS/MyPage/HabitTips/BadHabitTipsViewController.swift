@@ -7,11 +7,14 @@
 
 import UIKit
 
-class GoodHabitTipsViewController: UIViewController {
+class BadHabitTipsViewController: UIViewController {
 
 
     //MARK: - Properties
-    private let tipsTitle = ["Tip 1 : 분명하게 만들어라","Tip 2 : 매력적으로 만들어라","Tip 3 : 하기 쉽게 만들어라","Tip 4 : 만족스럽게 만들어라"]
+    private let tipsTitle = ["Tip 1 : 보이지 않게 만들어라",
+                             "Tip 2 : 매력적이지 않게 만들어라",
+                             "Tip 3 : 하기 어렵게 만들어라",
+                             "Tip 4 : 불만족스러운 것으로 만들어라"]
 
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -24,27 +27,27 @@ class GoodHabitTipsViewController: UIViewController {
     func navigationBarUI() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "좋은습관 잘 만드는 법"
+        self.title = "나쁜습관 없애는 법"
     }
 
     
 }
-extension GoodHabitTipsViewController : UITableViewDelegate,UITableViewDataSource {
+extension BadHabitTipsViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return tipsTitle.count
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = GoodTipsHeader()
+        let header = BadTipsHeader()
         return header
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 200
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return 85
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GoodTipsCell", for: indexPath) as? GoodTipsCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath) as? TipsCell else { return UITableViewCell() }
             
         cell.tipsListTitle.text = tipsTitle[indexPath.row]
             return cell

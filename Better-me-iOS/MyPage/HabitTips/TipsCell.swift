@@ -7,12 +7,13 @@
 
 import UIKit
 
-class GoodTipsCell: UITableViewCell {
+class TipsCell: UITableViewCell {
 
     @IBOutlet weak var tipsListTitle: UILabel!
     
     @IBAction func toggleBtn(_ sender: Any) {
     }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
