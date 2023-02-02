@@ -107,8 +107,10 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         naviBar.isTranslucent = false
         naviBar.backgroundColor = .clear
         naviBar.shadowImage = UIImage()
+        naviBar.tintColor = .black
 
         let naviItem = UINavigationItem(title: "")
+        
         naviItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapDoneButton))
         naviBar.items = [naviItem]
         view.addSubview(naviBar)
