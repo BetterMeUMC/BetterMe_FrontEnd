@@ -12,6 +12,8 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
+		28BFE250298B83A700176731 /* GoodTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* GoodTipsCell.swift */; };
+		28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE251298B83E100176731 /* GoodTipsHeader.swift */; };
 		28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */; };
 		28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48A2987B5190092E210 /* FeedBackController.swift */; };
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
@@ -45,6 +47,8 @@
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		280F5E582983B25F000A30B3 /* ProfileEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
+		28BFE24F298B83A700176731 /* GoodTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTipsCell.swift; sourceTree = "<group>"; };
+		28BFE251298B83E100176731 /* GoodTipsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTipsHeader.swift; sourceTree = "<group>"; };
 		28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableFooterView.swift; sourceTree = "<group>"; };
 		28EFD48A2987B5190092E210 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
 		28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +103,11 @@
 				280F5E592983B25F000A30B3 /* PWEditController.swift */,
 				28EFD48A2987B5190092E210 /* FeedBackController.swift */,
 				28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */,
-				28EFD48E298A79EF0092E210 /* GoodHabitTipsViewController.swift */,
 				28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */,
 				28EFD497298AAB620092E210 /* AlertTableViewCell.swift */,
+				28EFD48E298A79EF0092E210 /* GoodHabitTipsViewController.swift */,
+				28BFE24F298B83A700176731 /* GoodTipsCell.swift */,
+				28BFE251298B83E100176731 /* GoodTipsHeader.swift */,
 				28EFD493298A9FD50092E210 /* second.apn */,
 				28EFD491298A9D850092E210 /* first.apn */,
 			);
@@ -226,6 +232,7 @@
 			files = (
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
+				28BFE250298B83A700176731 /* GoodTipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
@@ -250,6 +257,7 @@
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
+				28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */,
 				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
