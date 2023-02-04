@@ -108,6 +108,17 @@ class FeedBackController: UIViewController {
         }
         // POST 전송
         task.resume()
+        let alert = UIAlertController(title: "접수완료", message: "피드백이 성공적으로 접수되었습니다!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default){_ in
+            self.titleTextField.text = ""
+            self.contentTextField.text = ""
+        }
+
+        alert.addAction(ok)
+
+        
+            self.present(alert, animated: false)
+        
     }
 
 }
