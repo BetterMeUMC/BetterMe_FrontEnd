@@ -27,7 +27,7 @@ class BadHabitTipsViewController: UIViewController {
     func navigationBarUI() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "나쁜습관 없애는 법"
+        self.title = "나쁜습관 쉽게 없애는 법"
     }
 
     

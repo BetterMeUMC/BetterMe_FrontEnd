@@ -116,8 +116,8 @@
 		28BFE253298BA58000176731 /* MypageTableView */ = {
 			isa = PBXGroup;
 			children = (
-				280F5E572983B25F000A30B3 /* MyPageCell.swift */,
 				280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */,
+				280F5E572983B25F000A30B3 /* MyPageCell.swift */,
 				28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */,
 			);
 			path = MypageTableView;

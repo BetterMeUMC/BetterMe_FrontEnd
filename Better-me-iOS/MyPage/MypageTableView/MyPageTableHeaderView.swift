@@ -25,7 +25,9 @@ class MyPageTableHeaderView: UIView {
         let view = UIButton()
         view.backgroundColor = UIColor(red: 1, green: 0.925, blue: 0.921, alpha: 1)
         view.layer.cornerRadius = 23
-        view.setTitle("좋은 습관 잘 만드는 법", for: .normal)
+        view.setTitle("좋은 습관 \n잘 만드는 법", for: .normal)
+        view.titleLabel?.textAlignment = .center
+        view.titleLabel?.numberOfLines = 2
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(.black, for: .normal)
 
@@ -37,7 +39,9 @@ class MyPageTableHeaderView: UIView {
         let view = UIButton()
         view.backgroundColor = UIColor(red: 1, green: 0.925, blue: 0.921, alpha: 1)
         view.layer.cornerRadius = 23
-        view.setTitle("나쁜습관 쉽게 없애는 법", for: .normal)
+        view.setTitle("나쁜습관 \n쉽게 없애는 법", for: .normal)
+        view.titleLabel?.textAlignment = .center
+        view.titleLabel?.numberOfLines = 2
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(.black, for: .normal)
         return view
