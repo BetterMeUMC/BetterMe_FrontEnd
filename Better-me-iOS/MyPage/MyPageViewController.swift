@@ -47,10 +47,17 @@ class MyPageViewController: UIViewController {
 //    }
     
     //MARK: - Helpers
+    func dateToString(date: Date) -> String{
+        let formmater = DateFormatter()
+        formmater.dateFormat = "M월 d일 E요일"
+        formmater.locale = Locale(identifier: "ko-KR")
+        return formmater.string(from: date)
+    }
+    
     func configureNaviBar() {
-        let HomeVC = HomeViewController()
+        
         let image = UIImage(named: "BetterMeLogo")
-        let date = HomeVC.dateToString(date: Date())
+        let date = dateToString(date: Date())
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: date, style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem?.tintColor = .black

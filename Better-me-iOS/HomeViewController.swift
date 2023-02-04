@@ -183,7 +183,7 @@ class HomeViewController: UIViewController {
     }
     
 
-    func dateToString(date: Date) -> String{
+    private func dateToString(date: Date) -> String{
         let formmater = DateFormatter()
         formmater.dateFormat = "M월 d일 E요일"
         formmater.locale = Locale(identifier: "ko-KR")
