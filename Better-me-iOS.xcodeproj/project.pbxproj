@@ -15,7 +15,6 @@
 		286F6AB7298E85570089936D /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6AB6298E85570089936D /* ProfileAPI.swift */; };
 		286F6ABA298E8BA00089936D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 286F6AB9298E8BA00089936D /* Kingfisher */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
-		286F6AC0298EC1E90089936D /* TipsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABF298EC1E90089936D /* TipsListCell.swift */; };
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
 		28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE251298B83E100176731 /* GoodTipsHeader.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
@@ -55,7 +54,6 @@
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
 		286F6AB6298E85570089936D /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
-		286F6ABF298EC1E90089936D /* TipsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsListCell.swift; sourceTree = "<group>"; };
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE251298B83E100176731 /* GoodTipsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTipsHeader.swift; sourceTree = "<group>"; };
 		28BFE257298BA6AA00176731 /* BadTipsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadTipsHeader.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			children = (
 				286F6ABB298EBD8C0089936D /* TipsData.swift */,
 				28BFE24F298B83A700176731 /* TipsCell.swift */,
-				286F6ABF298EC1E90089936D /* TipsListCell.swift */,
 				28EFD48E298A79EF0092E210 /* GoodHabitTipsViewController.swift */,
 				28BFE251298B83E100176731 /* GoodTipsHeader.swift */,
 				28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */,
@@ -292,7 +289,6 @@
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
-				286F6AC0298EC1E90089936D /* TipsListCell.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */,
 				28EFD48F298A79EF0092E210 /* GoodHabitTipsViewController.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,

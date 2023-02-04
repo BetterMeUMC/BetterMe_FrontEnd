@@ -12,7 +12,10 @@ class GoodHabitTipsViewController: UIViewController {
 
     //MARK: - Properties
     private let tipsTitle = ["Tip 1 : 분명하게 만들어라","Tip 2 : 매력적으로 만들어라","Tip 3 : 하기 쉽게 만들어라","Tip 4 : 만족스럽게 만들어라"]
+    private let tipsDB = TipsData()
 
+    let tableView =  UITableView(frame: .zero, style: .grouped)
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +44,19 @@ extension GoodHabitTipsViewController : UITableViewDelegate,UITableViewDataSourc
         return 200
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        
+        return CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
     }
+
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath) as? TipsCell else { return UITableViewCell() }
-            
+        cell.selectionStyle = .none
         cell.tipsListTitle.text = tipsTitle[indexPath.row]
-            return cell
+        cell.tipsContent.text = tipsDB.getTips(index: indexPath.row)
+        
+        return cell
 
     }
 }
+
