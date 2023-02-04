@@ -16,7 +16,7 @@ class FeedBackController: UIViewController {
     
     
     
-    let button : UIButton = {
+    lazy var button : UIButton = {
         let view = UIButton()
         view.backgroundColor = .white
         view.layer.cornerRadius = 22
@@ -53,7 +53,7 @@ class FeedBackController: UIViewController {
     func configureButtonUI() {
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -104),
+        NSLayoutConstraint.activate([button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: (view.frame.height/7) * -1),
                                      button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 18),
                                      button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -18),
                                      button.heightAnchor.constraint(equalToConstant: 43)])
@@ -62,7 +62,7 @@ class FeedBackController: UIViewController {
     //MARK: - PostAPI
     @objc func postFeedback() {
         
-        // 넣는 순서도 순서대로여야 하는 것 같다.
+        
         let feedback = PostFeedback(title: self.titleTextField.text ?? "", content: self.contentTextField.text ?? "")
         guard let uploadData = try? JSONEncoder().encode(feedback)
         else {return}

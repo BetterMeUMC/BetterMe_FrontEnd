@@ -83,7 +83,7 @@ class WithdrawalViewController: UIViewController {
         label.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 18)
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -411),
+        NSLayoutConstraint.activate([label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
                                      label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                                      label.widthAnchor.constraint(equalToConstant: 257),
                                      label.heightAnchor.constraint(equalToConstant: 50),])

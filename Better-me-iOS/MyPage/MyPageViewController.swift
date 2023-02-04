@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let cellID = "Cell"
+
 
 class MyPageViewController: UIViewController {
     
@@ -23,8 +23,9 @@ class MyPageViewController: UIViewController {
         }
     }
     
-    let tableView =  UITableView(frame: .zero, style: .grouped)
-    let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
+    private  let tableView =  UITableView(frame: .zero, style: .grouped)
+    private let cellID = "Cell"
+    private let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -35,16 +36,7 @@ class MyPageViewController: UIViewController {
         configureTableViewUI()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//    }
+
     
     //MARK: - Helpers
     func dateToString(date: Date) -> String{
@@ -55,7 +47,6 @@ class MyPageViewController: UIViewController {
     }
     
     func configureNaviBar() {
-        
         let image = UIImage(named: "BetterMeLogo")
         let date = dateToString(date: Date())
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
@@ -71,7 +62,6 @@ class MyPageViewController: UIViewController {
     }
     
     func configureTableViewUI() {
-        
         tableView.backgroundColor = .white
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
