@@ -36,6 +36,27 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
         swipeRecognizer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //noti등록
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //noti해제
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func sendAction(_ sender: Any) {
+        let emailValue = emailField.text!
+        GetMsgDataManager().checkIdx(userEmail: emailValue, viewController: self)
+
+    }
+    
     private func addNaviBar() {
         // safe area
         var statusBarHeight: CGFloat = 0
@@ -108,14 +129,6 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
            return true
        }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //noti등록
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
     @objc func keyboardWillshow(notification: NSNotification) {
         //키보드 값 가져오기 (옵셔널 값)
         if self.view.frame.origin.y == 0 {
@@ -129,31 +142,12 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
             }
         }
         }
-        
-        //self.view.frame.origin.y = -100
     }
-    
+  
     @objc func keyboardWillHide() {
         if self.view.frame.origin.y != 0 {
         self.view.frame.origin.y = 0
         }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        //noti해제
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-    }
-    
-    @IBAction func sendAction(_ sender: Any) {
-        let emailValue = emailField.text!
-        GetMsgDataManager().checkIdx(userEmail: emailValue, viewController: self)
-     
-
-    }
-    
 
 }

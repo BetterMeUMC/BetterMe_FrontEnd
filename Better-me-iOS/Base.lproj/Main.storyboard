@@ -2229,7 +2229,7 @@
                                     <color key="baseBackgroundColor" red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="MXm-EI-687"/>
+                                    <action selector="loginBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="zjk-CC-cRO"/>
                                     <segue destination="Ism-M4-Deg" kind="show" identifier="tabBar" id="ymj-od-7BK"/>
                                 </connections>
                             </button>
@@ -2244,7 +2244,7 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="passwordFindBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="ZMz-ui-DS5"/>
+                                    <action selector="passwordFindBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="Hk7-1a-1va"/>
                                     <segue destination="mDY-f1-mgV" kind="show" identifier="passwordFindvView" id="tJm-Vi-ks5"/>
                                 </connections>
                             </button>
@@ -2290,7 +2290,6 @@
                         <outlet property="emailField" destination="OOI-2S-Wpf" id="owI-wV-iPb"/>
                         <outlet property="loginBtn" destination="dU0-9L-ejj" id="Lsa-iO-gNH"/>
                         <outlet property="passwordField" destination="yZe-cZ-JeG" id="LAi-h2-Jkv"/>
-                        <outlet property="pwdBtn" destination="u2S-PX-9hB" id="ARb-J2-Len"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw0-It-L36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2333,7 +2332,7 @@
                                     <color key="baseBackgroundColor" red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="sendAction:" destination="mDY-f1-mgV" eventType="touchUpInside" id="zTg-nS-UrH"/>
+                                    <action selector="sendAction:" destination="mDY-f1-mgV" eventType="touchUpInside" id="lXB-xU-uAo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2404,7 +2403,7 @@
                                     <color key="baseBackgroundColor" red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="okBtn_next:" destination="ZkJ-8q-1Fb" eventType="touchUpInside" id="cqt-XU-pbN"/>
+                                    <action selector="okBtn_next:" destination="ZkJ-8q-1Fb" eventType="touchUpInside" id="R4d-hz-m28"/>
                                     <segue destination="Yc4-VZ-ikH" kind="show" identifier="nickNameView" id="CTp-sS-kTe"/>
                                 </connections>
                             </button>
@@ -2499,7 +2498,7 @@
                                     <color key="baseBackgroundColor" red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="NextViewOkBtn:" destination="Yc4-VZ-ikH" eventType="touchUpInside" id="zSa-Nc-tQP"/>
+                                    <action selector="NextViewOkBtn:" destination="Yc4-VZ-ikH" eventType="touchUpInside" id="tD2-lU-pLB"/>
                                     <segue destination="IMP-fz-JIl" kind="show" identifier="promiseView" id="Dae-YQ-aze"/>
                                 </connections>
                             </button>
@@ -2570,7 +2569,7 @@
                                     <color key="baseBackgroundColor" red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextViewBtn:" destination="IMP-fz-JIl" eventType="touchUpInside" id="QZG-OI-6j6"/>
+                                    <action selector="nextViewBtn:" destination="IMP-fz-JIl" eventType="touchUpInside" id="iNk-3d-ih4"/>
                                     <segue destination="Ism-M4-Deg" kind="show" identifier="tabView" id="sPj-xd-igP"/>
                                 </connections>
                             </button>

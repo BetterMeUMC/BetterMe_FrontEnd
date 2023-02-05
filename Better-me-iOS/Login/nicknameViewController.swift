@@ -21,16 +21,7 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     @IBOutlet weak var nickName: UITextField!
-    
- 
-    
-    @IBAction func NextViewOkBtn(_ sender: Any) {
-        let user = UserInfo.shared
-        user.nickName = nickName.text
-        self.performSegue(withIdentifier: "promiseView", sender: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +35,32 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
         
         nickName.delegate = self
    
-        
         NotificationCenter.default.addObserver(self,
                                                        selector: #selector(textDidChange(_:)),
                                                        name: UITextField.textDidChangeNotification,
                                                        object: nickName)
         addNaviBar()
         swipeRecognizer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //noti등록
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //noti해제
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func NextViewOkBtn(_ sender: Any) {
+        let user = UserInfo.shared
+        user.nickName = nickName.text
+        self.performSegue(withIdentifier: "promiseView", sender: nil)
     }
     
     private func addNaviBar() {
@@ -150,14 +160,6 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
            textField.resignFirstResponder() // TextField 비활성화
            return true
        }
-  
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //noti등록
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
     
     @objc func keyboardWillshow(notification: NSNotification) {
         //키보드 값 가져오기 (옵셔널 값)
@@ -180,15 +182,6 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
         if self.view.frame.origin.y != 0 {
         self.view.frame.origin.y = 0
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        //noti해제
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
 
 

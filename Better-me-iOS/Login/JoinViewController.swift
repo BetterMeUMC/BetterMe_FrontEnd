@@ -13,19 +13,15 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     var checkDuplicate: Bool = false
     var serverCheck: Bool = false
     
-    
     @IBOutlet weak var joinComment: UILabel!
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var passwordCheckField: UITextField!
-    
     @IBOutlet weak var checkLabel: UILabel! {
         didSet {
             checkLabel.isHidden = true
         }
     }
-    
     
     @IBOutlet weak var okBtn: UIButton!{
         didSet {
@@ -33,44 +29,74 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //유효성 검사
-    func isSameBoth(_ first: UITextField, _ second: UITextField) -> Bool { //비번 일치 확인
-        if(first.text == second.text) {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func isValidEmail(testStr:String) -> Bool {
-          let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,30}"
-          let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-          return emailTest.evaluate(with: testStr)
-    }
-    
-    func isValidPassword(str:String) -> Bool { //비밀번호 유효성 검사
-        let passwordEx = "^[A-Za-z0-9.-]{6,20}$"
-        return NSPredicate(format: "SELF MATCHES %@", passwordEx).evaluate(with: str)
-    }
-
-    
-    @objc func TextFieldChange (_ sender: UITextField) { //버튼 활성화, 비활성화 설정
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        if (isValidPassword(str: passwordField.text!)) && (isSameBoth(passwordField, passwordCheckField)) && (isValidEmail(testStr: emailField.text!)) && emailField.text!.count < 31 && passwordField.text!.count < 21 { //비밀번호, 이메일 확인되면 버튼 활성화
-            
-            okBtn.isEnabled = true
-            okBtn.configuration?.background.backgroundColor = .BtnColor
-            okBtn.configuration?.attributedTitle?.foregroundColor = .WhiteTextColor
-            
-            let email = emailField.text!
-            //이메일 중복검사
-            GetMsgDataManager().duplicateEmail(checkEmail: email, viewController: self)
-          
-        } else {
-            okBtn.configuration?.background.backgroundColor = .OriginBtnColor
-            okBtn.configuration?.attributedTitle?.foregroundColor = .TextColor
-            okBtn.isEnabled = false
-        }
+        //back 지움
+        self.navigationController?.navigationBar.topItem?.title = ""
+   
+        self.hideKeyboardWhenTappedAround()
+        
+        emailField.borderAttribute()
+        passwordField.borderAttribute()
+        passwordCheckField.borderAttribute()
+        
+        emailField.addLeftPadding()
+        passwordField.addLeftPadding()
+        passwordCheckField.addLeftPadding()
+        
+        //텍스트필드 delegate설정으로 return시 키보드 내려가도록 설정
+        emailField.delegate = self
+        passwordField.delegate = self
+        passwordCheckField.delegate = self
+        
+        //string password 관련
+     
+            passwordField.textContentType = .newPassword
+            passwordCheckField.textContentType = .newPassword
+        
+        
+        //행간
+        let attrString = NSMutableAttributedString(string: joinComment.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 10
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        joinComment.attributedText = attrString
+        
+        //텍스트 입력 감지
+        self.emailField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
+        self.passwordField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
+        self.passwordCheckField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
+        
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(textDidChange(_:)),
+                                                       name: UITextField.textDidChangeNotification,
+                                                       object: emailField)
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(PasswordTextDidChange(_:)),
+                                                       name: UITextField.textDidChangeNotification,
+                                                       object: passwordField)
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(PasswordTextDidChange(_:)),
+                                                       name: UITextField.textDidChangeNotification,
+                                                       object: passwordCheckField)
+        
+        addNaviBar()
+        swipeRecognizer()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //noti등록
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //noti해제
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func okBtn_next(_ sender: Any) {
@@ -95,6 +121,34 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     }
         if serverCheck {
             print("서버 오류입니다.")
+        }
+    }
+    
+    //유효성 검사
+    func isSameBoth(_ first: UITextField, _ second: UITextField) -> Bool { //비번 일치 확인
+        if(first.text == second.text) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    @objc func TextFieldChange (_ sender: UITextField) { //버튼 활성화, 비활성화 설정
+        
+        if (isValidPassword(str: passwordField.text!)) && (isSameBoth(passwordField, passwordCheckField)) && (isValidEmail(testStr: emailField.text!)) && emailField.text!.count < 31 && passwordField.text!.count < 21 { //비밀번호, 이메일 확인되면 버튼 활성화
+            
+            okBtn.isEnabled = true
+            okBtn.configuration?.background.backgroundColor = .BtnColor
+            okBtn.configuration?.attributedTitle?.foregroundColor = .WhiteTextColor
+            
+            let email = emailField.text!
+            //이메일 중복검사
+            GetMsgDataManager().duplicateEmail(checkEmail: email, viewController: self)
+          
+        } else {
+            okBtn.configuration?.background.backgroundColor = .OriginBtnColor
+            okBtn.configuration?.attributedTitle?.foregroundColor = .TextColor
+            okBtn.isEnabled = false
         }
     }
     
@@ -159,8 +213,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
           }
       }
     
-    
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == passwordField {
             passwordField.isSecureTextEntry = true
@@ -174,63 +226,17 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //back 지움
-        self.navigationController?.navigationBar.topItem?.title = ""
-   
-        self.hideKeyboardWhenTappedAround()
-        
-        emailField.borderAttribute()
-        passwordField.borderAttribute()
-        passwordCheckField.borderAttribute()
-        
-        emailField.addLeftPadding()
-        passwordField.addLeftPadding()
-        passwordCheckField.addLeftPadding()
-        
-        //텍스트필드 delegate설정으로 return시 키보드 내려가도록 설정
-        emailField.delegate = self
-        passwordField.delegate = self
-        passwordCheckField.delegate = self
-        
-        //string password 관련
-     
-            passwordField.textContentType = .newPassword
-            passwordCheckField.textContentType = .newPassword
-        
-        
-        //행간
-        let attrString = NSMutableAttributedString(string: joinComment.text!)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 10
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        joinComment.attributedText = attrString
-        
-        //텍스트 입력 감지
-        self.emailField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
-        self.passwordField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
-        self.passwordCheckField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
-        
-        NotificationCenter.default.addObserver(self,
-                                                       selector: #selector(textDidChange(_:)),
-                                                       name: UITextField.textDidChangeNotification,
-                                                       object: emailField)
-        NotificationCenter.default.addObserver(self,
-                                                       selector: #selector(PasswordTextDidChange(_:)),
-                                                       name: UITextField.textDidChangeNotification,
-                                                       object: passwordField)
-        NotificationCenter.default.addObserver(self,
-                                                       selector: #selector(PasswordTextDidChange(_:)),
-                                                       name: UITextField.textDidChangeNotification,
-                                                       object: passwordCheckField)
-        
-        addNaviBar()
-        swipeRecognizer()
-        
+    func isValidEmail(testStr:String) -> Bool {
+          let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,30}"
+          let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+          return emailTest.evaluate(with: testStr)
     }
+    
+    func isValidPassword(str:String) -> Bool { //비밀번호 유효성 검사
+        let passwordEx = "^[A-Za-z0-9.-]{6,20}$"
+        return NSPredicate(format: "SELF MATCHES %@", passwordEx).evaluate(with: str)
+    }
+    
     @objc private func textDidChange(_ notification: Notification) {
         let maxLength = 30
             if let textField = notification.object as? UITextField {
@@ -254,8 +260,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
                                       let newString = text[text.startIndex..<index]
                                       textField.text = String(newString)
                                   }
-                    
-                 
                 }
             }
         }
@@ -308,14 +312,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
            return true
        }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //noti등록
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
     @objc func keyboardWillshow(notification: NSNotification) {
         //키보드 값 가져오기 (옵셔널 값)
         if self.view.frame.origin.y == 0 {
@@ -338,15 +334,5 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        //noti해제
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-    }
-    
-
 
 }

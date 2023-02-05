@@ -44,7 +44,6 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
-    @IBOutlet weak var pwdBtn: UIButton!
     var loginCheck : Bool = false
     
     override func viewDidLoad() {
@@ -93,6 +92,30 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         //noti해제
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        let email = emailField.text!
+        let password = passwordField.text!
+        
+        PostDataManager().PostLogin(email: email, password: password, viewController: self)
+    }
+    
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "tabBar" {
+            if loginCheck {
+                self.performSegue(withIdentifier: "tabBar", sender: nil)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
+    
+    @IBAction func passwordFindBtn(_ sender: Any) {
+        performSegue(withIdentifier: "passwordFindvView", sender: sender)
     }
 
     
@@ -246,34 +269,6 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
-    
-    @IBAction func loginBtn(_ sender: Any) {
-        let email = emailField.text!
-        let password = passwordField.text!
-        
-        PostDataManager().PostLogin(email: email, password: password, viewController: self)
-    }
-    
-    
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "tabBar" {
-            if loginCheck {
-                self.performSegue(withIdentifier: "tabBar", sender: nil)
-            } else {
-                return false
-            }
-        }
-        return true
-    }
-    
-    
-    
-    @IBAction func passwordFindBtn(_ sender: Any) {
-        performSegue(withIdentifier: "passwordFindvView", sender: sender)
-    }
-    
     //return시 키보드 내려감
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            textField.resignFirstResponder() // TextField 비활성화
@@ -300,7 +295,6 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         self.view.frame.origin.y = 0
         }
     }
-    
     
 
 }

@@ -24,6 +24,46 @@ class wordViewController: UIViewController, UITextFieldDelegate {
     
     var checkUserInfo: Bool = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        wordField.borderAttribute()
+        wordField.addLeftPadding()
+       
+        self.hideKeyboardWhenTappedAround()
+
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
+        wordField.delegate = self
+        
+        //행간
+        let attrString = NSMutableAttributedString(string: wordLabel.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 10
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
+        wordLabel.attributedText = attrString
+        
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(textDidChange(_:)),
+                                                       name: UITextField.textDidChangeNotification,
+                                                       object: wordField)
+        addNaviBar()
+        swipeRecognizer()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //noti등록
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //noti해제
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
     @IBAction func nextViewBtn(_ sender: Any) {
         let user = UserInfo.shared
         user.promise = wordField.text
@@ -53,35 +93,6 @@ class wordViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-   
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        wordField.borderAttribute()
-        wordField.addLeftPadding()
-       
-        self.hideKeyboardWhenTappedAround()
-
-        self.navigationController?.navigationBar.topItem?.title = ""
-        
-        wordField.delegate = self
-        
-        //행간
-        let attrString = NSMutableAttributedString(string: wordLabel.text!)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 10
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
-        wordLabel.attributedText = attrString
-        
-        NotificationCenter.default.addObserver(self,
-                                                       selector: #selector(textDidChange(_:)),
-                                                       name: UITextField.textDidChangeNotification,
-                                                       object: wordField)
-        addNaviBar()
-        swipeRecognizer()
-    }
     private func addNaviBar() {
         // safe area
         var statusBarHeight: CGFloat = 0
@@ -182,14 +193,6 @@ class wordViewController: UIViewController, UITextFieldDelegate {
            return true
        }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //noti등록
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
     @objc func keyboardWillshow(notification: NSNotification) {
         //키보드 값 가져오기 (옵셔널 값)
         if self.view.frame.origin.y == 0 {
@@ -212,16 +215,5 @@ class wordViewController: UIViewController, UITextFieldDelegate {
         self.view.frame.origin.y = 0
         }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        //noti해제
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-    }
-    
-
 
 }
