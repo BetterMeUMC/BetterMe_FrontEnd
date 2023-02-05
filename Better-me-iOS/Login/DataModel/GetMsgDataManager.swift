@@ -38,8 +38,8 @@ struct GetMsgDataManager {
                    }
     }
     
-    func checkIdx(userEmail: String) {
-        let url = "http://54.180.13.219:3000/app/users/get/\(userEmail)"
+    func checkIdx(userEmail: String, viewController: passwordFindViewController) {
+        let url = "http://54.180.13.219:3000/app/users/get_email/\(userEmail)"
     
                AF.request(url,
                           method: .get,
@@ -53,21 +53,28 @@ struct GetMsgDataManager {
                     
                            if let userIdx = response.result?.userIdx {
                                print(userIdx)
-                      
-                               sendedPwd(userIdx: userIdx, email: userEmail)
+                               sendedPwd(userIdx: userIdx, email: userEmail, viewController: viewController)
                            } else {
                                print("값 없음")
+                               let alert = UIAlertController(title: "알림", message: "존재하지 않는 이메일입니다. \n이메일을 다시 확인해 주세요.", preferredStyle: .alert)
+                               alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
+                               })
+                               viewController.present(alert, animated: true, completion: nil)
                            }
                            
                        case .failure(let error):
                            print(error)
+                           let alert = UIAlertController(title: "알림", message: "존재하지 않는 이메일입니다. \n이메일을 다시 확인해 주세요.", preferredStyle: .alert)
+                           alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
+                           })
+                           viewController.present(alert, animated: true, completion: nil)
                      
                        }
                        
                    }
     }
     
-    func sendedPwd(userIdx: Int, email: String) {
+    func sendedPwd(userIdx: Int, email: String, viewController: passwordFindViewController) {
         let url = "http://54.180.13.219:3000/app/users/issuedPw/\(userIdx)"
         
         let params = ["userEmail": email] as Dictionary
@@ -81,9 +88,11 @@ struct GetMsgDataManager {
             .responseDecodable(of: ResponseModel.self) { response in
                 switch response.result {
                 case .success(let response):
-             
-                    print(response.code) //토큰이 필요하다고 뜸.
                     print(response.message)
+                        let alert = UIAlertController(title: "알림", message: "비밀번호가 전송되었습니다.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
+                        })
+                        viewController.present(alert, animated: true, completion: nil)
                     
                 case .failure(let error):
                     print(error)

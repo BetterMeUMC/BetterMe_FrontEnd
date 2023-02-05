@@ -29,8 +29,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func JoinBtn(_ sender: Any) {
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "JoinViewController")
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+        performSegue(withIdentifier: "joinView", sender: self)
     }
     
   

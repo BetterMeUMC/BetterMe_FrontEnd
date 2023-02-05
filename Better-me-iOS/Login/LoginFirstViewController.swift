@@ -95,11 +95,9 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    @IBOutlet weak var item: UINavigationItem!
+    
     private func addNaviBar() {
-
         // safe area
-        
         var statusBarHeight: CGFloat = 0
         statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
 
@@ -254,45 +252,10 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         let email = emailField.text!
         let password = passwordField.text!
         
-        PostLogin(email: email, password: password)
-    
+        PostDataManager().PostLogin(email: email, password: password, viewController: self)
     }
     
-    func PostLogin(email: String, password: String) {
-        let url = "http://54.180.13.219:3000/app/auth/login"
-        
-        let params = ["email": email, "password": password]
-        
-        AF.request(url,
-                   method: .post,
-                   parameters: params,
-                   encoding: JSONEncoding.default,
-                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
-            .validate()
-            .responseDecodable(of: LoginModel.self) { response in
-                switch response.result {
-                case .success(let response):
-             
-                    if let jwt = response.result?.jwt {
-                        self.loginCheck = true
-                        self.performSegue(withIdentifier: "tabBar", sender: self)
-          
-                    } else {
-                        print("토큰 없음")
-                            self.alertLabel.isHidden = false
-                            self.alertLabel.text = response.message
-                            self.loginBtn.isEnabled = false
-                            self.loginBtn.configuration?.background.backgroundColor = .OriginBtnColor
-                            self.loginBtn.configuration?.attributedTitle?.foregroundColor = .TextColor
-                        self.loginCheck = false
-                    }
-                case .failure(let error):
-                    print("서버오류")
-                    print(error)
-                }
-                
-            }
-    }
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "tabBar" {
@@ -308,9 +271,7 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func passwordFindBtn(_ sender: Any) {
-                                      
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "passwordFindViewController")
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+        performSegue(withIdentifier: "passwordFindvView", sender: sender)
     }
     
     //return시 키보드 내려감

@@ -32,8 +32,60 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
         emailField.delegate = self
         self.emailField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
     
-        
+        addNaviBar()
+        swipeRecognizer()
     }
+    
+    private func addNaviBar() {
+        // safe area
+        var statusBarHeight: CGFloat = 0
+        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+
+        // navigationBar
+        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
+        naviBar.isTranslucent = false
+        naviBar.backgroundColor = .clear
+        naviBar.shadowImage = UIImage()
+        naviBar.tintColor = .black
+
+        let naviItem = UINavigationItem(title: "")
+   
+        //우선 이미지로 대체
+        let customImage = UIImage(named: "backIcon")
+        let newWidth = 13
+        let newHeight = 20
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        customImage?.draw(in: newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
+        
+        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
+        naviBar.items = [naviItem]
+        view.addSubview(naviBar)
+    }
+    
+    @objc func didTapDoneButton() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    func swipeRecognizer() {
+          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+          self.view.addGestureRecognizer(swipeRight)
+          
+      }
+      
+      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
+          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+              switch swipeGesture.direction{
+              case UISwipeGestureRecognizer.Direction.right:
+                  // 스와이프 시, 원하는 기능 구현.
+                  self.dismiss(animated: true, completion: nil)
+              default: break
+              }
+          }
+      }
+    
     
     @objc func TextFieldChange (_ sender: UITextField) { //버튼 활성화, 비활성화 설정
         
@@ -98,13 +150,8 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func sendAction(_ sender: Any) {
         let emailValue = emailField.text!
-        GetMsgDataManager().checkIdx(userEmail: emailValue)
-        
-        let alert = UIAlertController(title: "알림", message: "비밀번호가 전송되었습니다.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
-          
-        })
-        self.present(alert, animated: true, completion: nil)
+        GetMsgDataManager().checkIdx(userEmail: emailValue, viewController: self)
+     
 
     }
     
