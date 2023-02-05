@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 250/250, alpha: 1.0)
         }
         registerForPushNotifications()
+        sleep(1)
         return true
     }
 
