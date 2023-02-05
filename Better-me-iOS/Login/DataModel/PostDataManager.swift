@@ -23,7 +23,6 @@ struct PostDataManager {
                    .responseDecodable(of: ResponseModel.self) { response in
                        switch response.result {
                        case .success(let response):
-                    
                            print(response.message)
                            
                        case .failure(let error):

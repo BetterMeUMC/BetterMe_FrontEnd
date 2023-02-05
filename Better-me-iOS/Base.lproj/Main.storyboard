@@ -146,7 +146,7 @@
                                                             </connections>
                                                         </button>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m4E-Fo-YBm">
-                                                            <rect key="frame" x="62" y="36.5" width="110" height="4"/>
+                                                            <rect key="frame" x="62" y="37" width="110" height="4"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="110" id="ZzE-Ib-rOf"/>
                                                             </constraints>
@@ -273,7 +273,7 @@
                                                             </connections>
                                                         </button>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P4Z-Mh-021">
-                                                            <rect key="frame" x="62" y="36.5" width="110" height="4"/>
+                                                            <rect key="frame" x="62" y="37" width="110" height="4"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="110" id="Gzn-ir-9dk"/>
                                                             </constraints>
@@ -475,7 +475,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-16" y="59" width="409" height="44"/>
+                                <rect key="frame" x="-16" y="59" width="408" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1148,7 +1148,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-19" y="59" width="413" height="44"/>
+                                <rect key="frame" x="-19" y="59" width="412" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1305,7 +1305,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-15" y="59" width="409" height="44"/>
+                                <rect key="frame" x="-15" y="59" width="408" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1553,7 +1553,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mYM-I9-Nhu">
-                                <rect key="frame" x="115" y="420.5" width="281" height="34"/>
+                                <rect key="frame" x="115" y="421" width="281" height="34"/>
                                 <attributedString key="attributedText">
                                     <fragment content="김유니">
                                         <attributes>
@@ -1565,7 +1565,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="오늘보다 더 빛나는 내가 되자" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45c-dD-WAn">
-                                <rect key="frame" x="115" y="496.5" width="281" height="112"/>
+                                <rect key="frame" x="115" y="497" width="281" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="4j6-Gs-sYd"/>
                                 </constraints>
@@ -2405,6 +2405,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="okBtn_next:" destination="ZkJ-8q-1Fb" eventType="touchUpInside" id="cqt-XU-pbN"/>
+                                    <segue destination="Yc4-VZ-ikH" kind="show" identifier="nickNameView" id="CTp-sS-kTe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# 숫자/영문자 혼합 6자 이상 20자 이내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyQ-MV-yyc">
@@ -2465,7 +2466,7 @@
         <!--Nickname View Controller-->
         <scene sceneID="wRx-P4-Exl">
             <objects>
-                <viewController storyboardIdentifier="nicknameViewController" id="Yc4-VZ-ikH" customClass="nicknameViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nicknameViewController" modalPresentationStyle="fullScreen" id="Yc4-VZ-ikH" customClass="nicknameViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYK-T0-wc5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2499,6 +2500,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="NextViewOkBtn:" destination="Yc4-VZ-ikH" eventType="touchUpInside" id="zSa-Nc-tQP"/>
+                                    <segue destination="IMP-fz-JIl" kind="show" identifier="promiseView" id="Dae-YQ-aze"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDu-0F-Sx2">
@@ -2521,6 +2523,7 @@
                             <constraint firstItem="hgb-2v-Nij" firstAttribute="top" secondItem="BDu-0F-Sx2" secondAttribute="bottom" constant="8" id="zw8-zr-VhS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WeN-SA-QWM"/>
                     <connections>
                         <outlet property="checkLabel" destination="BDu-0F-Sx2" id="3Zb-AE-pT1"/>
                         <outlet property="nickName" destination="hgb-2v-Nij" id="GPh-iW-HKY"/>
@@ -2534,7 +2537,7 @@
         <!--Word View Controller-->
         <scene sceneID="Fqx-Mb-Jye">
             <objects>
-                <viewController storyboardIdentifier="wordViewController" id="IMP-fz-JIl" customClass="wordViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wordViewController" modalPresentationStyle="fullScreen" id="IMP-fz-JIl" customClass="wordViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tqQ-Az-bt7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2568,6 +2571,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextViewBtn:" destination="IMP-fz-JIl" eventType="touchUpInside" id="QZG-OI-6j6"/>
+                                    <segue destination="Ism-M4-Deg" kind="show" identifier="tabView" id="sPj-xd-igP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한줄다짐을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-2K-vxb">
@@ -2590,6 +2594,7 @@
                             <constraint firstItem="Qai-BT-ENO" firstAttribute="centerX" secondItem="tqQ-Az-bt7" secondAttribute="centerX" id="qpD-n0-Erh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="s3r-0r-EXG"/>
                     <connections>
                         <outlet property="checkLabel" destination="cJ3-2K-vxb" id="KVJ-Jh-ofo"/>
                         <outlet property="okBtn" destination="Qai-BT-ENO" id="l8X-nY-wVO"/>
@@ -2602,6 +2607,9 @@
             <point key="canvasLocation" x="-3950" y="1174"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sPj-xd-igP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AwardButton" width="22" height="28"/>
         <image name="AwardButton.fill" width="22" height="28"/>

@@ -83,7 +83,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             okBtn.configuration?.attributedTitle?.foregroundColor = .TextColor
             okBtn.isEnabled = false
         } else {
-            
             let user = UserInfo.shared
             user.email = emailField.text
             user.password = passwordField.text
@@ -92,13 +91,73 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             okBtn.isEnabled = true
             okBtn.configuration?.background.backgroundColor = .BtnColor
             okBtn.configuration?.attributedTitle?.foregroundColor = .WhiteTextColor
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "nicknameViewController")
-            self.navigationController?.pushViewController(pushVC!, animated: true)
+            self.performSegue(withIdentifier: "nickNameView", sender: nil)
     }
         if serverCheck {
             print("서버 오류입니다.")
         }
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "nickNameView" {
+            if !checkDuplicate {
+                self.performSegue(withIdentifier: "nickNameView", sender: nil)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func addNaviBar() {
+        // safe area
+        var statusBarHeight: CGFloat = 0
+        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+
+        // navigationBar
+        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
+        naviBar.isTranslucent = false
+        naviBar.backgroundColor = .clear
+        naviBar.shadowImage = UIImage()
+        naviBar.tintColor = .black
+
+        let naviItem = UINavigationItem(title: "")
+   
+        //우선 이미지로 대체
+        let customImage = UIImage(named: "backIcon")
+        let newWidth = 13
+        let newHeight = 20
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        customImage?.draw(in: newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
+        
+        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
+        naviBar.items = [naviItem]
+        view.addSubview(naviBar)
+    }
+    
+    @objc func didTapDoneButton() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
+    func swipeRecognizer() {
+          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+          self.view.addGestureRecognizer(swipeRight)
+      }
+      
+      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
+          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+              switch swipeGesture.direction{
+              case UISwipeGestureRecognizer.Direction.right:
+                  // 스와이프 시, 원하는 기능 구현.
+                  self.dismiss(animated: true, completion: nil)
+              default: break
+              }
+          }
+      }
     
     
     
@@ -167,6 +226,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
                                                        selector: #selector(PasswordTextDidChange(_:)),
                                                        name: UITextField.textDidChangeNotification,
                                                        object: passwordCheckField)
+        
+        addNaviBar()
+        swipeRecognizer()
+        
     }
     @objc private func textDidChange(_ notification: Notification) {
         let maxLength = 30
@@ -244,8 +307,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
            textField.resignFirstResponder() // TextField 비활성화
            return true
        }
-    
-
     
     
     override func viewWillAppear(_ animated: Bool) {

@@ -68,11 +68,11 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
     @objc func didTapDoneButton() {
         self.presentingViewController?.dismiss(animated: true)
     }
+    
     func swipeRecognizer() {
           let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
           swipeRight.direction = UISwipeGestureRecognizer.Direction.right
           self.view.addGestureRecognizer(swipeRight)
-          
       }
       
       @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){

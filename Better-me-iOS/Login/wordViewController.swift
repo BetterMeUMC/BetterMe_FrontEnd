@@ -22,16 +22,19 @@ class wordViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    var checkUserInfo: Bool = false
+    
     @IBAction func nextViewBtn(_ sender: Any) {
         let user = UserInfo.shared
         user.promise = wordField.text
         if let email = user.email, let password = user.password, let nickname = user.nickName, let promise = user.promise {
             PostDataManager().PostUserData(email: email, password: password, nickName: nickname, promise: promise)
+            checkUserInfo = true
             //다음 뷰
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "")
-            self.navigationController?.pushViewController(pushVC!, animated: true)
+            self.performSegue(withIdentifier: "tabView", sender: nil)
         } else {
             print("data is nil")
+            checkUserInfo = false
         }
         
         /*sns로그인 관련 포스트할 정보들
@@ -39,6 +42,16 @@ class wordViewController: UIViewController, UITextFieldDelegate {
          */
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "nickNameView" {
+            if checkUserInfo {
+                self.performSegue(withIdentifier: "tabView", sender: nil)
+            } else {
+                return false
+            }
+        }
+        return true
+    }
     
     
    
@@ -66,8 +79,59 @@ class wordViewController: UIViewController, UITextFieldDelegate {
                                                        selector: #selector(textDidChange(_:)),
                                                        name: UITextField.textDidChangeNotification,
                                                        object: wordField)
-        
+        addNaviBar()
+        swipeRecognizer()
     }
+    private func addNaviBar() {
+        // safe area
+        var statusBarHeight: CGFloat = 0
+        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+
+        // navigationBar
+        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
+        naviBar.isTranslucent = false
+        naviBar.backgroundColor = .clear
+        naviBar.shadowImage = UIImage()
+        naviBar.tintColor = .black
+
+        let naviItem = UINavigationItem(title: "")
+   
+        //우선 이미지로 대체
+        let customImage = UIImage(named: "backIcon")
+        let newWidth = 13
+        let newHeight = 20
+        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        customImage?.draw(in: newImageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
+        UIGraphicsEndImageContext()
+        
+        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
+        naviBar.items = [naviItem]
+        view.addSubview(naviBar)
+    }
+    
+    @objc func didTapDoneButton() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
+    func swipeRecognizer() {
+          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+          self.view.addGestureRecognizer(swipeRight)
+      }
+      
+      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
+          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+              switch swipeGesture.direction{
+              case UISwipeGestureRecognizer.Direction.right:
+                  // 스와이프 시, 원하는 기능 구현.
+                  self.dismiss(animated: true, completion: nil)
+              default: break
+              }
+          }
+      }
+    
     @objc private func textDidChange(_ notification: Notification) {
         let maxLength = 30
             if let textField = notification.object as? UITextField {
