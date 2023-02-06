@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="DS4-NJ-Dyc">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="Ism-M4-Deg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="Ism-M4-Deg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4mB-P4-7oG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sLO-9V-27v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-KN-x5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-368.11594202898556" y="591.96428571428567"/>
+            <point key="canvasLocation" x="-1506" y="354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y99-BQ-Pkn">

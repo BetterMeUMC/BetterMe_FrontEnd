@@ -128,8 +128,6 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
             }
         }
         }
-        
-        //self.view.frame.origin.y = -100
     }
     
     @objc func keyboardWillHide() {
