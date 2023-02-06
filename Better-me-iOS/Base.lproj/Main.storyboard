@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cPM-9x-G9S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k68-Fi-OZ3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="DS4-NJ-Dyc">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="Ism-M4-Deg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" modalPresentationStyle="fullScreen" id="Ism-M4-Deg" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4mB-P4-7oG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sLO-9V-27v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbw-KN-x5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2187" y="592"/>
+            <point key="canvasLocation" x="-368.11594202898556" y="591.96428571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y99-BQ-Pkn">
@@ -35,7 +35,7 @@
                 <navigationController toolbarHidden="NO" id="4B7-ny-myh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="HomeButton" selectedImage="HomeButton.fill" id="KTr-s6-dUX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWI-iV-Xjy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -51,11 +51,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyr-Cw-Ume">
-                                <rect key="frame" x="12" y="68" width="390" height="60"/>
+                                <rect key="frame" x="12" y="104" width="390" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vll-0c-rag">
                                         <rect key="frame" x="12" y="12" width="346" height="36"/>
@@ -82,19 +82,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋은 습관 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpY-Of-xd1">
-                                <rect key="frame" x="18" y="143" width="118.5" height="22"/>
+                                <rect key="frame" x="18" y="179" width="118.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.47843137254901957" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나쁜 습관 없애기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-8T-SUh">
-                                <rect key="frame" x="18" y="424" width="119" height="22"/>
+                                <rect key="frame" x="18" y="460" width="119" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.47843137254901957" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWv-E0-y6o">
-                                <rect key="frame" x="18" y="177" width="378" height="235"/>
+                                <rect key="frame" x="18" y="213" width="378" height="235"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-iT-RTX">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="170"/>
@@ -221,7 +221,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIL-hO-jND">
-                                <rect key="frame" x="18" y="458" width="378" height="235"/>
+                                <rect key="frame" x="18" y="494" width="378" height="235"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-CZ-6nH">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="170"/>
@@ -390,11 +390,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddGoodHabitViewController" id="uS6-hi-y0C" customClass="AddGoodHabitViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T2y-uk-9Ig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="bAK-fg-MMb">
-                                <rect key="frame" x="18" y="76" width="170" height="29"/>
+                                <rect key="frame" x="18" y="112" width="170" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대표 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-uT-A5P">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="29"/>
@@ -414,7 +414,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="cv3-Ty-BtR">
-                                <rect key="frame" x="18" y="129" width="378" height="34"/>
+                                <rect key="frame" x="18" y="165" width="378" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습관명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qt-BW-jua">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="34"/>
@@ -430,13 +430,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습관 내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="das-xz-Lem">
-                                <rect key="frame" x="18" y="187" width="67.5" height="22"/>
+                                <rect key="frame" x="18" y="223" width="67.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-qk-WAj">
-                                <rect key="frame" x="18" y="221" width="378" height="300"/>
+                                <rect key="frame" x="18" y="257" width="378" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="SmO-EJ-Y4d"/>
@@ -446,13 +446,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구 초대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWD-fu-KRw">
-                                <rect key="frame" x="18" y="545" width="67.5" height="22"/>
+                                <rect key="frame" x="18" y="581" width="67.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-0i-Nf2">
-                                <rect key="frame" x="18" y="591" width="378" height="34.5"/>
+                                <rect key="frame" x="18" y="627" width="378" height="34.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="친구 초대하기" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zoi-HS-4yD">
                                         <rect key="frame" x="0.0" y="0.0" width="258" height="34.5"/>
@@ -502,7 +502,7 @@
                     <navigationItem key="navigationItem" title="좋은 습관 만들기" style="editor" id="pq6-wO-thF">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="bQS-cZ-P13">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3u5-NR-Xcu">
-                                <rect key="frame" x="339" y="12" width="55" height="32"/>
+                                <rect key="frame" x="339" y="6" width="55" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="등록" cornerStyle="capsule">
@@ -837,7 +837,7 @@
                 <navigationController id="2vo-o3-c7f" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="AwardButton" selectedImage="AwardButton.fill" id="LnD-mQ-FYb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HBM-7l-bqY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -846,14 +846,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTY-O2-O9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-918" y="354"/>
+            <point key="canvasLocation" x="901.44927536231887" y="353.57142857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HkT-Mj-ueX">
             <objects>
                 <viewController id="GrP-Sx-epD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FdV-kQ-Xf4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="o3c-Ra-Hbi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -862,7 +862,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uG-hm-9zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="354"/>
+            <point key="canvasLocation" x="1872.4637681159422" y="353.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K5I-fQ-Ex3">
@@ -870,7 +870,7 @@
                 <navigationController id="ywY-CR-tTA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="WorldButton" id="RHH-XD-bpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eR4-oP-gt1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -879,7 +879,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZW-PB-UhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-918" y="1056"/>
+            <point key="canvasLocation" x="901.44927536231887" y="1055.3571428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KA1-EF-DJK">
@@ -887,7 +887,7 @@
                 <navigationController id="POv-AM-R8S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="FriendButton" id="cqp-jY-3ef"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bex-G9-A1E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -903,11 +903,11 @@
             <objects>
                 <viewController storyboardIdentifier="RemoveBadHabitViewController" id="tFt-EZ-f2G" customClass="RemoveBadHabitViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9jJ-wW-lTP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-eU-3KW">
-                                <rect key="frame" x="18" y="76" width="170" height="29"/>
+                                <rect key="frame" x="18" y="112" width="170" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대표 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SR-uQ-M0S">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="29"/>
@@ -927,7 +927,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="mMt-hh-tKZ">
-                                <rect key="frame" x="18" y="129" width="378" height="34"/>
+                                <rect key="frame" x="18" y="165" width="378" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습관명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJm-LD-5wb">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="34"/>
@@ -943,13 +943,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습관 내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-Es-Qze">
-                                <rect key="frame" x="18" y="187" width="67.5" height="22"/>
+                                <rect key="frame" x="18" y="223" width="67.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jtC-cf-AKS">
-                                <rect key="frame" x="18" y="221" width="378" height="300"/>
+                                <rect key="frame" x="18" y="257" width="378" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="zfK-Fg-19z"/>
@@ -959,13 +959,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구 초대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyO-ig-9ru">
-                                <rect key="frame" x="18" y="545" width="67.5" height="22"/>
+                                <rect key="frame" x="18" y="581" width="67.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-C1-BAD">
-                                <rect key="frame" x="18" y="591" width="378" height="34.5"/>
+                                <rect key="frame" x="18" y="627" width="378" height="34.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="친구 초대하기" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-EP-qed">
                                         <rect key="frame" x="0.0" y="0.0" width="258" height="34.5"/>
@@ -1011,7 +1011,7 @@
                     <navigationItem key="navigationItem" title="나쁜 습관 없애기" style="editor" id="Uxd-64-NtN">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FfG-qY-zh9">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="orT-6W-Eyt">
-                                <rect key="frame" x="339" y="12" width="55" height="32"/>
+                                <rect key="frame" x="339" y="6" width="55" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="등록" cornerStyle="capsule">
@@ -1044,7 +1044,7 @@
             <objects>
                 <viewController id="Nqi-bM-7mJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hHE-Gu-fgj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cZh-3i-Mup"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1053,7 +1053,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoP-gY-6si" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="1056"/>
+            <point key="canvasLocation" x="1872.4637681159422" y="1055.3571428571429"/>
         </scene>
         <!--좋은 습관 만들기-->
         <scene sceneID="btS-4h-SSP">
@@ -1377,14 +1377,14 @@
             <objects>
                 <viewController id="39d-Az-jfR" customClass="MyPageViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNP-9I-cxN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image 6" translatesAutoresizingMaskIntoConstraints="NO" id="Eec-Fu-bzQ">
-                                <rect key="frame" x="18" y="81" width="166" height="28"/>
+                                <rect key="frame" x="18" y="117" width="166" height="28"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdB-gP-Fzk">
-                                <rect key="frame" x="18" y="134" width="378" height="120"/>
+                                <rect key="frame" x="18" y="170" width="378" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-jz-Uj7">
                                         <rect key="frame" x="15" y="20" width="79" height="79"/>
@@ -2084,7 +2084,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="LoginBtn:" destination="cPM-9x-G9S" eventType="touchUpInside" id="iNw-2S-ut9"/>
-                                    <segue destination="94b-2A-IG4" kind="show" identifier="loginView" id="RUC-vP-UrK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b92-zP-Hf8">
@@ -2103,7 +2102,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="JoinBtn:" destination="cPM-9x-G9S" eventType="touchUpInside" id="Se7-5a-B2N"/>
-                                    <segue destination="ZkJ-8q-1Fb" kind="show" identifier="joinView" id="uCZ-79-Dau"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-nI-GlH">
@@ -2168,18 +2166,19 @@
                             <constraint firstItem="eOc-ck-oL8" firstAttribute="centerX" secondItem="9Ou-hP-Eun" secondAttribute="centerX" id="zze-TG-1OL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6Dl-Qd-7Gw"/>
                     <connections>
                         <outlet property="joinBtn" destination="b92-zP-Hf8" id="gPs-b1-ykt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxw-5a-lTG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6517" y="544"/>
+            <point key="canvasLocation" x="-4697.1014492753629" y="543.75"/>
         </scene>
         <!--Title-->
         <scene sceneID="9vr-Cz-V04">
             <objects>
-                <viewController storyboardIdentifier="LoginFirstViewController" modalPresentationStyle="fullScreen" id="94b-2A-IG4" customClass="LoginFirstViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginFirstViewController" id="94b-2A-IG4" customClass="LoginFirstViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7b2-kz-ESv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2230,7 +2229,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="zjk-CC-cRO"/>
-                                    <segue destination="Ism-M4-Deg" kind="show" identifier="tabBar" id="ymj-od-7BK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-PX-9hB">
@@ -2245,7 +2243,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="passwordFindBtn:" destination="94b-2A-IG4" eventType="touchUpInside" id="Hk7-1a-1va"/>
-                                    <segue destination="mDY-f1-mgV" kind="show" identifier="passwordFindvView" id="tJm-Vi-ks5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호와 비밀번호 재입력이 일치하지 않습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN8-vo-k2E">
@@ -2294,7 +2291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw0-It-L36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5611" y="119"/>
+            <point key="canvasLocation" x="-3791.3043478260875" y="118.52678571428571"/>
         </scene>
         <!--Password Find View Controller-->
         <scene sceneID="x2A-5s-R6i">
@@ -2356,7 +2353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aU-mp-7ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4712" y="-251"/>
+            <point key="canvasLocation" x="-3059" y="119"/>
         </scene>
         <!--Join View Controller-->
         <scene sceneID="pud-lN-PbH">
@@ -2404,7 +2401,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="okBtn_next:" destination="ZkJ-8q-1Fb" eventType="touchUpInside" id="R4d-hz-m28"/>
-                                    <segue destination="Yc4-VZ-ikH" kind="show" identifier="nickNameView" id="CTp-sS-kTe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# 숫자/영문자 혼합 6자 이상 20자 이내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyQ-MV-yyc">
@@ -2460,7 +2456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE7-sc-j10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5611" y="1174"/>
+            <point key="canvasLocation" x="-3791.3043478260875" y="1173.2142857142856"/>
         </scene>
         <!--Nickname View Controller-->
         <scene sceneID="wRx-P4-Exl">
@@ -2499,7 +2495,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="NextViewOkBtn:" destination="Yc4-VZ-ikH" eventType="touchUpInside" id="tD2-lU-pLB"/>
-                                    <segue destination="IMP-fz-JIl" kind="show" identifier="promiseView" id="Dae-YQ-aze"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDu-0F-Sx2">
@@ -2531,7 +2526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaj-y4-rIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4842" y="1174"/>
+            <point key="canvasLocation" x="-3059" y="1173"/>
         </scene>
         <!--Word View Controller-->
         <scene sceneID="Fqx-Mb-Jye">
@@ -2570,7 +2565,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextViewBtn:" destination="IMP-fz-JIl" eventType="touchUpInside" id="iNk-3d-ih4"/>
-                                    <segue destination="Ism-M4-Deg" kind="show" identifier="tabView" id="sPj-xd-igP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한줄다짐을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-2K-vxb">
@@ -2603,12 +2597,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kT-c1-PnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3950" y="1174"/>
+            <point key="canvasLocation" x="-2320" y="1173"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z6c-Ps-wEj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="k68-Fi-OZ3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Inw-oJ-Gvj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cPM-9x-G9S" kind="relationship" relationship="rootViewController" id="D2W-ya-3V1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9d-uc-uFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5607.2463768115949" y="543.75"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sPj-xd-igP"/>
-    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="AwardButton" width="22" height="28"/>
         <image name="AwardButton.fill" width="22" height="28"/>

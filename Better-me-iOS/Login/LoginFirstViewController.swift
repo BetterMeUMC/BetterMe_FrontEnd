@@ -45,6 +45,8 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginBtn: UIButton!
     
     var loginCheck : Bool = false
+    var emailCk : Bool = false
+    var pwdCk : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,8 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         
         //back title 지우기
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
         
         emailField.borderAttribute()
         passwordField.borderAttribute()
@@ -75,8 +79,7 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
                                                        name: UITextField.textDidChangeNotification,
                                                        object: passwordField)
  
-        addNaviBar()
-        swipeRecognizer()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,77 +104,10 @@ class LoginFirstViewController: UIViewController, UITextFieldDelegate {
         PostDataManager().PostLogin(email: email, password: password, viewController: self)
     }
     
-    
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "tabBar" {
-            if loginCheck {
-                self.performSegue(withIdentifier: "tabBar", sender: nil)
-            } else {
-                return false
-            }
-        }
-        return true
-    }
-    
     @IBAction func passwordFindBtn(_ sender: Any) {
-        performSegue(withIdentifier: "passwordFindvView", sender: sender)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "passwordFindViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
-
-    
-    private func addNaviBar() {
-        // safe area
-        var statusBarHeight: CGFloat = 0
-        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
-
-        // navigationBar
-        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
-        naviBar.isTranslucent = false
-        naviBar.backgroundColor = .clear
-        naviBar.shadowImage = UIImage()
-        naviBar.tintColor = .black
-
-        let naviItem = UINavigationItem(title: "")
-   
-        //우선 이미지로 대체
-        let customImage = UIImage(named: "backIcon")
-        let newWidth = 13
-        let newHeight = 20
-        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        customImage?.draw(in: newImageRect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
-        UIGraphicsEndImageContext()
-        
-        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
-        naviBar.items = [naviItem]
-        view.addSubview(naviBar)
-    }
-    
-    @objc func didTapDoneButton() {
-        self.presentingViewController?.dismiss(animated: true)
-    }
-    func swipeRecognizer() {
-          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
-          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-          self.view.addGestureRecognizer(swipeRight)
-          
-      }
-      
-      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
-          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-              switch swipeGesture.direction{
-              case UISwipeGestureRecognizer.Direction.right:
-                  // 스와이프 시, 원하는 기능 구현.
-                  self.dismiss(animated: true, completion: nil)
-              default: break
-              }
-          }
-      }
-
-    
-    var emailCk : Bool = false
-    var pwdCk : Bool = true
     
     @objc private func textDidChange(_ notification: Notification) {
         let maxLength = 30

@@ -17,6 +17,8 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
         //행간
         let attrString = NSMutableAttributedString(string: comment.text!)
         let paragraphStyle = NSMutableParagraphStyle()
@@ -31,9 +33,7 @@ class passwordFindViewController: UIViewController, UITextFieldDelegate {
         
         emailField.delegate = self
         self.emailField.addTarget(self, action: #selector(self.TextFieldChange(_:)), for: .editingChanged)
-    
-        addNaviBar()
-        swipeRecognizer()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

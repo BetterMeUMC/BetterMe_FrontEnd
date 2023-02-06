@@ -32,6 +32,8 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
         self.hideKeyboardWhenTappedAround()
 
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
         
         nickName.delegate = self
    
@@ -39,8 +41,7 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
                                                        selector: #selector(textDidChange(_:)),
                                                        name: UITextField.textDidChangeNotification,
                                                        object: nickName)
-        addNaviBar()
-        swipeRecognizer()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +49,7 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
         //noti등록
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -60,58 +62,10 @@ class nicknameViewController: UIViewController, UITextFieldDelegate {
     @IBAction func NextViewOkBtn(_ sender: Any) {
         let user = UserInfo.shared
         user.nickName = nickName.text
-        self.performSegue(withIdentifier: "promiseView", sender: nil)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "wordViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     
-    private func addNaviBar() {
-        // safe area
-        var statusBarHeight: CGFloat = 0
-        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
-
-        // navigationBar
-        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
-        naviBar.isTranslucent = false
-        naviBar.backgroundColor = .clear
-        naviBar.shadowImage = UIImage()
-        naviBar.tintColor = .black
-
-        let naviItem = UINavigationItem(title: "")
-   
-        //우선 이미지로 대체
-        let customImage = UIImage(named: "backIcon")
-        let newWidth = 13
-        let newHeight = 20
-        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        customImage?.draw(in: newImageRect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
-        UIGraphicsEndImageContext()
-        
-        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
-        naviBar.items = [naviItem]
-        view.addSubview(naviBar)
-    }
-    
-    @objc func didTapDoneButton() {
-        self.presentingViewController?.dismiss(animated: true)
-    }
-    
-    func swipeRecognizer() {
-          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
-          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-          self.view.addGestureRecognizer(swipeRight)
-      }
-      
-      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
-          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-              switch swipeGesture.direction{
-              case UISwipeGestureRecognizer.Direction.right:
-                  // 스와이프 시, 원하는 기능 구현.
-                  self.dismiss(animated: true, completion: nil)
-              default: break
-              }
-          }
-      }
     
     @objc private func textDidChange(_ notification: Notification) {
         let maxLength = 20

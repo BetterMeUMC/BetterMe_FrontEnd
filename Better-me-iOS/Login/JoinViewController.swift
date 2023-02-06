@@ -34,6 +34,8 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         
         //back 지움
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
    
         self.hideKeyboardWhenTappedAround()
         
@@ -80,10 +82,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
                                                        selector: #selector(PasswordTextDidChange(_:)),
                                                        name: UITextField.textDidChangeNotification,
                                                        object: passwordCheckField)
-        
-        addNaviBar()
-        swipeRecognizer()
-        
+        self.navigationController?.isNavigationBarHidden = false
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -97,6 +96,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         //noti해제
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func okBtn_next(_ sender: Any) {
@@ -117,7 +117,8 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             okBtn.isEnabled = true
             okBtn.configuration?.background.backgroundColor = .BtnColor
             okBtn.configuration?.attributedTitle?.foregroundColor = .WhiteTextColor
-            self.performSegue(withIdentifier: "nickNameView", sender: nil)
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "nicknameViewController")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
     }
         if serverCheck {
             print("서버 오류입니다.")
@@ -151,67 +152,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             okBtn.isEnabled = false
         }
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "nickNameView" {
-            if !checkDuplicate {
-                self.performSegue(withIdentifier: "nickNameView", sender: nil)
-            } else {
-                return false
-            }
-        }
-        return true
-    }
-    
-    private func addNaviBar() {
-        // safe area
-        var statusBarHeight: CGFloat = 0
-        statusBarHeight = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
-
-        // navigationBar
-        let naviBar = UINavigationBar(frame: .init(x: 0, y: statusBarHeight, width: view.frame.width, height: statusBarHeight))
-        naviBar.isTranslucent = false
-        naviBar.backgroundColor = .clear
-        naviBar.shadowImage = UIImage()
-        naviBar.tintColor = .black
-
-        let naviItem = UINavigationItem(title: "")
-   
-        //우선 이미지로 대체
-        let customImage = UIImage(named: "backIcon")
-        let newWidth = 13
-        let newHeight = 20
-        let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        customImage?.draw(in: newImageRect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(.alwaysOriginal)
-        UIGraphicsEndImageContext()
-        
-        naviItem.leftBarButtonItem = UIBarButtonItem(image: newImage, style: UIBarButtonItem.Style.plain, target: self, action: #selector(didTapDoneButton))
-        naviBar.items = [naviItem]
-        view.addSubview(naviBar)
-    }
-    
-    @objc func didTapDoneButton() {
-        self.presentingViewController?.dismiss(animated: true)
-    }
-    
-    func swipeRecognizer() {
-          let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
-          swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-          self.view.addGestureRecognizer(swipeRight)
-      }
-      
-      @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
-          if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-              switch swipeGesture.direction{
-              case UISwipeGestureRecognizer.Direction.right:
-                  // 스와이프 시, 원하는 기능 구현.
-                  self.dismiss(animated: true, completion: nil)
-              default: break
-              }
-          }
-      }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == passwordField {

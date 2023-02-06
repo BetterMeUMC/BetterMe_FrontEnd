@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 struct PostDataManager {
-    func PostUserData(email: String, password: String, nickName: String, promise: String) {
+    func PostUserData(email: String, password: String, nickName: String, promise: String, viewController: wordViewController) {
         let url = "http://54.180.13.219:3000/app/auth/register"
     
         let params = ["email": email, "password": password, "nickName": nickName, "promise": promise] as Dictionary
@@ -24,10 +24,16 @@ struct PostDataManager {
                        switch response.result {
                        case .success(let response):
                            print(response.message)
+                           let pushVC = viewController.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
+                           viewController.navigationController?.pushViewController(pushVC!, animated: true)
                            
                        case .failure(let error):
                            print("서버오류")
                            print(error)
+                           let alert = UIAlertController(title: "알림", message: "서버가 불안정합니다. \n잠시후 시도해주세요.", preferredStyle: .alert)
+                           alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
+                           })
+                           viewController.present(alert, animated: true, completion: nil)
                         
                        }
                        
@@ -52,7 +58,10 @@ struct PostDataManager {
                     if let jwt = response.result?.jwt {
                         viewController.loginCheck = true
                         viewController.performSegue(withIdentifier: "tabBar", sender: self)
-          
+                        let pushVC = viewController.storyboard?.instantiateViewController(withIdentifier: "TabBar")
+                        viewController.navigationController?.pushViewController(pushVC!, animated: true)
+                        
+                        UserDefaults.standard.setValue(jwt, forKey: "token")
                     } else {
                         print("토큰 없음")
                         viewController.alertLabel.isHidden = false
