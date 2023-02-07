@@ -19,8 +19,8 @@ class BadHabitDetailViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var inviteTextField: UITextField!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var editButton: UIBarButtonItem!
+    
+    @IBOutlet weak var editButton: UIButton!
     
     weak var delegate: BadHabitDetailViewDelegate?
     var habit: Habit?
@@ -35,7 +35,6 @@ class BadHabitDetailViewController: UIViewController {
         self.configureTitleTextField()
         self.configureContentsTextView()
         self.configureInviteTextField()
-        self.configureDeleteButton()
         self.emojiTextField.delegate = self
         self.navigationController?.navigationBar.tintColor = .black
         NotificationCenter.default.addObserver(
@@ -89,19 +88,6 @@ class BadHabitDetailViewController: UIViewController {
         self.inviteTextField.layer.cornerRadius = 5.0
     }
     
-    private func configureInputField() {
-        self.titleTextField.addTarget(self, action: #selector(titleTextFieldDidChange(_:)), for: .editingChanged)
-    }
-    
-    private func configureDeleteButton() {
-        self.deleteButton.tintColor = .black
-        self.deleteButton.layer.addBorder([.top], color: UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1.0), width: 1.0)
-    }
-    
-
-    @objc private func titleTextFieldDidChange(_ textField: UITextField) {
-        self.validateInputField()
-    }
     
     @objc private func textDidChange(_ notification: Notification) {
         if let textField = notification.object as? UITextField {
@@ -124,42 +110,21 @@ class BadHabitDetailViewController: UIViewController {
         self.view.endEditing(true)
         self.contentsTextView.resignFirstResponder()
     }
-    
-    private func validateInputField() {
-        self.editButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.contentsTextView.text?.isEmpty ?? true) && !(self.emojiTextField.text?.isEmpty ?? true)
+    @IBAction func tapButton(_ sender: UIButton) {
+        self.editButton.setImage(UIImage(named: "EditButton.fill"), for: .normal)
+        guard let editViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController else { return }
+        editViewController.definesPresentationContext = true
+        editViewController.modalPresentationStyle = .overFullScreen
+        editViewController.hidesBottomBarWhenPushed = true
+        editViewController.habitTitle = self.titleTextField.text
+        editViewController.delegate = self
+        navigationController?.present(editViewController, animated: true, completion: nil)
     }
-    
-
-    @IBAction func tapDeleteButton(_ sender: UIButton) {
-        guard let alertViewController = self.storyboard?.instantiateViewController(withIdentifier: "AlertViewController") as? AlertViewController else { return }
-        alertViewController.alertName = "앗!"
-        alertViewController.habitName = self.titleTextField.text ?? ""
-        alertViewController.contents = "습관을 삭제하시겠습니까?"
-        alertViewController.delegate = self
-        alertViewController.definesPresentationContext = true
-        alertViewController.modalPresentationStyle = .overCurrentContext
-        navigationController?.present(alertViewController, animated: false, completion: nil)
-    }
-    
-    
-    @IBAction func tapEditButton(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
-        guard let title = self.titleTextField.text else { return }
-        guard let emoji = self.emojiTextField.text else { return }
-        guard let contents = self.contentsTextView.text else { return }
-        guard let hNum = self.hNum else { return }
-        guard let isCheck = self.isCheck else { return }
-        guard let date = self.date else { return }
-        let habit = Habit(title: title, emoji: emoji, contents: contents, hNum: hNum, isCheck: isCheck, date: date)
-        self.delegate?.didBadSelectEdit(indexPath: indexPath, habit: habit)
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     
     @IBAction func tapSearchButton(_ sender: UIButton) {
         guard let modalViewController = self.storyboard?.instantiateViewController(identifier: "SearchFriendViewController") as? SearchFriendViewController else { return }
         modalViewController.definesPresentationContext = true
-        modalViewController.modalPresentationStyle = .overCurrentContext
+        modalViewController.modalPresentationStyle = .overFullScreen
         modalViewController.inviteText = self.inviteTextField.text ?? ""
         navigationController?.present(modalViewController, animated: true, completion: nil)
     }
@@ -180,9 +145,6 @@ extension BadHabitDetailViewController: UITextViewDelegate {
             self.contentsTextView.textColor = UIColor.black
         }
     }
-    func textViewDidChange(_ textView: UITextView) {
-        self.validateInputField()
-    }
 }
 extension BadHabitDetailViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -199,15 +161,45 @@ extension BadHabitDetailViewController: UITextFieldDelegate {
             }
         }
     }
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        self.validateInputField()
-    }
 }
 
 extension BadHabitDetailViewController: AlertViewControllerDelegate {
-    func didSelectDelete(isDelete: Bool) {
+    func didSelectDelete() {
         guard let indexPath = self.indexPath else { return }
         self.delegate?.didBadSelectDelete(indexPath: indexPath)
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+
+extension BadHabitDetailViewController: EditViewDelegate {
+    func didCheckDelete() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+            guard let alertViewController = self.storyboard?.instantiateViewController(withIdentifier: "AlertViewController") as? AlertViewController else { return }
+            alertViewController.alertName = "앗!"
+            alertViewController.habitName = self.titleTextField.text ?? ""
+            alertViewController.contents = "습관을 삭제하시겠습니까?"
+            alertViewController.delegate = self
+            alertViewController.definesPresentationContext = true
+            alertViewController.modalPresentationStyle = .overFullScreen
+            alertViewController.modalTransitionStyle = .crossDissolve
+            self.present(alertViewController, animated: true, completion: nil)
+        }
+        self.editButton.setImage(UIImage(named: "EditButton"), for: .normal)
+    }
+    func didCancel() {
+        self.editButton.setImage(UIImage(named: "EditButton"), for: .normal)
+    }
+    func didCheckEdit() {
+        guard let indexPath = self.indexPath else { return }
+        guard let title = self.titleTextField.text else { return }
+        guard let emoji = self.emojiTextField.text else { return }
+        guard let contents = self.contentsTextView.text else { return }
+        guard let hNum = self.hNum else { return }
+        guard let isCheck = self.isCheck else { return }
+        guard let date = self.date else { return }
+        let habit = Habit(title: title, emoji: emoji, contents: contents, hNum: hNum, isCheck: isCheck, date: date)
+        self.delegate?.didBadSelectEdit(indexPath: indexPath, habit: habit)
         self.navigationController?.popViewController(animated: true)
     }
 }
