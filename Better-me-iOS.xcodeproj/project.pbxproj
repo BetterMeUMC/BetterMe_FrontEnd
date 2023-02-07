@@ -53,9 +53,11 @@
 		BEF940BE2972827900D0F1FD /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BD2972827900D0F1FD /* Habit.swift */; };
 		BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */; };
 		BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */; };
+		F002024CD56D8C47A63F8AD3 /* Pods_Better_me_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EDE1216A9BDD8CA29343AD /* Pods_Better_me_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A98CE0DFAA3D5D1912B62E /* Pods-Better-me-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.release.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		1A24292B299273B7008AE8FC /* LoginFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFirstViewController.swift; sourceTree = "<group>"; };
 		1A24292C299273B7008AE8FC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1A24292D299273B7008AE8FC /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
 		28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlertViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		B9EEABAD453CC4665332902D /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		BEF940BD2972827900D0F1FD /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitCell.swift; sourceTree = "<group>"; };
+		F4EDE1216A9BDD8CA29343AD /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F002024CD56D8C47A63F8AD3 /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +176,31 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		6F744D01AE050665490FB17A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9EEABAD453CC4665332902D /* Pods-Better-me-iOS.debug.xcconfig */,
+				12A98CE0DFAA3D5D1912B62E /* Pods-Better-me-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0CE319F104A7A337C724E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4EDE1216A9BDD8CA29343AD /* Pods_Better_me_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BECC4B2C296C3AB60037807F = {
 			isa = PBXGroup;
 			children = (
 				BECC4B37296C3AB60037807F /* Better-me-iOS */,
 				BECC4B36296C3AB60037807F /* Products */,
+				6F744D01AE050665490FB17A /* Pods */,
+				B0CE319F104A7A337C724E27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BECC4B49296C3AB80037807F /* Build configuration list for PBXNativeTarget "Better-me-iOS" */;
 			buildPhases = (
+				3EA9CC6A3734779734BAAA61 /* [CP] Check Pods Manifest.lock */,
 				BECC4B31296C3AB60037807F /* Sources */,
 				BECC4B32296C3AB60037807F /* Frameworks */,
 				BECC4B33296C3AB60037807F /* Resources */,
+				6AFA08433691EB761BF7CF43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +310,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EA9CC6A3734779734BAAA61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Better-me-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AFA08433691EB761BF7CF43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BECC4B31296C3AB60037807F /* Sources */ = {
@@ -473,6 +542,7 @@
 		};
 		BECC4B4A296C3AB80037807F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9EEABAD453CC4665332902D /* Pods-Better-me-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -502,6 +572,7 @@
 		};
 		BECC4B4B296C3AB80037807F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A98CE0DFAA3D5D1912B62E /* Pods-Better-me-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
