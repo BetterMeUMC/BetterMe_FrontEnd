@@ -11,10 +11,7 @@ class BadHabitTipsViewController: UIViewController {
 
 
     //MARK: - Properties
-    private let tipsTitle = ["Tip 1 : 보이지 않게 만들어라",
-                             "Tip 2 : 매력적이지 않게 만들어라",
-                             "Tip 3 : 하기 어렵게 만들어라",
-                             "Tip 4 : 불만족스러운 것으로 만들어라"]
+    let tipsDB = TipsData()
 
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -34,23 +31,42 @@ class BadHabitTipsViewController: UIViewController {
 }
 extension BadHabitTipsViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tipsTitle.count
+        return Constants.tipsTitle.count
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = BadTipsHeader()
-        return header
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
-    }
+
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return UITableView.automaticDimension
+//        return CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+                return CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath) as? TipsCell else { return UITableViewCell() }
             
-        cell.tipsListTitle.text = tipsTitle[indexPath.row]
+        cell.setUI(with: indexPath.row)
             return cell
 
     }
+
+    
+    
+ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.3) {
+            tableView.performBatchUpdates(nil)
+        }
+    }
+ func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+       if let cell = tableView.cellForRow(at: indexPath) as? TipsCell {
+           cell.hideDetailView()
+       }
+   }
+}
+enum Constants {
+    static let tipsTitle = ["Tip 1 : 보이지 않게 만들어라",
+                            "Tip 2 : 매력적이지 않게 만들어라",
+                            "Tip 3 : 하기 어렵게 만들어라",
+                            "Tip 4 : 불만족스러운 것으로 만들어라"]
 }
