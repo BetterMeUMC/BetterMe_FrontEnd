@@ -19,6 +19,7 @@
 		BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */; };
 		BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */; };
 		BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7F1296ED62400C236F8 /* Friend.swift */; };
+		BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82D332298D191A003EFE44 /* EditViewController.swift */; };
 		BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B38296C3AB60037807F /* AppDelegate.swift */; };
 		BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3A296C3AB60037807F /* SceneDelegate.swift */; };
 		BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3C296C3AB60037807F /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 		BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
 		BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		BE6AF7F1296ED62400C236F8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		BE82D332298D191A003EFE44 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		BECC4B35296C3AB60037807F /* Better-me-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better-me-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECC4B38296C3AB60037807F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECC4B3A296C3AB60037807F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				BEF940BD2972827900D0F1FD /* Habit.swift */,
 				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
 				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
+				BE82D332298D191A003EFE44 /* EditViewController.swift */,
 				280F5E542983B23A000A30B3 /* MyPage */,
 			);
 			path = "Better-me-iOS";
@@ -220,6 +223,7 @@
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
+				BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */,
 				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
