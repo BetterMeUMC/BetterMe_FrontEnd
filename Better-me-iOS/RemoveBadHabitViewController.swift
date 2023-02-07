@@ -113,12 +113,10 @@ class RemoveBadHabitViewController: UIViewController {
     @IBAction func tapSearchButton(_ sender: UIButton) {
         guard let modalViewController = self.storyboard?.instantiateViewController(identifier: "SearchFriendViewController") as? SearchFriendViewController else { return }
         modalViewController.definesPresentationContext = true
-        modalViewController.modalPresentationStyle = .overCurrentContext
+        modalViewController.modalPresentationStyle = .overFullScreen
         modalViewController.inviteText = self.inviteTextField.text ?? ""
         navigationController?.present(modalViewController, animated: true, completion: nil)
-        
     }
-    
     @IBAction func tapConfirmButton(_ sender: UIBarButtonItem) {
         guard let title = self.titleTextField.text else { return }
         guard let contents = self.contentsTextView.text else { return }
