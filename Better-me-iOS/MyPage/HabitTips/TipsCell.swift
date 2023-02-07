@@ -16,7 +16,7 @@ class TipsCell: UITableViewCell {
     @IBOutlet weak var toggleBtn: UIButton!
     @IBAction func toggleBtn(_ sender: Any) {
         isClicked = !isClicked
-        settingData(isClicked)
+        TVC.settingData(isClicked,cell: self)
         
     }
 
@@ -25,8 +25,6 @@ class TipsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        settingData(false)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,25 +33,7 @@ class TipsCell: UITableViewCell {
         
     }
     
-    func settingData(_ isClicked : Bool)
-    
-    {
-        if isClicked == true
-        {
-
-            self.tipsContent.isHidden = false
-            self.tipsListTitle.textColor = .black
-            self.toggleBtn.tintColor = .black
-
-        }
-        else
-        {
-            self.tipsContent.isHidden = true
-            self.tipsListTitle.textColor = .gray
-            self.toggleBtn.tintColor = .gray
-
-        }
-    }
+   
 
 }
 

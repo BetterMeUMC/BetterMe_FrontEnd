@@ -20,7 +20,7 @@ class GoodHabitTipsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarUI()
-
+        
     }
     //MARK: - Helpers
     
@@ -44,19 +44,41 @@ extension GoodHabitTipsViewController : UITableViewDelegate,UITableViewDataSourc
         return 200
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
+        CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
     }
 
-        
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath) as? TipsCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         cell.tipsListTitle.text = tipsTitle[indexPath.row]
         cell.tipsContent.text = tipsDB.getTips(index: indexPath.row)
         
+        
         return cell
 
+    }
+    func settingData(_ isClicked : Bool, cell: TipsCell )
+    
+    {
+        if isClicked == true
+        {
+            cell.tipsContent.isHidden = false
+            cell.tipsListTitle.textColor = .black
+            cell.toggleBtn.tintColor = .black
+            cell.tipsContentHeightConstraint.constant = 280
+            tableView.reloadData()
+        }
+        else
+        {
+
+            cell.tipsContent.isHidden = true
+            cell.tipsListTitle.textColor = .gray
+            cell.toggleBtn.tintColor = .gray
+            cell.tipsContentHeightConstraint.constant = 0
+            tableView.reloadData()
+        }
+        
     }
 }
 
