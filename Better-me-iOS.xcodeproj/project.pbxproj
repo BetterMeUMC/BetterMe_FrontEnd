@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A242939299273B7008AE8FC /* LoginFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24292B299273B7008AE8FC /* LoginFirstViewController.swift */; };
+		1A24293A299273B7008AE8FC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24292C299273B7008AE8FC /* UIColorExtension.swift */; };
+		1A24293B299273B7008AE8FC /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24292D299273B7008AE8FC /* JoinViewController.swift */; };
+		1A24293C299273B7008AE8FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24292E299273B7008AE8FC /* MainViewController.swift */; };
+		1A24293D299273B7008AE8FC /* passwordFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24292F299273B7008AE8FC /* passwordFindViewController.swift */; };
+		1A24293E299273B7008AE8FC /* nicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242930299273B7008AE8FC /* nicknameViewController.swift */; };
+		1A24293F299273B7008AE8FC /* wordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242931299273B7008AE8FC /* wordViewController.swift */; };
+		1A242940299273B7008AE8FC /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242933299273B7008AE8FC /* ResponseModel.swift */; };
+		1A242941299273B7008AE8FC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242934299273B7008AE8FC /* LoginModel.swift */; };
+		1A242942299273B7008AE8FC /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242935299273B7008AE8FC /* PostDataManager.swift */; };
+		1A242943299273B7008AE8FC /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242936299273B7008AE8FC /* UserDataModel.swift */; };
+		1A242944299273B7008AE8FC /* GetUserIdxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242937299273B7008AE8FC /* GetUserIdxModel.swift */; };
+		1A242945299273B7008AE8FC /* GetMsgDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A242938299273B7008AE8FC /* GetMsgDataManager.swift */; };
 		280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */; };
 		280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E562983B25E000A30B3 /* MyPageViewController.swift */; };
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
@@ -43,6 +56,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A24292B299273B7008AE8FC /* LoginFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFirstViewController.swift; sourceTree = "<group>"; };
+		1A24292C299273B7008AE8FC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1A24292D299273B7008AE8FC /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		1A24292E299273B7008AE8FC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1A24292F299273B7008AE8FC /* passwordFindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passwordFindViewController.swift; sourceTree = "<group>"; };
+		1A242930299273B7008AE8FC /* nicknameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nicknameViewController.swift; sourceTree = "<group>"; };
+		1A242931299273B7008AE8FC /* wordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordViewController.swift; sourceTree = "<group>"; };
+		1A242933299273B7008AE8FC /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		1A242934299273B7008AE8FC /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1A242935299273B7008AE8FC /* PostDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
+		1A242936299273B7008AE8FC /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		1A242937299273B7008AE8FC /* GetUserIdxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserIdxModel.swift; sourceTree = "<group>"; };
+		1A242938299273B7008AE8FC /* GetMsgDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMsgDataManager.swift; sourceTree = "<group>"; };
 		280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableHeaderView.swift; sourceTree = "<group>"; };
 		280F5E562983B25E000A30B3 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
@@ -94,6 +120,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A24292A299273B7008AE8FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1A24292B299273B7008AE8FC /* LoginFirstViewController.swift */,
+				1A24292C299273B7008AE8FC /* UIColorExtension.swift */,
+				1A24292D299273B7008AE8FC /* JoinViewController.swift */,
+				1A24292E299273B7008AE8FC /* MainViewController.swift */,
+				1A24292F299273B7008AE8FC /* passwordFindViewController.swift */,
+				1A242930299273B7008AE8FC /* nicknameViewController.swift */,
+				1A242931299273B7008AE8FC /* wordViewController.swift */,
+				1A242932299273B7008AE8FC /* DataModel */,
+			);
+			name = Login;
+			path = "../../BetterMeClone/BetterMe_FrontEnd 복사본/Better-me-iOS/Login";
+			sourceTree = "<group>";
+		};
+		1A242932299273B7008AE8FC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A242933299273B7008AE8FC /* ResponseModel.swift */,
+				1A242934299273B7008AE8FC /* LoginModel.swift */,
+				1A242935299273B7008AE8FC /* PostDataManager.swift */,
+				1A242936299273B7008AE8FC /* UserDataModel.swift */,
+				1A242937299273B7008AE8FC /* GetUserIdxModel.swift */,
+				1A242938299273B7008AE8FC /* GetMsgDataManager.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		280F5E542983B23A000A30B3 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +190,7 @@
 		BECC4B37296C3AB60037807F /* Better-me-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1A24292A299273B7008AE8FC /* Login */,
 				28EFD490298A9A930092E210 /* Better-me-iOS.entitlements */,
 				BECC4B38296C3AB60037807F /* AppDelegate.swift */,
 				BECC4B3A296C3AB60037807F /* SceneDelegate.swift */,
@@ -234,19 +290,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
+				1A242945299273B7008AE8FC /* GetMsgDataManager.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE250298B83A700176731 /* GoodTipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
+				1A24293C299273B7008AE8FC /* MainViewController.swift in Sources */,
+				1A24293E299273B7008AE8FC /* nicknameViewController.swift in Sources */,
+				1A242939299273B7008AE8FC /* LoginFirstViewController.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
+				1A242944299273B7008AE8FC /* GetUserIdxModel.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */,
+				1A24293A299273B7008AE8FC /* UIColorExtension.swift in Sources */,
+				1A24293F299273B7008AE8FC /* wordViewController.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
+				1A24293B299273B7008AE8FC /* JoinViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
+				1A242940299273B7008AE8FC /* ResponseModel.swift in Sources */,
+				1A242942299273B7008AE8FC /* PostDataManager.swift in Sources */,
+				1A24293D299273B7008AE8FC /* passwordFindViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */,
+				1A242943299273B7008AE8FC /* UserDataModel.swift in Sources */,
 				28EFD48F298A79EF0092E210 /* GoodHabitTipsViewController.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
@@ -259,6 +327,7 @@
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
+				1A242941299273B7008AE8FC /* LoginModel.swift in Sources */,
 				BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
 				28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */,
