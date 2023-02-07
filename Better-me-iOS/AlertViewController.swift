@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AlertViewControllerDelegate: AnyObject {
-    func didSelectDelete(isDelete: Bool)
+    func didSelectDelete()
 }
 
 class AlertViewController: UIViewController{
@@ -19,7 +19,6 @@ class AlertViewController: UIViewController{
     @IBOutlet weak var contentsLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
-    
     weak var delegate: AlertViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -58,13 +57,11 @@ class AlertViewController: UIViewController{
     }
     
     @IBAction func tapCancelButton(_ sender: UIButton) {
-        self.dismiss(animated: false)
+        self.dismiss(animated: true)
     }
     
     @IBAction func tapConfirmButton(_ sender: UIButton) {
-        self.delegate?.didSelectDelete(isDelete: true)
-        self.dismiss(animated: false)
+        self.delegate?.didSelectDelete()
+        self.dismiss(animated: true)
     }
-    
-    
 }
