@@ -1,0 +1,10 @@
+{
+  "aps": {
+    "alert" : {
+         "title" : "습관체크 알림",
+         "body" : "비타민C 먹기 시간입니다!"
+      },
+    "sound": "default"
+  },
+  "link_url": "https://www.lipsum.com/"
+}

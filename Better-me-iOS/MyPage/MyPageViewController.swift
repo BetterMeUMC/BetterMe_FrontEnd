@@ -23,10 +23,8 @@ class MyPageViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var tapView: UIView!
-    
     let tableView =  UITableView(frame: .zero, style: .grouped)
-    let myPageMenu = ["비밀번호 변경", "이용 가이드","자주 묻는 질문","1:1 문의","푸시알림 설정"]
+    let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -64,12 +62,29 @@ class MyPageViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(MyPageCell.self, forCellReuseIdentifier: cellID)
         
-        NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo:    profileView.bottomAnchor, constant: 28),
+        NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 28),
                                      tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
                                      tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-        
     }
+    
+    @objc func btn1Clicked(_ sender: UIButton) {
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "GoodHabitTipsViewController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
+    @objc func logOutButtonClicked(_ sender: UIButton) {
+        let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(yes)
+        alert.addAction(no)
+        
+            self.present(alert, animated: false)
+    
+     }
 
 }
 
@@ -91,20 +106,42 @@ extension MyPageViewController: UITableViewDataSource {
 }
 
 extension MyPageViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = HeaderView()
-        
+        let header = MyPageTableHeaderView()
+        header.button1.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
         return header
     }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = MyPageTableFooterView()
+        footer.button.addTarget(self, action: #selector(logOutButtonClicked), for: .touchUpInside)
+        return footer
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 176
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
+            
         case 0:
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PWEditController"){
-            self.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
+        }
+            
+        case 1:
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "FeedBackController"){
+                self.navigationController?.pushViewController(controller, animated: true)
+        }
+    
+        case 2:
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PushAlertViewController"){
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+        case 3:
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "WithdrawalViewController"){
+                self.navigationController?.pushViewController(controller, animated: true)
         }
             
         default:
@@ -121,3 +158,4 @@ func shadowing(view : UIView) {
     view.layer.shadowRadius = 5
     view.layer.shadowOffset = CGSize(width: 1, height: 1)
 }
+
