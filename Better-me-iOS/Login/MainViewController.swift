@@ -35,8 +35,6 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     
-    @IBAction func kakao(_ sender: Any) {
-    }
     
     
 }
