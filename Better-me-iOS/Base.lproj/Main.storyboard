@@ -1649,11 +1649,11 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn3-jc-3oC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn3-jc-3oC">
                                                     <rect key="frame" x="20" y="71" width="336" height="118"/>
                                                     <color key="backgroundColor" red="0.92845720050000002" green="0.92845708130000004" blue="0.92845708130000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="121" id="gYF-sK-Bzk"/>
+                                                        <constraint firstAttribute="height" constant="118" id="gYF-sK-Bzk"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="336" id="jpF-dh-rkk"/>
                                                     </constraints>
                                                     <attributedString key="attributedText">
@@ -1676,14 +1676,18 @@
                                                 <constraint firstItem="nzr-Nw-4ET" firstAttribute="top" secondItem="L4V-Uf-dW6" secondAttribute="top" id="ben-8b-LpQ"/>
                                                 <constraint firstItem="L4V-Uf-dW6" firstAttribute="top" secondItem="LAu-Fd-iIc" secondAttribute="top" constant="29.333333333333336" id="cuU-OT-egW"/>
                                                 <constraint firstItem="nn3-jc-3oC" firstAttribute="leading" secondItem="nzr-Nw-4ET" secondAttribute="trailing" constant="-248.33333333333337" id="mpM-sY-xRp"/>
-                                                <constraint firstItem="nn3-jc-3oC" firstAttribute="top" secondItem="lbP-1d-DfZ" secondAttribute="bottom" constant="14" id="qMh-Wq-hkz"/>
+                                                <constraint firstItem="nn3-jc-3oC" firstAttribute="top" secondItem="lbP-1d-DfZ" secondAttribute="bottom" constant="16.666666666666671" id="qMh-Wq-hkz"/>
                                                 <constraint firstItem="lbP-1d-DfZ" firstAttribute="top" secondItem="nzr-Nw-4ET" secondAttribute="top" id="sX8-BZ-Ir0"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lbP-1d-DfZ" secondAttribute="trailing" constant="18" id="wvr-1Q-oEZ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nn3-jc-3oC" secondAttribute="trailing" constant="20" symbolic="YES" id="xK4-Li-2KS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="nn3-jc-3oC" secondAttribute="bottom" id="bAf-cJ-gSq"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="tipsContent" destination="nn3-jc-3oC" id="3Qq-LM-Ct3"/>
+                                            <outlet property="tipsContentHeightConstraint" destination="gYF-sK-Bzk" id="OLr-DK-j23"/>
                                             <outlet property="tipsListTitle" destination="nzr-Nw-4ET" id="bim-fb-tXc"/>
                                             <outlet property="toggleBtn" destination="lbP-1d-DfZ" id="SeE-sD-5uh"/>
                                         </connections>

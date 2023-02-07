@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController {
     private  let tableView =  UITableView(frame: .zero, style: .grouped)
     private let cellID = "Cell"
     private let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
-    
+    let GPDS = GetPersonDataService()
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class MyPageViewController: UIViewController {
         configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
+        GPDS.confidureImagefromURL()
     }
     
 
@@ -164,6 +165,10 @@ extension MyPageViewController: UITableViewDelegate {
             
         }
     }
+}
+
+extension MyPageViewController {
+    
 }
 
 func shadowing(view : UIView) {

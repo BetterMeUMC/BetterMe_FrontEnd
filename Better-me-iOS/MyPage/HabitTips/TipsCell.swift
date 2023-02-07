@@ -8,7 +8,7 @@
 import UIKit
 
 class TipsCell: UITableViewCell {
-
+    let TVC = GoodHabitTipsViewController()
     @IBOutlet weak var tipsListTitle: UILabel!
     
     @IBOutlet weak var tipsContent: UILabel!
@@ -19,7 +19,8 @@ class TipsCell: UITableViewCell {
         settingData(isClicked)
         
     }
-    
+
+    @IBOutlet weak var tipsContentHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,14 +44,14 @@ class TipsCell: UITableViewCell {
             self.tipsContent.isHidden = false
             self.tipsListTitle.textColor = .black
             self.toggleBtn.tintColor = .black
-            
+
         }
         else
         {
             self.tipsContent.isHidden = true
             self.tipsListTitle.textColor = .gray
             self.toggleBtn.tintColor = .gray
-            self.heightAnchor.constraint(equalToConstant: 0).isActive = true
+
         }
     }
 
