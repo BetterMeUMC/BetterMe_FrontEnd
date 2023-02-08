@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let cellID = "Cell"
+
 
 class MyPageViewController: UIViewController {
     
@@ -23,29 +23,38 @@ class MyPageViewController: UIViewController {
         }
     }
     
-    let tableView =  UITableView(frame: .zero, style: .grouped)
-    let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
-    
+    private  let tableView =  UITableView(frame: .zero, style: .grouped)
+    private let cellID = "Cell"
+    private let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
+    let GPDS = GetPersonDataService()
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
+        GPDS.confidureImagefromURL()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+
     
     //MARK: - Helpers
+    func dateToString(date: Date) -> String{
+        let formmater = DateFormatter()
+        formmater.dateFormat = "M월 d일 E요일"
+        formmater.locale = Locale(identifier: "ko-KR")
+        return formmater.string(from: date)
+    }
+    
+    func configureNaviBar() {
+        let image = UIImage(named: "BetterMeLogo")
+        let date = dateToString(date: Date())
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: date, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = .black
+    }
+    
     func configureProfileViewUI() {
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
@@ -54,7 +63,6 @@ class MyPageViewController: UIViewController {
     }
     
     func configureTableViewUI() {
-        
         tableView.backgroundColor = .white
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,6 +82,12 @@ class MyPageViewController: UIViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
+    @objc func btn2Clicked(_ sender: UIButton) {
+        
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "BadHabitTipsViewController"){
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
     @objc func logOutButtonClicked(_ sender: UIButton) {
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
@@ -81,7 +95,7 @@ class MyPageViewController: UIViewController {
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
         alert.addAction(no)
-        
+
             self.present(alert, animated: false)
     
      }
@@ -94,7 +108,6 @@ extension MyPageViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyPageCell
-        
         cell.menuLabel.text = myPageMenu[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -110,6 +123,7 @@ extension MyPageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MyPageTableHeaderView()
         header.button1.addTarget(self, action: #selector(btn1Clicked), for: .touchUpInside)
+        header.button2.addTarget(self, action: #selector(btn2Clicked), for: .touchUpInside)
         return header
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -120,6 +134,9 @@ extension MyPageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 176
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 70
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -151,6 +168,7 @@ extension MyPageViewController: UITableViewDelegate {
         }
     }
 }
+
 
 func shadowing(view : UIView) {
     view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor
