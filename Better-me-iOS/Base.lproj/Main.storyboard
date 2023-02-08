@@ -474,7 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-11" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-14" y="59" width="391" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -840,28 +840,43 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GrP-Sx-epD" kind="relationship" relationship="rootViewController" id="c8H-Vj-xKL"/>
+                        <segue destination="GrP-Sx-epD" kind="relationship" relationship="rootViewController" destinationCreationSelector="addSwiftUIView:" id="c8H-Vj-xKL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTY-O2-O9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-918" y="354"/>
         </scene>
-        <!--View Controller-->
+        <!--Social View Controller-->
         <scene sceneID="HkT-Mj-ueX">
             <objects>
-                <viewController id="GrP-Sx-epD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FdV-kQ-Xf4">
+                <viewController id="GrP-Sx-epD" customClass="SocialViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FdV-kQ-Xf4" customClass="SocialViewControllerSocialViewController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-7s-wo2">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <connections>
+                                    <segue destination="pYz-Fy-JDu" kind="embed" destinationCreationSelector="addSwiftUIView:" id="aD7-lc-wt8"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o3c-Ra-Hbi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oBR-7s-wo2" firstAttribute="top" secondItem="o3c-Ra-Hbi" secondAttribute="top" id="2Wn-Aw-mdE"/>
+                            <constraint firstItem="oBR-7s-wo2" firstAttribute="bottom" secondItem="o3c-Ra-Hbi" secondAttribute="bottom" id="7qY-8R-TBR"/>
+                            <constraint firstItem="oBR-7s-wo2" firstAttribute="top" secondItem="o3c-Ra-Hbi" secondAttribute="top" id="IeS-ET-YHf"/>
+                            <constraint firstItem="oBR-7s-wo2" firstAttribute="leading" secondItem="o3c-Ra-Hbi" secondAttribute="leading" id="LOj-IU-BTt"/>
+                            <constraint firstItem="o3c-Ra-Hbi" firstAttribute="trailing" secondItem="oBR-7s-wo2" secondAttribute="trailing" id="xYZ-Yp-nFh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m3Q-6u-C0D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uG-hm-9zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="354"/>
+            <point key="canvasLocation" x="52.671755725190835" y="353.52112676056339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K5I-fQ-Ex3">
@@ -1052,7 +1067,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoP-gY-6si" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="1056"/>
+            <point key="canvasLocation" x="52.671755725190835" y="1054.9295774647887"/>
         </scene>
         <!--좋은 습관 만들기-->
         <scene sceneID="btS-4h-SSP">
@@ -1147,7 +1162,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-11" y="59" width="395" height="44"/>
+                                <rect key="frame" x="-16" y="59" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1304,7 +1319,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-10" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-13" y="59" width="391" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1687,6 +1702,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uq-Hu-NY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="2572"/>
+        </scene>
+        <!--Content View-->
+        <scene sceneID="h5b-MK-qEN">
+            <objects>
+                <hostingController id="pYz-Fy-JDu" customClass="ContentView" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8B-4N-TOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="535"/>
         </scene>
     </scenes>
     <resources>

@@ -12,6 +12,20 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
+		3B7049E2298FCE3C0054096A /* InviteHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DA298FCE3C0054096A /* InviteHabit.swift */; };
+		3B7049E3298FCE3C0054096A /* FriendSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DB298FCE3C0054096A /* FriendSearchModel.swift */; };
+		3B7049E4298FCE3C0054096A /* Request_Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DC298FCE3C0054096A /* Request_Friend.swift */; };
+		3B7049E5298FCE3C0054096A /* Request_FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DD298FCE3C0054096A /* Request_FriendModel.swift */; };
+		3B7049E6298FCE3C0054096A /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DE298FCE3C0054096A /* NewPerson.swift */; };
+		3B7049E7298FCE3C0054096A /* FriendSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049DF298FCE3C0054096A /* FriendSearch.swift */; };
+		3B7049E8298FCE3C0054096A /* InviteHabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049E0298FCE3C0054096A /* InviteHabitModel.swift */; };
+		3B7049E9298FCE3C0054096A /* NewPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049E1298FCE3C0054096A /* NewPersonModel.swift */; };
+		3B7049EC298FCE5E0054096A /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049EA298FCE5E0054096A /* PersonModel.swift */; };
+		3B7049ED298FCE5E0054096A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7049EB298FCE5E0054096A /* Person.swift */; };
+		3B9BDE06298FC40000CC0C45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9BDE05298FC40000CC0C45 /* Alamofire */; };
+		3BA12292298A94EA000E38A8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA12291298A94EA000E38A8 /* SwiftUIView.swift */; };
+		3BA12295298A967B000E38A8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3BA12294298A967B000E38A8 /* PopupView */; };
+		3BA122E3298AA5E9000E38A8 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA122E2298AA5E9000E38A8 /* SocialViewController.swift */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
 		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
@@ -39,6 +53,18 @@
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		280F5E582983B25F000A30B3 /* ProfileEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
+		3B7049DA298FCE3C0054096A /* InviteHabit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabit.swift; sourceTree = "<group>"; };
+		3B7049DB298FCE3C0054096A /* FriendSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchModel.swift; sourceTree = "<group>"; };
+		3B7049DC298FCE3C0054096A /* Request_Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_Friend.swift; sourceTree = "<group>"; };
+		3B7049DD298FCE3C0054096A /* Request_FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_FriendModel.swift; sourceTree = "<group>"; };
+		3B7049DE298FCE3C0054096A /* NewPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
+		3B7049DF298FCE3C0054096A /* FriendSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearch.swift; sourceTree = "<group>"; };
+		3B7049E0298FCE3C0054096A /* InviteHabitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabitModel.swift; sourceTree = "<group>"; };
+		3B7049E1298FCE3C0054096A /* NewPersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPersonModel.swift; sourceTree = "<group>"; };
+		3B7049EA298FCE5E0054096A /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		3B7049EB298FCE5E0054096A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3BA12291298A94EA000E38A8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3BA122E2298AA5E9000E38A8 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA12295298A967B000E38A8 /* PopupView in Frameworks */,
+				3B9BDE06298FC40000CC0C45 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +111,33 @@
 				280F5E592983B25F000A30B3 /* PWEditController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		3B9BDDF3298FC2EA00CC0C45 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B7049EB298FCE5E0054096A /* Person.swift */,
+				3B7049EA298FCE5E0054096A /* PersonModel.swift */,
+				3B7049DF298FCE3C0054096A /* FriendSearch.swift */,
+				3B7049DB298FCE3C0054096A /* FriendSearchModel.swift */,
+				3B7049DA298FCE3C0054096A /* InviteHabit.swift */,
+				3B7049E0298FCE3C0054096A /* InviteHabitModel.swift */,
+				3B7049DE298FCE3C0054096A /* NewPerson.swift */,
+				3B7049E1298FCE3C0054096A /* NewPersonModel.swift */,
+				3B7049DC298FCE3C0054096A /* Request_Friend.swift */,
+				3B7049DD298FCE3C0054096A /* Request_FriendModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3BA12278298A9340000E38A8 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				3B9BDDF3298FC2EA00CC0C45 /* Data */,
+				3BA122E2298AA5E9000E38A8 /* SocialViewController.swift */,
+				3BA12291298A94EA000E38A8 /* SwiftUIView.swift */,
+			);
+			path = Social;
 			sourceTree = "<group>";
 		};
 		BECC4B2C296C3AB60037807F = {
@@ -124,6 +179,7 @@
 				BEF940BD2972827900D0F1FD /* Habit.swift */,
 				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
 				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
+				3BA12278298A9340000E38A8 /* Social */,
 				280F5E542983B23A000A30B3 /* MyPage */,
 			);
 			path = "Better-me-iOS";
@@ -145,6 +201,10 @@
 			dependencies = (
 			);
 			name = "Better-me-iOS";
+			packageProductDependencies = (
+				3BA12294298A967B000E38A8 /* PopupView */,
+				3B9BDE05298FC40000CC0C45 /* Alamofire */,
+			);
 			productName = "Better-me-iOS";
 			productReference = BECC4B35296C3AB60037807F /* Better-me-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +233,10 @@
 				Base,
 			);
 			mainGroup = BECC4B2C296C3AB60037807F;
+			packageReferences = (
+				3BA12293298A967B000E38A8 /* XCRemoteSwiftPackageReference "PopupView" */,
+				3B9BDE04298FC40000CC0C45 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BECC4B36296C3AB60037807F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,25 +266,37 @@
 			files = (
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
+				3BA12292298A94EA000E38A8 /* SwiftUIView.swift in Sources */,
+				3B7049E4298FCE3C0054096A /* Request_Friend.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
+				3B7049E9298FCE3C0054096A /* NewPersonModel.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* HeaderView.swift in Sources */,
+				3B7049E5298FCE3C0054096A /* Request_FriendModel.swift in Sources */,
+				3B7049ED298FCE5E0054096A /* Person.swift in Sources */,
+				3B7049E3298FCE3C0054096A /* FriendSearchModel.swift in Sources */,
+				3B7049E8298FCE3C0054096A /* InviteHabitModel.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
+				3BA122E3298AA5E9000E38A8 /* SocialViewController.swift in Sources */,
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
+				3B7049EC298FCE5E0054096A /* PersonModel.swift in Sources */,
 				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
 				BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */,
 				BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */,
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
+				3B7049E2298FCE3C0054096A /* InviteHabit.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
 				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
+				3B7049E7298FCE3C0054096A /* FriendSearch.swift in Sources */,
+				3B7049E6298FCE3C0054096A /* NewPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +514,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B9BDE04298FC40000CC0C45 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3BA12293298A967B000E38A8 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B9BDE05298FC40000CC0C45 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B9BDE04298FC40000CC0C45 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3BA12294298A967B000E38A8 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BA12293298A967B000E38A8 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BECC4B2D296C3AB60037807F /* Project object */;
 }
