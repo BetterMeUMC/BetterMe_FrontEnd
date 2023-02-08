@@ -10,7 +10,7 @@ import UIKit
 final class CustomTableCellView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        btnImageView.image = UIImage(named: "arrowtriangle.down.fill")
+        
         commonInit()
     }
     
@@ -22,14 +22,15 @@ final class CustomTableCellView: UIView {
     private let imageView = UIImageView()
     let btnImageView = UIImageView()
     
-    func setUI(with string: String, image: UIImage) {
+    func setUI(with string: String, image: UIImage, btn:UIImage) {
         title.text = string
         title.textColor = .gray
         title.textAlignment = .left
         title.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
         title.numberOfLines = 1
         imageView.image = image
-        
+        btnImageView.image = btn
+        btnImageView.tintColor = .black
     }
     
     func commonInit() {
@@ -50,9 +51,9 @@ final class CustomTableCellView: UIView {
         imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30).isActive = true
         imageView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -10).isActive = true
         
-        btnImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        btnImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
         btnImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30).isActive = true
-        btnImageView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 30).isActive = true
+
         
         title.leadingAnchor.constraint(equalTo: title.trailingAnchor).isActive = true
         title.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true

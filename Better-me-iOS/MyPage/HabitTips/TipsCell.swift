@@ -23,14 +23,17 @@ class TipsCell: UITableViewCell {
 
         if tag == 1 {
             cellView.setUI(with: GConstants.tipsTitle[index],
-                           image: UIImage(named: "YellowStar") ?? UIImage())
+                           image: UIImage(named: "YellowStar") ?? UIImage(),
+                           btn: UIImage(systemName: "arrowtriangle.down.fill") ?? UIImage())
             detailView.setUI(with: TDB.getGoodTips(index: index))
         }
         else {
             cellView.setUI(with: BConstants.tipsTitle[index],
-                           image: UIImage(named: "YellowStar") ?? UIImage())
+                           image: UIImage(named: "YellowStar") ?? UIImage(),
+                           btn: UIImage(systemName: "arrowtriangle.down.fill") ?? UIImage())
             detailView.setUI(with: TDB.getBadTips(index: index))
         }
+    
         
     }
     
@@ -64,11 +67,13 @@ extension TipsCell {
     func showDetailView() {
         detailView.isHidden = false
         cellView.title.textColor = .black
+        cellView.btnImageView.tintColor = .black
     }
 
     func hideDetailView() {
         detailView.isHidden = true
         cellView.title.textColor = .gray
+        cellView.btnImageView.tintColor = .gray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -85,7 +85,9 @@ class MyPageTableHeaderView: UIView {
                                      button2.widthAnchor.constraint(equalToConstant: 155),
                                      button2.heightAnchor.constraint(equalToConstant: 90)])
     }
-    
+    func configureLoginBtn () {
+        
+    }
 
     
 }

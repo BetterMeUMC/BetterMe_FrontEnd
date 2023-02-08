@@ -167,9 +167,6 @@ extension MyPageViewController: UITableViewDelegate {
     }
 }
 
-extension MyPageViewController {
-    
-}
 
 func shadowing(view : UIView) {
     view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor

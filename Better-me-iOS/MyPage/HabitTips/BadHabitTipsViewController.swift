@@ -59,8 +59,8 @@ extension BadHabitTipsViewController : UITableViewDelegate,UITableViewDataSource
         }
     }
  func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-       if let cell = tableView.cellForRow(at: indexPath) as? TipsCell {
-           cell.hideDetailView()
+     if tableView.cellForRow(at: indexPath) is TipsCell {
+        
        }
    }
 }
