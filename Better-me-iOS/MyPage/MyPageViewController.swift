@@ -95,7 +95,7 @@ class MyPageViewController: UIViewController {
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
         alert.addAction(no)
-        
+
             self.present(alert, animated: false)
     
      }
@@ -108,7 +108,6 @@ extension MyPageViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! MyPageCell
-        
         cell.menuLabel.text = myPageMenu[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -135,6 +134,9 @@ extension MyPageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 176
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 70
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
