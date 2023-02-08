@@ -10,8 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //탭바 배경색 변경
         if #available(iOS 15.0, *) {
@@ -22,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 250/250, alpha: 1.0)
         }
         registerForPushNotifications()
+        sleep(1)
         return true
     }
 
