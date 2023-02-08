@@ -31,8 +31,21 @@ class TipsData {
         "  3.   습관 추적을 하라. 습관 추적을 계속하고 흐름을\n     깨뜨리지 마라.",
         "  4.   두번 거르지 마라. 한 번 걸렀을 때 즉시 궤도로\n     돌아가라."]
     
+    let badTips1 = [
+        "  1.   습관 점수표를 활용하라, 현재 습관을 써보고\n      그것들을 인식하라."]
+    let badTips2 = [
+        "  1.   마인드세트를 재구축하라. 나쁜 습관을 피했을 때\n      얻을 이득에 초점을 맞춰라."]
+    let badTips3 = [
+        "  1.   마찰을 증가시켜라. 당신과 나쁜 습관 사이의 단계\n      들을 늘려라.",
+        "  2.   이행 장치를 이용하라. 당신에게 이득이 될 습관으로\n      미래 선택들을 제한하라."]
+    let badTips4 = [
+        "  1.   책임감 있는 파트너를 찾아라. 누군가에게 당신의\n     행동을 감시해달라고 부탁하라.",
+        "  2.   습관 계약을 하라. 나쁜 습관의 대가를 공적이고\n     고통스러운 것으로 만들어라."]
     
-    func getTips (index : Int) -> String {
+    
+
+    
+    func getGoodTips (index : Int) -> String {
         var str = "\n"
         switch index {
         case 0:
@@ -60,7 +73,7 @@ class TipsData {
         }
     }
     
-    func getNum(index : Int) -> Int {
+    func getGoodTipsNum(index : Int) -> Int {
         switch index {
         case 0:
             return goodTips1.count
@@ -70,6 +83,50 @@ class TipsData {
             return goodTips3.count
         case 3:
             return goodTips4.count
+        default:
+            return 4
+        }
+    }
+    
+    
+    func getBadTips (index : Int) -> String {
+        var str = "\n"
+        switch index {
+        case 0:
+            for string in badTips1 {
+                str += string + "\n\n"
+            }
+            return str
+        case 1:
+            for string in badTips2 {
+                str += string + "\n\n"
+            }
+            return str
+        case 2:
+            for string in badTips3 {
+                str += string + "\n\n"
+            }
+            return str
+        case 3:
+            for string in badTips4 {
+                str += string + "\n\n"
+            }
+            return str
+        default:
+            return str
+        }
+    }
+    
+    func getBadTipsNum(index : Int) -> Int {
+        switch index {
+        case 0:
+            return badTips1.count
+        case 1:
+            return badTips2.count
+        case 2:
+            return badTips3.count
+        case 3:
+            return badTips4.count
         default:
             return 4
         }

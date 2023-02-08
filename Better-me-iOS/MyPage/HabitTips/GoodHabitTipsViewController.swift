@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BadHabitTipsViewController: UIViewController {
+class GoodHabitTipsViewController: UIViewController {
 
 
     //MARK: - Properties
@@ -24,29 +24,29 @@ class BadHabitTipsViewController: UIViewController {
     func navigationBarUI() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "나쁜습관 쉽게 없애는 법"
+        self.title = "좋은습관 쉽게 만드는 법"
     }
 
     
 }
-extension BadHabitTipsViewController : UITableViewDelegate,UITableViewDataSource {
+extension GoodHabitTipsViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BConstants.tipsTitle.count
+        return GConstants.tipsTitle.count
     }
 
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
-
+//        return CGFloat(tipsDB.getNum(index: indexPath.row) * 70)
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-                return CGFloat(tipsDB.getBadTipsNum(index: indexPath.row) * 70)
+                return CGFloat(tipsDB.getGoodTipsNum(index: indexPath.row) * 70)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath) as? TipsCell else { return UITableViewCell() }
             
-        cell.setUI(with: indexPath.row, 2)
+        cell.setUI(with: indexPath.row,1)
             return cell
 
     }
@@ -64,9 +64,9 @@ extension BadHabitTipsViewController : UITableViewDelegate,UITableViewDataSource
        }
    }
 }
-enum BConstants {
-    static let tipsTitle = ["Tip 1 : 보이지 않게 만들어라",
-                            "Tip 2 : 매력적이지 않게 만들어라",
-                            "Tip 3 : 하기 어렵게 만들어라",
-                            "Tip 4 : 불만족스러운 것으로 만들어라"]
+enum GConstants {
+    static let tipsTitle = ["Tip 1 : 분명하게 만들어라",
+                            "Tip 2 : 매력적으로 만들어라",
+                            "Tip 3 : 하기 쉽게 만들어라",
+                            "Tip 4 : 만족스럽게 만들어라"]
 }

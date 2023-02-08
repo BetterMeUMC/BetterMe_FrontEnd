@@ -17,10 +17,9 @@
 		28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28AAB1FC298FC78400B58C12 /* Alamofire */; };
 		28AAB1FF298FCBF900B58C12 /* GetPersonDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* GetPersonDataService.swift */; };
 		28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */; };
+		28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */; };
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
-		28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE251298B83E100176731 /* GoodTipsHeader.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
-		28BFE25B298BA9CF00176731 /* BadTipsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE257298BA6AA00176731 /* BadTipsHeader.swift */; };
 		28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */; };
 		28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48A2987B5190092E210 /* FeedBackController.swift */; };
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
@@ -56,9 +55,8 @@
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		28AAB1FE298FCBF900B58C12 /* GetPersonDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPersonDataService.swift; sourceTree = "<group>"; };
 		28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCellView.swift; sourceTree = "<group>"; };
+		28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
-		28BFE251298B83E100176731 /* GoodTipsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTipsHeader.swift; sourceTree = "<group>"; };
-		28BFE257298BA6AA00176731 /* BadTipsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadTipsHeader.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableFooterView.swift; sourceTree = "<group>"; };
 		28EFD48A2987B5190092E210 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
@@ -144,12 +142,11 @@
 		28BFE255298BA5FE00176731 /* HabitTips */ = {
 			isa = PBXGroup;
 			children = (
-				286F6ABB298EBD8C0089936D /* TipsData.swift */,
 				28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */,
+				286F6ABB298EBD8C0089936D /* TipsData.swift */,
 				28BFE24F298B83A700176731 /* TipsCell.swift */,
-				28BFE251298B83E100176731 /* GoodTipsHeader.swift */,
+				28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */,
 				28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */,
-				28BFE257298BA6AA00176731 /* BadTipsHeader.swift */,
 			);
 			path = HabitTips;
 			sourceTree = "<group>";
@@ -287,7 +284,7 @@
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				28AAB1FF298FCBF900B58C12 /* GetPersonDataService.swift in Sources */,
-				28BFE25B298BA9CF00176731 /* BadTipsHeader.swift in Sources */,
+				28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
 				28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
@@ -309,7 +306,6 @@
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
 				286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */,
-				28BFE252298B83E100176731 /* GoodTipsHeader.swift in Sources */,
 				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
