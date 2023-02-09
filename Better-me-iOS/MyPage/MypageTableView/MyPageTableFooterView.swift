@@ -37,6 +37,7 @@ class MyPageTableFooterView: UIView {
     //MARK: - Helpers
 
     func configureUI() {
+       
         addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([button.topAnchor.constraint(equalTo: topAnchor, constant: 13),

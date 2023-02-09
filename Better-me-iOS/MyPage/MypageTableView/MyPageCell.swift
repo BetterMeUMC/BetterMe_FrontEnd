@@ -44,6 +44,6 @@ class MyPageCell: UITableViewCell {
     }
     
     
-    // MARK: - Lifecycle
+
     
 }
