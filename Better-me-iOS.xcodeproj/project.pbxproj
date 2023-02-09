@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ADA5F372994DFD900FE90AD /* LoginFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F292994DFD900FE90AD /* LoginFirstViewController.swift */; };
+		1ADA5F382994DFD900FE90AD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2A2994DFD900FE90AD /* UIColorExtension.swift */; };
+		1ADA5F392994DFD900FE90AD /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2B2994DFD900FE90AD /* JoinViewController.swift */; };
+		1ADA5F3A2994DFD900FE90AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2C2994DFD900FE90AD /* MainViewController.swift */; };
+		1ADA5F3B2994DFD900FE90AD /* passwordFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2D2994DFD900FE90AD /* passwordFindViewController.swift */; };
+		1ADA5F3C2994DFD900FE90AD /* nicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2E2994DFD900FE90AD /* nicknameViewController.swift */; };
+		1ADA5F3D2994DFD900FE90AD /* wordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F2F2994DFD900FE90AD /* wordViewController.swift */; };
+		1ADA5F3E2994DFD900FE90AD /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F312994DFD900FE90AD /* ResponseModel.swift */; };
+		1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F322994DFD900FE90AD /* LoginModel.swift */; };
+		1ADA5F402994DFD900FE90AD /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F332994DFD900FE90AD /* PostDataManager.swift */; };
+		1ADA5F412994DFD900FE90AD /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F342994DFD900FE90AD /* UserDataModel.swift */; };
+		1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F352994DFD900FE90AD /* GetUserIdxModel.swift */; };
+		1ADA5F432994DFD900FE90AD /* GetMsgDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F362994DFD900FE90AD /* GetMsgDataManager.swift */; };
 		280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */; };
 		280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E562983B25E000A30B3 /* MyPageViewController.swift */; };
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
@@ -45,9 +58,24 @@
 		BEF940BE2972827900D0F1FD /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BD2972827900D0F1FD /* Habit.swift */; };
 		BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */; };
 		BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */; };
+		D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B307C46D7BBE790ECF1FAC /* Pods-Better-me-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.release.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1ADA5F292994DFD900FE90AD /* LoginFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFirstViewController.swift; sourceTree = "<group>"; };
+		1ADA5F2A2994DFD900FE90AD /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1ADA5F2B2994DFD900FE90AD /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		1ADA5F2C2994DFD900FE90AD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1ADA5F2D2994DFD900FE90AD /* passwordFindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passwordFindViewController.swift; sourceTree = "<group>"; };
+		1ADA5F2E2994DFD900FE90AD /* nicknameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nicknameViewController.swift; sourceTree = "<group>"; };
+		1ADA5F2F2994DFD900FE90AD /* wordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordViewController.swift; sourceTree = "<group>"; };
+		1ADA5F312994DFD900FE90AD /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		1ADA5F322994DFD900FE90AD /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1ADA5F332994DFD900FE90AD /* PostDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
+		1ADA5F342994DFD900FE90AD /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		1ADA5F352994DFD900FE90AD /* GetUserIdxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserIdxModel.swift; sourceTree = "<group>"; };
+		1ADA5F362994DFD900FE90AD /* GetMsgDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMsgDataManager.swift; sourceTree = "<group>"; };
 		280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableHeaderView.swift; sourceTree = "<group>"; };
 		280F5E562983B25E000A30B3 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
@@ -67,6 +95,8 @@
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
 		28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlertViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -98,12 +128,41 @@
 			files = (
 				286F6ABA298E8BA00089936D /* Kingfisher in Frameworks */,
 				28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */,
+				D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ADA5F282994DFD900FE90AD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA5F292994DFD900FE90AD /* LoginFirstViewController.swift */,
+				1ADA5F2A2994DFD900FE90AD /* UIColorExtension.swift */,
+				1ADA5F2B2994DFD900FE90AD /* JoinViewController.swift */,
+				1ADA5F2C2994DFD900FE90AD /* MainViewController.swift */,
+				1ADA5F2D2994DFD900FE90AD /* passwordFindViewController.swift */,
+				1ADA5F2E2994DFD900FE90AD /* nicknameViewController.swift */,
+				1ADA5F2F2994DFD900FE90AD /* wordViewController.swift */,
+				1ADA5F302994DFD900FE90AD /* DataModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1ADA5F302994DFD900FE90AD /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA5F312994DFD900FE90AD /* ResponseModel.swift */,
+				1ADA5F322994DFD900FE90AD /* LoginModel.swift */,
+				1ADA5F332994DFD900FE90AD /* PostDataManager.swift */,
+				1ADA5F342994DFD900FE90AD /* UserDataModel.swift */,
+				1ADA5F352994DFD900FE90AD /* GetUserIdxModel.swift */,
+				1ADA5F362994DFD900FE90AD /* GetMsgDataManager.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		280F5E542983B23A000A30B3 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +217,8 @@
 			children = (
 				BECC4B37296C3AB60037807F /* Better-me-iOS */,
 				BECC4B36296C3AB60037807F /* Products */,
+				E64412815AF12B933831F217 /* Pods */,
+				D1D6417B6D6B9C4E0EFC0DB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +233,7 @@
 		BECC4B37296C3AB60037807F /* Better-me-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1ADA5F282994DFD900FE90AD /* Login */,
 				28EFD490298A9A930092E210 /* Better-me-iOS.entitlements */,
 				BECC4B38296C3AB60037807F /* AppDelegate.swift */,
 				BECC4B3A296C3AB60037807F /* SceneDelegate.swift */,
@@ -199,6 +261,23 @@
 			path = "Better-me-iOS";
 			sourceTree = "<group>";
 		};
+		D1D6417B6D6B9C4E0EFC0DB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E64412815AF12B933831F217 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */,
+				06B307C46D7BBE790ECF1FAC /* Pods-Better-me-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BECC4B49296C3AB80037807F /* Build configuration list for PBXNativeTarget "Better-me-iOS" */;
 			buildPhases = (
+				ADA67A91C94D266823103EBE /* [CP] Check Pods Manifest.lock */,
 				BECC4B31296C3AB60037807F /* Sources */,
 				BECC4B32296C3AB60037807F /* Frameworks */,
 				BECC4B33296C3AB60037807F /* Resources */,
+				900A6873AD64F1C771BEB467 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,35 +354,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		900A6873AD64F1C771BEB467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADA67A91C94D266823103EBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Better-me-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BECC4B31296C3AB60037807F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
+				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */,
 				28BFE250298B83A700176731 /* TipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
+				1ADA5F402994DFD900FE90AD /* PostDataManager.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				28AAB1FF298FCBF900B58C12 /* GetPersonDataService.swift in Sources */,
 				28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */,
+				1ADA5F432994DFD900FE90AD /* GetMsgDataManager.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
 				28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
+				1ADA5F372994DFD900FE90AD /* LoginFirstViewController.swift in Sources */,
 				28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
+				1ADA5F412994DFD900FE90AD /* UserDataModel.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
+				1ADA5F3C2994DFD900FE90AD /* nicknameViewController.swift in Sources */,
+				1ADA5F3B2994DFD900FE90AD /* passwordFindViewController.swift in Sources */,
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
+				1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */,
+				1ADA5F3A2994DFD900FE90AD /* MainViewController.swift in Sources */,
 				28EFD496298AA2FC0092E210 /* PushAlertViewController.swift in Sources */,
+				1ADA5F392994DFD900FE90AD /* JoinViewController.swift in Sources */,
+				1ADA5F382994DFD900FE90AD /* UIColorExtension.swift in Sources */,
 				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
 				BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */,
 				BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */,
+				1ADA5F3E2994DFD900FE90AD /* ResponseModel.swift in Sources */,
+				1ADA5F3D2994DFD900FE90AD /* wordViewController.swift in Sources */,
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
@@ -452,6 +588,7 @@
 		};
 		BECC4B4A296C3AB80037807F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +620,7 @@
 		};
 		BECC4B4B296C3AB80037807F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B307C46D7BBE790ECF1FAC /* Pods-Better-me-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
