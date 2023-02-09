@@ -474,11 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-<<<<<<< HEAD
                                 <rect key="frame" x="-16" y="59" width="387" height="44"/>
-=======
-                                <rect key="frame" x="-14" y="59" width="394" height="44"/>
->>>>>>> b35e2862fcbf9f40d5c0262c617f43a3d085d7f2
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1205,11 +1201,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-<<<<<<< HEAD
                                 <rect key="frame" x="-20" y="59" width="392" height="44"/>
-=======
-                                <rect key="frame" x="-15" y="59" width="396" height="44"/>
->>>>>>> b35e2862fcbf9f40d5c0262c617f43a3d085d7f2
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1350,11 +1342,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-<<<<<<< HEAD
                                 <rect key="frame" x="-15" y="59" width="387" height="44"/>
-=======
-                                <rect key="frame" x="-13" y="59" width="394" height="44"/>
->>>>>>> b35e2862fcbf9f40d5c0262c617f43a3d085d7f2
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
