@@ -55,7 +55,8 @@ struct PostDataManager {
             .responseDecodable(of: LoginModel.self) { response in
                 switch response.result {
                 case .success(let response):
-             
+                    let userIdx = response.result?.userID
+                    UserDefaults.standard.set(userIdx, forKey: "userIdx")// 폴 : 유저 아이디를 위해 추가했습니다!
                     if let jwt = response.result?.jwt {
                         viewController.loginCheck = true
                       

@@ -62,7 +62,7 @@ class FeedBackController: UIViewController {
     //MARK: - PostAPI
     @objc func postFeedback() {
         
-        let userIdx = 1
+        let userIdx = UserDefaults.standard.object(forKey: "userIdx")
         let feedback = PostFeedback(title: self.titleTextField.text ?? "", content: self.contentTextField.text ?? "")
         guard let uploadData = try? JSONEncoder().encode(feedback)
         else {return}
