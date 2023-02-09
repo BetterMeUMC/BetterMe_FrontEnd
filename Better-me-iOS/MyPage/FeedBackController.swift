@@ -66,8 +66,8 @@ class FeedBackController: UIViewController {
         let feedback = PostFeedback(title: self.titleTextField.text ?? "", content: self.contentTextField.text ?? "")
         guard let uploadData = try? JSONEncoder().encode(feedback)
         else {return}
-        
-        let header = ["x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWR4IjoxLCJpYXQiOjE2NzU5MTI0OTksImV4cCI6MTY3NTk5ODg5OSwic3ViIjoidXNlckluZm8ifQ.PMc1ghN20fi8yGP9UsTGDmUmf5X5DYpfL_Y56xo3hN0","Content-Type": "application/json"]
+        let token = UserDefaults.standard.object(forKey: "token")
+        let header = ["x-access-token": token]
         // URL 객체 정의
         let url = URL(string: "http://54.180.13.219:3000/app/feedback/\(userIdx)")
 
