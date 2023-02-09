@@ -39,7 +39,6 @@ class MyPageViewController: UIViewController {
         configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
-        GPDS.confidureImagefromURL()
     }
     
 
@@ -68,6 +67,8 @@ class MyPageViewController: UIViewController {
         shadowing(view: profileView)
         profileImageView.layer.cornerRadius = profileImageView.frame.width/2
         shadowing(view: profileImageView)
+        
+        
     }
     
     func configureTableViewUI() {
