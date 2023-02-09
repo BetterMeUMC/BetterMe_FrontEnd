@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         guard let scene = (scene as? UIWindowScene) else { return }
-        //UserDefaults.standard.removeObject(forKey: "token")
      
         if hasJwtToken() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
