@@ -30,14 +30,18 @@ class PWEditController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "비밀번호 변경"
-        
-        self.navigationItem.rightBarButtonItem = self.saveBtn
+        navigationBarUI()
         textFieldCustom(textField:oldPWTextField)
         textFieldCustom(textField:newPWTextField)
         textFieldCustom(textField:newPWTextField2)
+    }
+    
+    func navigationBarUI() {
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.title = "비밀번호 변경"
+        self.navigationItem.rightBarButtonItem = self.saveBtn
+        
     }
     
     func textFieldCustom (textField: UITextField) {
@@ -45,6 +49,7 @@ class PWEditController: UIViewController{
         textField.layer.cornerRadius = 17
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
+        textField.textAlignment = .center
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
      

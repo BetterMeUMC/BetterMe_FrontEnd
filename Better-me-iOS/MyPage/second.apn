@@ -1,0 +1,10 @@
+{
+  "aps": {
+    "alert" : {
+         "title" : "습관 초대 알림",
+         "body" : "폴 이 습관초대를 보냈습니다"
+      },
+    "sound": "default"
+  },
+  "link_url": "https://www.lipsum.com/"
+}

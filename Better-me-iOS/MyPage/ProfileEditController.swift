@@ -32,16 +32,18 @@ class ProfileEditController: UIViewController{
     let imagePickerController = UIImagePickerController()
     let alertController = UIAlertController(title: "올릴 방식을 선택하세요", message: "사진 찍기 또는 앨범에서 선택", preferredStyle: .actionSheet)
 
-    let saveBtn : UIBarButtonItem = {
+    lazy var saveBtn : UIBarButtonItem = {
         let view = UIButton()
         view.backgroundColor = UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1)
         view.layer.cornerRadius = 15
-        view.setTitle("저장", for: .normal)
-//        view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
+        view.setTitle("완료", for: .normal)
+        view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 15)
         view.setTitleColor(.white, for: .normal)
         NSLayoutConstraint.activate([
             view.widthAnchor.constraint(equalToConstant: 55),
             view.heightAnchor.constraint(equalToConstant: 31)])
+        
+        view.addTarget(self, action: #selector(clickedSavedBtn), for: .touchUpInside)
         
         
         return UIBarButtonItem(customView: view)
@@ -56,6 +58,31 @@ class ProfileEditController: UIViewController{
         self.imagePickerController.delegate = self
         
         navigationBarUI()
+        configureProfileUI()
+
+        textFieldCustom(textField: nameTextField)
+        textFieldCustom(textField: messageTextField)
+        enrollAlertEvent()
+    }
+    
+    //MARK: - Helpers
+    @objc func clickedSavedBtn(_ sender: UIButton) {
+        let alret = UIAlertController(title: "저장!", message: "프로필이 수정되었습니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+
+        alret.addAction(ok)
+        present(alret, animated: true, completion: nil)
+        print("저장")
+    }
+    
+    
+    func navigationBarUI() {
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.title = "프로필 수정"
+        self.navigationItem.rightBarButtonItem = self.saveBtn
+    }
+    func configureProfileUI(){
         shadowing(view: profileView)
         profileView.layer.cornerRadius = profileView.frame.height/2
         
@@ -64,25 +91,16 @@ class ProfileEditController: UIViewController{
         userCommentImageView.clipsToBounds = true
         userCommentImageView.layer.borderColor = UIColor.clear.cgColor
         userCommentImageView.clipsToBounds = true
-
-        textFieldCustom(textField: nameTextField)
-        textFieldCustom(textField: messageTextField)
-        enrollAlertEvent()
-    }
-    
-    //MARK: - Helpers
-    func navigationBarUI() {
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "프로필 수정"
-        self.navigationItem.rightBarButtonItem = self.saveBtn
     }
     func textFieldCustom (textField: UITextField) {
-        textField.clearsOnBeginEditing = true
+        textField.clearsOnBeginEditing = false
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
     }
+    
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
      
           self.view.endEditing(true)
@@ -126,18 +144,6 @@ class ProfileEditController: UIViewController{
         }
 
     
-    //이미지를 탭해서 프로필사진을 변경할 경우
-//    func addGestureRecognizer() {
-//            let tapGestureRecognizer
-//      = UITapGestureRecognizer(target: self,
-//                               action: #selector(self.tappedUIImageView(_:)))
-//            self.userCommentImageView.addGestureRecognizer(tapGestureRecognizer)
-//            self.userCommentImageView.isUserInteractionEnabled = true
-//    }
-
-//    @objc func tappedUIImageView(_ gesture: UITapGestureRecognizer) {
-//            self.present(alertController, animated: true, completion: nil)
-//    }
 }
 
 
@@ -171,6 +177,8 @@ extension ProfileEditController: UIImagePickerControllerDelegate, UINavigationCo
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
         
     }
+    
+    
 
 }
 
