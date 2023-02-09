@@ -71,6 +71,8 @@ class wordViewController: UIViewController, UITextFieldDelegate {
         user.promise = wordField.text
         if let email = user.email, let password = user.password, let nickname = user.nickName, let promise = user.promise {
             PostDataManager().PostUserData(email: email, password: password, nickName: nickname, promise: promise, viewController: self)
+            UserDefaults.setValue(nickname, forKey: "nickName")
+            UserDefaults.setValue(promise, forKey: "promise")
         } else {
             print("data is nil")
            
