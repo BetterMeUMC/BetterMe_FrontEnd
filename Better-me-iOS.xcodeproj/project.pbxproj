@@ -25,6 +25,7 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
+		282C4690299548F4006E1E13 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 282C468F299548F4006E1E13 /* PopupView */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
 		28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28AAB1FC298FC78400B58C12 /* Alamofire */; };
 		28AAB1FF298FCBF900B58C12 /* GetPersonDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* GetPersonDataService.swift */; };
@@ -125,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282C4690299548F4006E1E13 /* PopupView in Frameworks */,
 				28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */,
 				D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
@@ -296,6 +298,7 @@
 			name = "Better-me-iOS";
 			packageProductDependencies = (
 				28AAB1FC298FC78400B58C12 /* Alamofire */,
+				282C468F299548F4006E1E13 /* PopupView */,
 			);
 			productName = "Better-me-iOS";
 			productReference = BECC4B35296C3AB60037807F /* Better-me-iOS.app */;
@@ -327,6 +330,7 @@
 			mainGroup = BECC4B2C296C3AB60037807F;
 			packageReferences = (
 				28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				282C468E299548F4006E1E13 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = BECC4B36296C3AB60037807F /* Products */;
 			projectDirPath = "";
@@ -670,6 +674,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		282C468E299548F4006E1E13 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -681,6 +693,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		282C468F299548F4006E1E13 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 282C468E299548F4006E1E13 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
 		28AAB1FC298FC78400B58C12 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */;
