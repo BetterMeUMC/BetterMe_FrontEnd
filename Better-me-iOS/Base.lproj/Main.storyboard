@@ -868,7 +868,7 @@
         <scene sceneID="K5I-fQ-Ex3">
             <objects>
                 <navigationController id="ywY-CR-tTA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="WorldButton" id="RHH-XD-bpC"/>
+                    <tabBarItem key="tabBarItem" title="" image="WorldButton" selectedImage="WorldButton.fill" id="RHH-XD-bpC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eR4-oP-gt1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -885,7 +885,7 @@
         <scene sceneID="KA1-EF-DJK">
             <objects>
                 <navigationController id="POv-AM-R8S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="FriendButton" id="cqp-jY-3ef"/>
+                    <tabBarItem key="tabBarItem" title="" image="FriendButton" selectedImage="FriendButton.fill" id="cqp-jY-3ef"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bex-G9-A1E">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2064,9 +2064,11 @@
         <image name="AwardButton" width="21.666666030883789" height="28.333333969116211"/>
         <image name="AwardButton.fill" width="21.666666030883789" height="28.333333969116211"/>
         <image name="FriendButton" width="18.333333969116211" height="25"/>
+        <image name="FriendButton.fill" width="18.333333969116211" height="25"/>
         <image name="HomeButton" width="24" height="27"/>
         <image name="HomeButton.fill" width="24" height="27"/>
         <image name="WorldButton" width="27.333333969116211" height="27.333333969116211"/>
+        <image name="WorldButton.fill" width="27.333333969116211" height="27.333333969116211"/>
         <image name="YellowStar" width="18.333333969116211" height="17.333333969116211"/>
         <image name="image 101" width="57" height="57"/>
         <image name="image 11" width="126.66666412353516" height="128"/>
