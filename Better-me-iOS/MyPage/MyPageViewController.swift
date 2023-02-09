@@ -40,6 +40,11 @@ class MyPageViewController: UIViewController {
         configureProfileViewUI()
         configureTableViewUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
+        self.promise.text = UserDefaults.standard.string(forKey: "promise")
+        
+    }
     
 
     
