@@ -91,7 +91,11 @@ class MyPageViewController: UIViewController {
     
     @objc func logOutButtonClicked(_ sender: UIButton) {
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let yes = UIAlertAction(title: "확인", style: .default){
+            _ in
+            UserDefaults.standard.removeObject(forKey: "token")
+            self.navigationController?.popToRootViewController(animated: true)
+        }
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
         alert.addAction(no)
