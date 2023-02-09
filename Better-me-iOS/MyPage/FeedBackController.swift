@@ -62,14 +62,14 @@ class FeedBackController: UIViewController {
     //MARK: - PostAPI
     @objc func postFeedback() {
         
-        let userIdx = UserDefaults.standard.object(forKey: "userIdx")
+        let userIdx = UserDefaults.standard.string(forKey: "userIdx")
         let feedback = PostFeedback(title: self.titleTextField.text ?? "", content: self.contentTextField.text ?? "")
         guard let uploadData = try? JSONEncoder().encode(feedback)
         else {return}
-        let token = UserDefaults.standard.object(forKey: "token")
-        let header = ["x-access-token": token]
+        let token = UserDefaults.standard.string(forKey: "token")
+        let header = ["x-access-token": token ?? ""]
         // URL 객체 정의
-        let url = URL(string: "http://54.180.13.219:3000/app/feedback/\(userIdx)")
+        let url = URL(string: "http://54.180.13.219:3000/app/feedback/\(userIdx ?? "")")
 
         // URLRequest 객체를 정의
         var request = URLRequest(url: url!)
@@ -80,26 +80,6 @@ class FeedBackController: UIViewController {
         // URLSession 객체를 통해 전송, 응답값 처리
         let task = URLSession.shared.uploadTask(with: request, from: uploadData) { (data, response, error) in
 
-            // 서버가 응답이 없거나 통신이 실패
-//            let successCode = 1000
-////            let noTitleCode = 2044
-////            let noContentCode = 2045
-//            
-//            guard error == nil,
-//                let statusCode = (response as? HTTPURLResponse)?.statusCode,
-//                successCode == statusCode else {
-////                if statusCode == noTitleCode {
-////                    print("제목 미작성 오류")
-////                } else if statusCode == noContentCode {
-////                    print("내용 미작성 오류")
-////                }
-//                print("missing something")
-//     
-//                    return
-//            }
-            
-            
-            
             if let e = error {
                 NSLog("An error has occured: \(e.localizedDescription)")
                 return

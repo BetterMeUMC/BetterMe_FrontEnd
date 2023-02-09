@@ -1463,8 +1463,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="aTK-gj-SqE"/>
                     <connections>
+                        <outlet property="nickName" destination="zOy-MJ-BEO" id="Pub-WS-5wX"/>
                         <outlet property="profileImageView" destination="dBF-jz-Uj7" id="GI5-VO-qKJ"/>
                         <outlet property="profileView" destination="KdB-gP-Fzk" id="KVO-ZF-rQn"/>
+                        <outlet property="promise" destination="Nzg-0A-k9J" id="gCx-3T-lXh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pm9-nd-iHZ" sceneMemberID="firstResponder"/>

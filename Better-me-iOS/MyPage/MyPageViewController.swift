@@ -16,6 +16,11 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImageView: UIView!
     
+    @IBOutlet weak var nickName: UILabel!
+    @IBOutlet weak var promise: UILabel!
+    
+    
+    
     @IBAction func ProfileEditBtn(_ sender: Any) {
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ProfileEditController"){
         
@@ -56,6 +61,9 @@ class MyPageViewController: UIViewController {
     }
     
     func configureProfileViewUI() {
+        self.nickName.text = UserDefaults.standard.string(forKey: "nickName")
+        self.promise.text = UserDefaults.standard.string(forKey: "promise")
+        
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
         profileImageView.layer.cornerRadius = profileImageView.frame.width/2
