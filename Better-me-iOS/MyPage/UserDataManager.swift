@@ -117,6 +117,27 @@ class UserDataManager {
             }
         }
     }
+    func deleteAccount(viewController: WithdrawalViewController) {
+        
+        guard let url = URL(string: "http://54.180.13.219:3000/app/auth/unregister\(userIdx ?? "")") else {return}
+        let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
+
+        AF.request(url,
+                   method: .patch,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: header)
+        .responseDecodable(of: patchUserResponseStruct.self) { response in
+            switch response.result {
+            case .success(_):
+                UserDefaults.standard.removeObject(forKey: "token")
+                viewController.navigationController?.popToRootViewController(animated: true)
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+    }
     
 
 }

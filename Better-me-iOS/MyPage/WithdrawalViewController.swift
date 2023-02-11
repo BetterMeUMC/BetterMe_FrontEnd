@@ -33,6 +33,7 @@ class WithdrawalViewController: UIViewController {
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(.white, for: .normal)
         
+        view.addTarget(self, action: #selector(yesClicked), for: .touchUpInside)
         
         return view
     }()
@@ -48,6 +49,8 @@ class WithdrawalViewController: UIViewController {
         view.setTitle("아니요, 계속 사용할래요", for: .normal)
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1), for: .normal)
+        
+        view.addTarget(self, action: #selector(noClicked), for: .touchUpInside)
         
         return view
     }()
@@ -103,6 +106,12 @@ class WithdrawalViewController: UIViewController {
                                      noButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 18),
                                      noButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -18),
                                      noButton.heightAnchor.constraint(equalToConstant: 43)])
+    }
+    @objc func yesClicked ( _ sender : UIButton) {
+        UserDataManager().deleteAccount(viewController: self)
+    }
+    @objc func noClicked ( _ sender : UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

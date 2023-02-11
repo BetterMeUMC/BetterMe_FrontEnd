@@ -110,7 +110,6 @@ class MyPageViewController: UIViewController {
         let yes = UIAlertAction(title: "확인", style: .default){
             _ in
             UserDefaults.standard.removeObject(forKey: "token")
-
             self.navigationController?.popToRootViewController(animated: true)
         }
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
