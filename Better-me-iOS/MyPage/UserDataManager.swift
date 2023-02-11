@@ -16,7 +16,7 @@ class UserDataManager {
     let userIdx = UserDefaults.standard.string(forKey: "userIdx")
    
     
-    func getNickNamePromise() {
+    func getNickNameAndPromise() {
 
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/getMyPage/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
@@ -57,7 +57,7 @@ class UserDataManager {
                 self.patchPromise(promise: promise,viewController: viewController)
                 UserDefaults.standard.setValue(nickName, forKey: "nickName")
                 UserDefaults.standard.setValue(promise, forKey: "promise")
-                print("성공")
+
             case .failure(let error):
                 print(error)
                 
@@ -85,29 +85,40 @@ class UserDataManager {
                 alret.addAction(ok)
                 viewController.present(alret, animated: true, completion: nil)
             
-            
-                
             case .failure(let error):
                 print(error)
                 
             }
         }
     }
-//    func judgeStatus(by statusCode: Int, _ data: User) -> NetworkResult<Any> {
-//        
-//        let decoder = JSONDecoder()
-//        
-//        guard let decodedData = try? decoder.decode(UserDataModel.self, from: data)
-//        else { return .pathErr}
-//        
-//        switch statusCode {
-//            
-//        case 1000: return .success(decodedData.message)
-//            //        case 2017: return .requestErr(decodedData.message)
-//            //        case 500: return .serverErr
-//        default: return .networkFail
-//        }
-//    }
+    func patchPassword(password: String, viewController: PWEditController) {
+        
+        guard let url = URL(string: "http://54.180.13.219:3000/app/users/changePw/\(userIdx ?? "")") else {return}
+        let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
+        let params = ["password": password] as Dictionary
+
+        AF.request(url,
+                   method: .patch,
+                   parameters: params,
+                   encoding: JSONEncoding.default,
+                   headers: header)
+        .responseDecodable(of: patchUserResponseStruct.self) { response in
+            switch response.result {
+            case .success(_):
+                
+                let alret = UIAlertController(title: "비밀번호 변경완료!", message: "비밀번호가 변경되었습니다.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alret.addAction(ok)
+                viewController.present(alret, animated: true, completion: nil)
+            
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+    }
+    
+
 }
             
 

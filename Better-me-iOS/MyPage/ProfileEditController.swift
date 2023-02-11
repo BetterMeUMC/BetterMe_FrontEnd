@@ -79,6 +79,7 @@ class ProfileEditController: UIViewController{
         self.title = "프로필 수정"
         self.navigationItem.rightBarButtonItem = self.saveBtn
     }
+    
     func configureProfileUI(){
         shadowing(view: profileView)
         
