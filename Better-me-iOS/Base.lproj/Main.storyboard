@@ -474,7 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-16" y="59" width="387" height="44"/>
+                                <rect key="frame" x="-23" y="59" width="383" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1147,7 +1147,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-21" y="59" width="393" height="44"/>
+                                <rect key="frame" x="-22" y="59" width="383" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1304,7 +1304,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-15" y="59" width="387" height="44"/>
+                                <rect key="frame" x="-22" y="59" width="383" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1408,13 +1408,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGt-JN-IXW">
-                                        <rect key="frame" x="190" y="31" width="93" height="19.333333333333329"/>
+                                        <rect key="frame" x="190" y="39" width="167" height="19.333333333333485"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="김유니 님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOy-MJ-BEO">
-                                        <rect key="frame" x="115" y="28" width="67.333333333333314" height="21.666666666666671"/>
+                                        <rect key="frame" x="115" y="36" width="67.333333333333314" height="21.666666666666515"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21.666666666666671" id="O7J-Qw-DEz"/>
                                         </constraints>
@@ -1433,22 +1433,22 @@
                                 <constraints>
                                     <constraint firstItem="Nzg-0A-k9J" firstAttribute="leading" secondItem="zOy-MJ-BEO" secondAttribute="leading" id="04c-AU-tro"/>
                                     <constraint firstItem="8cJ-yP-JMD" firstAttribute="width" secondItem="KdB-gP-Fzk" secondAttribute="width" multiplier="0.941176" id="0pR-2Y-nlV"/>
-                                    <constraint firstItem="Nzg-0A-k9J" firstAttribute="top" secondItem="UGt-JN-IXW" secondAttribute="bottom" constant="14.666666666666671" id="1fZ-wX-SJW"/>
+                                    <constraint firstItem="Nzg-0A-k9J" firstAttribute="top" secondItem="UGt-JN-IXW" secondAttribute="bottom" constant="6.6666666666665151" id="1fZ-wX-SJW"/>
                                     <constraint firstItem="8cJ-yP-JMD" firstAttribute="height" secondItem="KdB-gP-Fzk" secondAttribute="height" multiplier="0.9" id="BKQ-Zc-W3m"/>
-                                    <constraint firstItem="Nzg-0A-k9J" firstAttribute="top" secondItem="zOy-MJ-BEO" secondAttribute="bottom" constant="15.333333333333329" id="FH0-dG-TBf"/>
+                                    <constraint firstItem="Nzg-0A-k9J" firstAttribute="top" secondItem="zOy-MJ-BEO" secondAttribute="bottom" constant="7.3333333333334849" id="FH0-dG-TBf"/>
                                     <constraint firstAttribute="bottom" secondItem="8cJ-yP-JMD" secondAttribute="bottom" constant="2" id="KAb-Kz-BNk"/>
                                     <constraint firstItem="UGt-JN-IXW" firstAttribute="leading" secondItem="zOy-MJ-BEO" secondAttribute="trailing" constant="7.6666666666666856" id="NET-pj-2PN"/>
                                     <constraint firstItem="Nzg-0A-k9J" firstAttribute="leading" secondItem="KdB-gP-Fzk" secondAttribute="leading" constant="115" id="RZ8-wy-GPd"/>
                                     <constraint firstItem="8cJ-yP-JMD" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="topMargin" constant="2" id="SfF-OX-qQK"/>
                                     <constraint firstItem="dBF-jz-Uj7" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="top" constant="20" id="Uag-5J-c6a"/>
-                                    <constraint firstItem="zOy-MJ-BEO" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="top" constant="28" id="Y7b-D2-6EB"/>
+                                    <constraint firstItem="zOy-MJ-BEO" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="top" constant="36" id="Y7b-D2-6EB"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nzg-0A-k9J" secondAttribute="trailing" constant="20" symbolic="YES" id="Ztn-pA-JMe"/>
                                     <constraint firstItem="8cJ-yP-JMD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dBF-jz-Uj7" secondAttribute="leading" id="d1v-hy-3oY"/>
-                                    <constraint firstItem="UGt-JN-IXW" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="top" constant="31" id="lhA-Dk-Hu7"/>
+                                    <constraint firstItem="UGt-JN-IXW" firstAttribute="top" secondItem="KdB-gP-Fzk" secondAttribute="top" constant="39" id="lhA-Dk-Hu7"/>
                                     <constraint firstItem="zOy-MJ-BEO" firstAttribute="leading" secondItem="dBF-jz-Uj7" secondAttribute="trailing" constant="21" id="o9j-He-s8w"/>
                                     <constraint firstItem="dBF-jz-Uj7" firstAttribute="leading" secondItem="KdB-gP-Fzk" secondAttribute="leading" constant="15" id="scJ-of-CbL"/>
                                     <constraint firstAttribute="trailing" secondItem="8cJ-yP-JMD" secondAttribute="trailing" constant="6" id="t3d-wY-VEF"/>
-                                    <constraint firstAttribute="trailing" secondItem="UGt-JN-IXW" secondAttribute="trailing" constant="74" id="uc5-F1-eLq"/>
+                                    <constraint firstAttribute="trailing" secondItem="UGt-JN-IXW" secondAttribute="trailing" id="uc5-F1-eLq"/>
                                     <constraint firstItem="Nzg-0A-k9J" firstAttribute="centerY" secondItem="KdB-gP-Fzk" secondAttribute="centerY" constant="13.5" id="zLU-mi-lvg"/>
                                 </constraints>
                             </view>
