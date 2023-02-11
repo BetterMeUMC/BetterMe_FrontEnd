@@ -67,16 +67,9 @@ class ProfileEditController: UIViewController{
     
     //MARK: - Helpers
     @objc func clickedSavedBtn(_ sender: UIButton) {
-        UserDefaults.standard.setValue(self.nameTextField.text, forKey: "nickName")
-        UserDefaults.standard.setValue(self.messageTextField.text, forKey: "promise")
-        
-        
-        let alret = UIAlertController(title: "저장!", message: "프로필이 수정되었습니다.", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
 
-        alret.addAction(ok)
-        present(alret, animated: true, completion: nil)
-        print("저장")
+        UserDataManager().patchUserData(nickName: self.nameTextField.text ?? "", promise: self.messageTextField.text ?? "",viewController: self)
+        
     }
     
     

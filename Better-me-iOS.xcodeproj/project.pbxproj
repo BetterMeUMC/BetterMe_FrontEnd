@@ -25,6 +25,7 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
+		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		286F6ABA298E8BA00089936D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 286F6AB9298E8BA00089936D /* Kingfisher */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
 		28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28AAB1FC298FC78400B58C12 /* Alamofire */; };
@@ -81,6 +82,7 @@
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		280F5E582983B25F000A30B3 /* ProfileEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
+		282C46932997F62A006E1E13 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCellView.swift; sourceTree = "<group>"; };
@@ -166,8 +168,9 @@
 		280F5E542983B23A000A30B3 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */,
 				280F5E562983B25E000A30B3 /* MyPageViewController.swift */,
+				282C46932997F62A006E1E13 /* ResponseStruct.swift */,
+				28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */,
 				28BFE253298BA58000176731 /* MypageTableView */,
 				28BFE255298BA5FE00176731 /* HabitTips */,
 				280F5E582983B25F000A30B3 /* ProfileEditController.swift */,
@@ -439,6 +442,7 @@
 				1ADA5F3E2994DFD900FE90AD /* ResponseModel.swift in Sources */,
 				1ADA5F3D2994DFD900FE90AD /* wordViewController.swift in Sources */,
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
+				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
