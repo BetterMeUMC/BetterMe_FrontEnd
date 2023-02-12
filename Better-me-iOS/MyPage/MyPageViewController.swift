@@ -114,18 +114,17 @@ class MyPageViewController: UIViewController {
     
     @objc func logOutButtonClicked(_ sender: UIButton) {
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "확인", style: .default){
-            _ in
-            for key in UserDefaults.standard.dictionaryRepresentation().keys {
-                UserDefaults.standard.removeObject(forKey: key.description)
-            }
-            self.tabBarController?.view.removeFromSuperview()
+        let yes = UIAlertAction(title: "확인", style: .default) { UIAlertAction in
+            UserDefaults.standard.removeObject(forKey: "token")
+            let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+            self.view.window?.rootViewController = mainController
+            self.view.window?.makeKeyAndVisible()
         }
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
         alert.addAction(no)
 
-            self.present(alert, animated: false)
+        self.present(alert, animated: false)
     
      }
 
