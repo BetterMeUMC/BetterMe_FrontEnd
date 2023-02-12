@@ -16,7 +16,7 @@ class UserDataManager {
     let userIdx = UserDefaults.standard.string(forKey: "userIdx")
    
     
-    func getNickNameAndPromise() {
+    func getUserInfoData() {
 
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/getMyPage/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
@@ -31,7 +31,10 @@ class UserDataManager {
             case .success(let response):
                 UserDefaults.standard.setValue(response.result.nickName, forKey: "nickName")
                 UserDefaults.standard.setValue(response.result.promise, forKey: "promise")
-
+                
+                let imageURL = URL(string:response.result.photo)
+                UserDefaults.standard.setValue(imageURL, forKey: "photoURL")
+                
             case .failure(let error):
                 print(error)
                 

@@ -25,7 +25,7 @@ struct patchUserResponseStruct: Codable {
 struct User: Codable {
     let userIdx : Int
     let nickName : String
-//    let photo : String
+    let photo : String
     let promise : String
 }
 

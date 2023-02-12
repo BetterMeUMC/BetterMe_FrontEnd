@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 
 class MyPageViewController: UIViewController {
@@ -14,7 +14,7 @@ class MyPageViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var profileImageView: UIView!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var promise: UILabel!
@@ -38,9 +38,11 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureNaviBar()
-        UserDataManager().getNickNameAndPromise()
+        UserDataManager().getUserInfoData()
         configureProfileViewUI()
         configureTableViewUI()
+        print(UserDefaults.standard.string(forKey: "userIdx"))
+        print(UserDefaults.standard.string(forKey: "token"))
     }
     override func viewWillAppear(_ animated: Bool) {
         self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
@@ -69,12 +71,12 @@ class MyPageViewController: UIViewController {
     func configureProfileViewUI() {
         self.nickName.text = UserDefaults.standard.string(forKey: "nickName")
         self.promise.text = UserDefaults.standard.string(forKey: "promise")
+//        self.photoImageView.kf.setImage(with: UserDefaults.standard.url(forKey: "photoURL"))
         
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
-        profileImageView.layer.cornerRadius = profileImageView.frame.width/2
-        shadowing(view: profileImageView)
-        
+        photoImageView.layer.cornerRadius = photoImageView.frame.width/2
+        shadowing(view: photoImageView)
         
     }
     
