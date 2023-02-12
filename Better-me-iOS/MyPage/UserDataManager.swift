@@ -29,11 +29,14 @@ class UserDataManager {
         .responseDecodable(of: getUserResponseStruct.self) { response in
             switch response.result {
             case .success(let response):
+                print(response.result.nickName)
+                print(response.result.promise)
+                print(response.result.photo)
                 UserDefaults.standard.setValue(response.result.nickName, forKey: "nickName")
                 UserDefaults.standard.setValue(response.result.promise, forKey: "promise")
-                
-                let imageURL = URL(string:response.result.photo)
-                UserDefaults.standard.setValue(imageURL, forKey: "photoURL")
+               
+                let photoURL = URL(string: response.result.photo)
+                UserDefaults.standard.setValue(photoURL, forKey: "photoURL")
                 
             case .failure(let error):
                 print(error)
@@ -43,7 +46,7 @@ class UserDataManager {
     }
     
     func patchUserData(nickName: String, promise: String, viewController: ProfileEditController) {
-
+        
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/changeN/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
         let params = ["nickName": nickName] as Dictionary
@@ -60,20 +63,20 @@ class UserDataManager {
                 self.patchPromise(promise: promise,viewController: viewController)
                 UserDefaults.standard.setValue(nickName, forKey: "nickName")
                 UserDefaults.standard.setValue(promise, forKey: "promise")
-
+                
             case .failure(let error):
                 print(error)
                 
             }
         }
     }
-        
+    
     func patchPromise(promise: String, viewController: ProfileEditController) {
         
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/changePm/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
         let params = ["promise": promise] as Dictionary
-
+        
         AF.request(url,
                    method: .patch,
                    parameters: params,
@@ -87,7 +90,7 @@ class UserDataManager {
                 let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                 alret.addAction(ok)
                 viewController.present(alret, animated: true, completion: nil)
-            
+                
             case .failure(let error):
                 print(error)
                 
@@ -99,7 +102,7 @@ class UserDataManager {
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/changePw/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
         let params = ["password": password] as Dictionary
-
+        
         AF.request(url,
                    method: .patch,
                    parameters: params,
@@ -113,7 +116,7 @@ class UserDataManager {
                 let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                 alret.addAction(ok)
                 viewController.present(alret, animated: true, completion: nil)
-            
+                
             case .failure(let error):
                 print(error)
                 
@@ -122,18 +125,20 @@ class UserDataManager {
     }
     func deleteAccount(viewController: WithdrawalViewController) {
         
-        guard let url = URL(string: "http://54.180.13.219:3000/app/auth/unregister\(userIdx ?? "")") else {return}
-        let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
-
+        guard let url = URL(string: "http://54.180.13.219:3000/app/auth/unregister/\(userIdx ?? "")") else {return}
+        let header : HTTPHeaders = ["x-access-token": token ?? ""]
+        
         AF.request(url,
-                   method: .patch,
-                   parameters: nil,
+                   method: .delete,
                    encoding: JSONEncoding.default,
                    headers: header)
         .responseDecodable(of: patchUserResponseStruct.self) { response in
             switch response.result {
             case .success(_):
-                UserDefaults.standard.removeObject(forKey: "token")
+                for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    UserDefaults.standard.removeObject(forKey: key.description)
+                }
+                print("회원탈퇴 완료")
                 viewController.navigationController?.popToRootViewController(animated: true)
             case .failure(let error):
                 print(error)
@@ -142,8 +147,8 @@ class UserDataManager {
         }
     }
     
-
+    
 }
-            
+
 
 

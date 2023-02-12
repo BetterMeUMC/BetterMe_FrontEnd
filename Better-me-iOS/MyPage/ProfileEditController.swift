@@ -68,6 +68,9 @@ class ProfileEditController: UIViewController{
     //MARK: - Helpers
     @objc func clickedSavedBtn(_ sender: UIButton) {
 
+        guard let newImageData = self.userCommentImageView.image?.pngData() else { return }
+        ProfileImageDataManager().patchProfilePhoto(imgData: newImageData)
+        
         UserDataManager().patchUserData(nickName: self.nameTextField.text ?? "", promise: self.messageTextField.text ?? "",viewController: self)
         
     }
@@ -82,16 +85,21 @@ class ProfileEditController: UIViewController{
     
     func configureProfileUI(){
         shadowing(view: profileView)
-        
-        self.nameTextField.text = UserDefaults.standard.string(forKey: "nickName")
-        self.messageTextField.text = UserDefaults.standard.string(forKey: "promise")
-        
         profileView.layer.cornerRadius = profileView.frame.height/2
         userCommentImageView.layer.cornerRadius = userCommentImageView.frame.height/2
         userCommentImageView.layer.borderWidth = 1
         userCommentImageView.clipsToBounds = true
         userCommentImageView.layer.borderColor = UIColor.clear.cgColor
-        userCommentImageView.clipsToBounds = true
+        
+        self.nameTextField.text = UserDefaults.standard.string(forKey: "nickName")
+        self.messageTextField.text = UserDefaults.standard.string(forKey: "promise")
+        
+        guard let url = UserDefaults.standard.url(forKey: "photoURL") else { return }
+        if let data = try? Data(contentsOf: url) {
+            if let image = UIImage(data: data) {
+                self.userCommentImageView.image = image
+            }
+        }
     }
     func textFieldCustom (textField: UITextField) {
         textField.clearsOnBeginEditing = false
@@ -173,13 +181,9 @@ extension ProfileEditController: UIImagePickerControllerDelegate, UINavigationCo
         } else {
             print("error detected in didFinishPickinMediaWithInfo method")
         }
+        self.userCommentImageView.image = newImage
         
-        self.userCommentImageView.image = newImage // 받아온 이미지를 update
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
-        
     }
-    
-    
-
 }
 

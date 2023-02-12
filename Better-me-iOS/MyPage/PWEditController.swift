@@ -9,7 +9,7 @@ import UIKit
 
 class PWEditController: UIViewController{
     //MARK: - Properties
-    @IBOutlet weak var oldPWTextField: UITextField!
+
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var passwordCheckField: UITextField!
     @IBOutlet weak var checkLabel: UILabel! {
@@ -37,7 +37,6 @@ class PWEditController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarUI()
-        textFieldCustom(textField:oldPWTextField)
         textFieldCustom(textField:passwordField)
         textFieldCustom(textField:passwordCheckField)
         
@@ -87,8 +86,7 @@ class PWEditController: UIViewController{
    
     @objc func saveBtnClicked(_sender: UIButton) {
         UserDataManager().patchPassword(password: passwordField.text!, viewController: self)
-        
-        oldPWTextField.text = ""
+    
         passwordField.text = ""
         passwordCheckField.text = ""
     }

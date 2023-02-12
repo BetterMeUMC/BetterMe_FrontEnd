@@ -34,6 +34,7 @@
 		28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */; };
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
+		28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */; };
 		28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */; };
 		28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48A2987B5190092E210 /* FeedBackController.swift */; };
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
@@ -89,6 +90,7 @@
 		28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
+		28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageDataManager.swift; sourceTree = "<group>"; };
 		28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableFooterView.swift; sourceTree = "<group>"; };
 		28EFD48A2987B5190092E210 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
 		28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				280F5E562983B25E000A30B3 /* MyPageViewController.swift */,
+				28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */,
 				282C46932997F62A006E1E13 /* ResponseStruct.swift */,
 				28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */,
 				28BFE253298BA58000176731 /* MypageTableView */,
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
+				28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */,
 				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */,

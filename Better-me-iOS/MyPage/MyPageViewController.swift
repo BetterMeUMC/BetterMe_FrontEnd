@@ -36,18 +36,16 @@ class MyPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDataManager().getUserInfoData()
         // Do any additional setup after loading the view.
         configureNaviBar()
-        UserDataManager().getUserInfoData()
         configureProfileViewUI()
         configureTableViewUI()
-        print(UserDefaults.standard.string(forKey: "userIdx"))
-        print(UserDefaults.standard.string(forKey: "token"))
     }
     override func viewWillAppear(_ animated: Bool) {
         self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
         self.promise.text = UserDefaults.standard.string(forKey: "promise")
-        
+        // self.photoImageView.kf.setImage(with: UserDefaults.standard.url(forKey: "photoURL"))
     }
     
 
@@ -69,15 +67,22 @@ class MyPageViewController: UIViewController {
     }
     
     func configureProfileViewUI() {
-        self.nickName.text = UserDefaults.standard.string(forKey: "nickName")
-        self.promise.text = UserDefaults.standard.string(forKey: "promise")
-//        self.photoImageView.kf.setImage(with: UserDefaults.standard.url(forKey: "photoURL"))
-        
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
         photoImageView.layer.cornerRadius = photoImageView.frame.width/2
         shadowing(view: photoImageView)
         
+        self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
+        self.promise.text = UserDefaults.standard.string(forKey: "promise")
+        
+        guard let url = UserDefaults.standard.url(forKey: "photoURL") else { return }
+        if let data = try? Data(contentsOf: url) {
+            if let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.photoImageView.image = image
+                }
+            }
+        }
     }
     
     func configureTableViewUI() {
@@ -111,8 +116,10 @@ class MyPageViewController: UIViewController {
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "확인", style: .default){
             _ in
-            UserDefaults.standard.removeObject(forKey: "token")
-            self.navigationController?.popToRootViewController(animated: true)
+            for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                UserDefaults.standard.removeObject(forKey: key.description)
+            }
+            self.tabBarController?.view.removeFromSuperview()
         }
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
