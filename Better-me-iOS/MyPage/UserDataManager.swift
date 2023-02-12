@@ -136,10 +136,12 @@ class UserDataManager {
             switch response.result {
             case .success(_):
                 for key in UserDefaults.standard.dictionaryRepresentation().keys {
-                    UserDefaults.standard.removeObject(forKey: key.description)
-                }
+                            UserDefaults.standard.removeObject(forKey: key.description)
+                        }
+                let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+                viewController.view.window?.rootViewController = mainController
+                viewController.view.window?.makeKeyAndVisible()
                 print("회원탈퇴 완료")
-                viewController.navigationController?.popToRootViewController(animated: true)
             case .failure(let error):
                 print(error)
                 

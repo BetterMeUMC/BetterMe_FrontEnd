@@ -25,9 +25,8 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
-		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		282C4690299548F4006E1E13 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 282C468F299548F4006E1E13 /* PopupView */; };
-
+		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
 		28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */; };
 		28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */; };
@@ -35,6 +34,8 @@
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
 		28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */; };
+		28E5ABFF299958B1009EB65C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28AAB1FC298FC78400B58C12 /* Alamofire */; };
+		28E5AC0129996184009EB65C /* FirstAlertSubViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */; };
 		28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */; };
 		28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48A2987B5190092E210 /* FeedBackController.swift */; };
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
@@ -91,6 +92,7 @@
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageDataManager.swift; sourceTree = "<group>"; };
+		28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAlertSubViewCell.swift; sourceTree = "<group>"; };
 		28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableFooterView.swift; sourceTree = "<group>"; };
 		28EFD48A2987B5190092E210 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
 		28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
@@ -130,8 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E5ABFF299958B1009EB65C /* Alamofire in Frameworks */,
 				282C4690299548F4006E1E13 /* PopupView in Frameworks */,
-				28AAB1FD298FC78400B58C12 /* Alamofire in Frameworks */,
 				D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +204,7 @@
 			children = (
 				28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */,
 				28EFD497298AAB620092E210 /* AlertTableViewCell.swift */,
+				28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */,
 			);
 			path = PushAlert;
 			sourceTree = "<group>";
@@ -303,10 +306,8 @@
 			);
 			name = "Better-me-iOS";
 			packageProductDependencies = (
-
 				28AAB1FC298FC78400B58C12 /* Alamofire */,
 				282C468F299548F4006E1E13 /* PopupView */,
-
 			);
 			productName = "Better-me-iOS";
 			productReference = BECC4B35296C3AB60037807F /* Better-me-iOS.app */;
@@ -339,7 +340,6 @@
 			packageReferences = (
 				28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				282C468E299548F4006E1E13 /* XCRemoteSwiftPackageReference "PopupView" */,
-
 			);
 			productRefGroup = BECC4B36296C3AB60037807F /* Products */;
 			projectDirPath = "";
@@ -451,6 +451,7 @@
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
 				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
+				28E5AC0129996184009EB65C /* FirstAlertSubViewCell.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,

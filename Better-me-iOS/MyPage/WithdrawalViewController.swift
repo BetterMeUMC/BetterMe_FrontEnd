@@ -109,6 +109,8 @@ class WithdrawalViewController: UIViewController {
     }
     @objc func yesClicked ( _ sender : UIButton) {
         UserDataManager().deleteAccount(viewController: self)
+        
+        
     }
     @objc func noClicked ( _ sender : UIButton) {
         navigationController?.popViewController(animated: true)

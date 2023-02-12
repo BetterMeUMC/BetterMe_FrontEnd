@@ -41,6 +41,8 @@ class MyPageViewController: UIViewController {
         configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
+//        print(UserDefaults.standard.string(forKey: "userIdx"))
+//        print(UserDefaults.standard.string(forKey: "token"))
     }
     override func viewWillAppear(_ animated: Bool) {
         self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
@@ -115,7 +117,9 @@ class MyPageViewController: UIViewController {
     @objc func logOutButtonClicked(_ sender: UIButton) {
         let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "확인", style: .default) { UIAlertAction in
-            UserDefaults.standard.removeObject(forKey: "token")
+            for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                        UserDefaults.standard.removeObject(forKey: key.description)
+                    }
             let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
             self.view.window?.rootViewController = mainController
             self.view.window?.makeKeyAndVisible()
