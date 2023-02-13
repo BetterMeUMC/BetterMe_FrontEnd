@@ -50,9 +50,6 @@ extension GoodHabitTipsViewController : UITableViewDelegate,UITableViewDataSourc
             return cell
 
     }
-
-    
-    
  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UIView.animate(withDuration: 0.3) {
             tableView.performBatchUpdates(nil)
