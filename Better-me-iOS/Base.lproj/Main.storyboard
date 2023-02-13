@@ -474,7 +474,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-17" y="59" width="384" height="44"/>
+                                <rect key="frame" x="-18" y="59" width="384" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -1147,7 +1147,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-24" y="59" width="392" height="44"/>
+                                <rect key="frame" x="-25" y="59" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1304,7 +1304,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-16" y="59" width="384" height="44"/>
+                                <rect key="frame" x="-17" y="59" width="384" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -1800,10 +1800,10 @@
             </objects>
             <point key="canvasLocation" x="1082" y="2535"/>
         </scene>
-        <!--Push Alert View Controller-->
+        <!--Push Noti View Controller-->
         <scene sceneID="E0B-N7-bvn">
             <objects>
-                <viewController storyboardIdentifier="PushAlertViewController" id="fNf-n5-HsF" customClass="PushAlertViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PushNotiViewController" id="fNf-n5-HsF" customClass="PushNotiViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nMO-dv-lB2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1859,18 +1859,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="alertSubTitleLabel" destination="EhD-7P-RCS" id="PRa-5B-jMs"/>
-                                            <outlet property="alertSwitch" destination="XaS-ST-shO" id="kTo-H0-dv4"/>
                                             <outlet property="alertTitleLabel" destination="Wdn-Wz-VZc" id="SzL-xG-gD1"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FirstAlertSubViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstAlertSubViewCell" rowHeight="91" id="dhI-OD-oXw" customClass="FirstAlertSubViewCell" customModule="Better_me_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="141" width="393" height="91"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhI-OD-oXw" id="8bN-wo-InI">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="91"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="0.93333333330000001" green="0.50588235290000005" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1882,9 +1872,6 @@
                         <viewLayoutGuide key="safeArea" id="LJK-CJ-vzJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="alertSwitch" destination="XaS-ST-shO" id="2eq-JD-sTG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qh8-p0-7wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

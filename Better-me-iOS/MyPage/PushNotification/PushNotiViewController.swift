@@ -1,5 +1,5 @@
 //
-//  PushAlertViewController.swift
+//  PushNotiViewController.swift
 //  Better-me-iOS
 //
 //  Created by Phil on 2023/02/01.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PushAlertViewController: UIViewController {
+class PushNotiViewController: UIViewController {
 
     private let alertTitle = ["매일 습관 체크 알림","습관 초대 알림","친구 요청 알림","친구 어워드 알림"]
     private let alertSubTitle = ["매일 정해진 시간에 습관 체크 알림을 보냅니다",
@@ -32,7 +32,7 @@ class PushAlertViewController: UIViewController {
 }
 
 
-extension PushAlertViewController: UITableViewDataSource , UITableViewDelegate{
+extension PushNotiViewController: UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alertTitle.count
     }

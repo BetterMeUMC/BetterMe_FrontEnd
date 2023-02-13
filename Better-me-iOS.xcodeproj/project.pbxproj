@@ -35,11 +35,10 @@
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
 		28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */; };
 		28E5ABFF299958B1009EB65C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28AAB1FC298FC78400B58C12 /* Alamofire */; };
-		28E5AC0129996184009EB65C /* FirstAlertSubViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */; };
 		28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */; };
 		28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48A2987B5190092E210 /* FeedBackController.swift */; };
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
-		28EFD496298AA2FC0092E210 /* PushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */; };
+		28EFD496298AA2FC0092E210 /* PushNotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */; };
 		28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD497298AAB620092E210 /* AlertTableViewCell.swift */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
@@ -92,14 +91,13 @@
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageDataManager.swift; sourceTree = "<group>"; };
-		28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAlertSubViewCell.swift; sourceTree = "<group>"; };
 		28EFD4882987AE140092E210 /* MyPageTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableFooterView.swift; sourceTree = "<group>"; };
 		28EFD48A2987B5190092E210 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
 		28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
 		28EFD490298A9A930092E210 /* Better-me-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Better-me-iOS.entitlements"; sourceTree = "<group>"; };
 		28EFD491298A9D850092E210 /* first.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = first.apn; sourceTree = "<group>"; };
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
-		28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlertViewController.swift; sourceTree = "<group>"; };
+		28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
 		6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +180,7 @@
 				280F5E592983B25F000A30B3 /* PWEditController.swift */,
 				28EFD48A2987B5190092E210 /* FeedBackController.swift */,
 				28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */,
-				28BFE254298BA5CC00176731 /* PushAlert */,
+				28E5AC02299AD454009EB65C /* PushNotification */,
 				28EFD493298A9FD50092E210 /* second.apn */,
 				28EFD491298A9D850092E210 /* first.apn */,
 			);
@@ -199,16 +197,6 @@
 			path = MypageTableView;
 			sourceTree = "<group>";
 		};
-		28BFE254298BA5CC00176731 /* PushAlert */ = {
-			isa = PBXGroup;
-			children = (
-				28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */,
-				28EFD497298AAB620092E210 /* AlertTableViewCell.swift */,
-				28E5AC0029996184009EB65C /* FirstAlertSubViewCell.swift */,
-			);
-			path = PushAlert;
-			sourceTree = "<group>";
-		};
 		28BFE255298BA5FE00176731 /* HabitTips */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +207,15 @@
 				28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */,
 			);
 			path = HabitTips;
+			sourceTree = "<group>";
+		};
+		28E5AC02299AD454009EB65C /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */,
+				28EFD497298AAB620092E210 /* AlertTableViewCell.swift */,
+			);
+			path = PushNotification;
 			sourceTree = "<group>";
 		};
 		BECC4B2C296C3AB60037807F = {
@@ -440,7 +437,7 @@
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
 				1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */,
 				1ADA5F3A2994DFD900FE90AD /* MainViewController.swift in Sources */,
-				28EFD496298AA2FC0092E210 /* PushAlertViewController.swift in Sources */,
+				28EFD496298AA2FC0092E210 /* PushNotiViewController.swift in Sources */,
 				1ADA5F392994DFD900FE90AD /* JoinViewController.swift in Sources */,
 				1ADA5F382994DFD900FE90AD /* UIColorExtension.swift in Sources */,
 				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
@@ -451,7 +448,6 @@
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
 				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
-				28E5AC0129996184009EB65C /* FirstAlertSubViewCell.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,

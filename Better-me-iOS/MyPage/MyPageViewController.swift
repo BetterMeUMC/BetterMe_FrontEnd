@@ -185,7 +185,7 @@ extension MyPageViewController: UITableViewDelegate {
         }
     
         case 2:
-            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PushAlertViewController"){
+            if let controller = self.storyboard?.instantiateViewController(withIdentifier: "PushNotiViewController"){
                 self.navigationController?.pushViewController(controller, animated: true)
             }
         case 3:
