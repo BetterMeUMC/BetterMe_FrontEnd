@@ -14,10 +14,10 @@ class UserDataManager {
     
     let token = UserDefaults.standard.string(forKey: "token")
     let userIdx = UserDefaults.standard.string(forKey: "userIdx")
-   
+    
     
     func getUserInfoData() {
-
+        
         guard let url = URL(string: "http://54.180.13.219:3000/app/users/getMyPage/\(userIdx ?? "")") else {return}
         let header : HTTPHeaders = ["Content-Type":"application/json", "Accept":"application/json", "x-access-token": token ?? ""]
         
@@ -138,8 +138,8 @@ class UserDataManager {
             switch response.result {
             case .success(_):
                 for key in UserDefaults.standard.dictionaryRepresentation().keys {
-                            UserDefaults.standard.removeObject(forKey: key.description)
-                        }
+                    UserDefaults.standard.removeObject(forKey: key.description)
+                }
                 let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
                 viewController.view.window?.rootViewController = mainController
                 viewController.view.window?.makeKeyAndVisible()

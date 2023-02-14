@@ -5,9 +5,9 @@
 import UIKit
 
 class MyPageTableFooterView: UIView {
-
+    
     //MARK: - Properties
-
+    
     let button : UIButton = {
         let view = UIButton()
         view.backgroundColor = .white
@@ -24,7 +24,7 @@ class MyPageTableFooterView: UIView {
         
         return view
     }()
-
+    
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,9 +35,9 @@ class MyPageTableFooterView: UIView {
     }
     
     //MARK: - Helpers
-
+    
     func configureUI() {
-       
+        
         addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([button.topAnchor.constraint(equalTo: topAnchor, constant: 13),
@@ -45,7 +45,7 @@ class MyPageTableFooterView: UIView {
                                      button.rightAnchor.constraint(equalTo: rightAnchor, constant: -18),
                                      button.heightAnchor.constraint(equalToConstant: 43)])
     }
-
-
+    
+    
     
 }

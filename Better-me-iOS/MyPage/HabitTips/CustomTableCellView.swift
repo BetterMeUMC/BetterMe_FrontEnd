@@ -53,7 +53,7 @@ final class CustomTableCellView: UIView {
         
         btnImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
         btnImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30).isActive = true
-
+        
         
         title.leadingAnchor.constraint(equalTo: title.trailingAnchor).isActive = true
         title.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -72,7 +72,7 @@ final class CustomTableDetailView: UIView {
     }
     
     private let title = UILabel()
-
+    
     func setUI(with string: String) {
         title.text = string
         title.textAlignment = .left
@@ -83,7 +83,7 @@ final class CustomTableDetailView: UIView {
     
     func commonInit() {
         addSubview(title)
-
+        
         title.translatesAutoresizingMaskIntoConstraints = false
         title.topAnchor.constraint(equalTo: self.topAnchor,constant: 50).isActive = true
         title.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 30).isActive = true

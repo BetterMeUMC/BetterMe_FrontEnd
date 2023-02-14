@@ -8,7 +8,7 @@
 import UIKit
 
 class FeedBackController: UIViewController {
-
+    
     //MARK: - Properties
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -68,18 +68,14 @@ class FeedBackController: UIViewController {
         else {return}
         let token = UserDefaults.standard.string(forKey: "token")
         let header = ["x-access-token": token ?? ""]
-        // URL 객체 정의
         let url = URL(string: "http://54.180.13.219:3000/app/feedback/\(userIdx ?? "")")
-
-        // URLRequest 객체를 정의
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        // HTTP 메시지 헤더
         request.allHTTPHeaderFields = header
-
+        
         // URLSession 객체를 통해 전송, 응답값 처리
         let task = URLSession.shared.uploadTask(with: request, from: uploadData) { (data, response, error) in
-
+            
             if let e = error {
                 NSLog("An error has occured: \(e.localizedDescription)")
                 return
@@ -94,20 +90,20 @@ class FeedBackController: UIViewController {
             self.titleTextField.text = ""
             self.contentTextField.text = ""
         }
-
-        alert.addAction(ok)
-
         
-            self.present(alert, animated: false)
+        alert.addAction(ok)
+        
+        
+        self.present(alert, animated: false)
         
     }
-
+    
 }
 
 struct PostFeedback: Codable {
     let title: String
     let content: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title, content
     }

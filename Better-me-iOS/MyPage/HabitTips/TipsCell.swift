@@ -18,9 +18,9 @@ class TipsCell: UITableViewCell {
         // Initialization code
         commonInit()
     }
-
+    
     func setUI(with index: Int,_ tag: Int) {
-
+        
         if tag == 1 {
             cellView.setUI(with: GConstants.tipsTitle[index],
                            image: UIImage(named: "YellowStar") ?? UIImage(),
@@ -33,17 +33,17 @@ class TipsCell: UITableViewCell {
                            btn: UIImage(systemName: "arrowtriangle.down.fill") ?? UIImage())
             detailView.setUI(with: TDB.getBadTips(index: index))
         }
-    
+        
         
     }
     
     func commonInit() {
         selectionStyle = .none
         detailView.isHidden = true
-
+        
         
         containerView.axis = .vertical
-
+        
         contentView.addSubview(containerView)
         containerView.addArrangedSubview(cellView)
         containerView.addArrangedSubview(detailView)
@@ -63,19 +63,19 @@ extension TipsCell {
     var isDetailViewHidden: Bool {
         return detailView.isHidden
     }
-
+    
     func showDetailView() {
         detailView.isHidden = false
         cellView.title.textColor = .black
         cellView.btnImageView.tintColor = .black
     }
-
+    
     func hideDetailView() {
         detailView.isHidden = true
         cellView.title.textColor = .gray
         cellView.btnImageView.tintColor = .gray
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if isDetailViewHidden, selected {
@@ -86,8 +86,8 @@ extension TipsCell {
     }
 }
 
-    
-   
+
+
 
 
 

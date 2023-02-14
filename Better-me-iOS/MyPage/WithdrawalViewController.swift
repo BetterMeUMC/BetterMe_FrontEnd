@@ -9,13 +9,13 @@ import UIKit
 
 
 class WithdrawalViewController: UIViewController {
-
+    
     //MARK: - Properties
     
     let handImageView : UIImageView = {
         let aImageView = UIImageView()
         aImageView.image = UIImage(named: "image 123")
-       
+        
         return aImageView
     }()
     
@@ -117,9 +117,9 @@ class WithdrawalViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-     
-          self.view.endEditing(true)
-     
+        
+        self.view.endEditing(true)
+        
     }
-
+    
 }

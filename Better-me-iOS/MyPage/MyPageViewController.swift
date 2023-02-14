@@ -14,11 +14,8 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
-
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var promise: UILabel!
-    
-    
     
     @IBAction func ProfileEditBtn(_ sender: Any) {
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ProfileEditController"){
@@ -27,12 +24,11 @@ class MyPageViewController: UIViewController {
         }
     }
     
-    private  let tableView =  UITableView(frame: .zero, style: .grouped)
+    private let tableView =  UITableView(frame: .zero, style: .grouped)
     private let cellID = "Cell"
     private let myPageMenu = ["비밀번호 변경","피드백 작성하기","푸시알림 설정","회원탈퇴"]
 
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNaviBar()
@@ -46,17 +42,15 @@ class MyPageViewController: UIViewController {
         configureUserInfo()
     }
     
-
-    
     //MARK: - Helpers
-    func dateToString(date: Date) -> String{
+    private func dateToString(date: Date) -> String{
         let formmater = DateFormatter()
         formmater.dateFormat = "M월 d일 E요일"
         formmater.locale = Locale(identifier: "ko-KR")
         return formmater.string(from: date)
     }
     
-    func configureNaviBar() {
+    private func configureNaviBar() {
         let image = UIImage(named: "BetterMeLogo")
         let date = dateToString(date: Date())
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
@@ -64,7 +58,7 @@ class MyPageViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
-    func configureProfileViewUI() {
+    private func configureProfileViewUI() {
         profileView.layer.cornerRadius = 18
         shadowing(view: profileView)
         photoImageView.layer.cornerRadius = photoImageView.frame.width/2
@@ -72,7 +66,7 @@ class MyPageViewController: UIViewController {
         configureUserInfo()
     }
     
-    func configureTableViewUI() {
+    private func configureTableViewUI() {
         tableView.backgroundColor = .white
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +79,7 @@ class MyPageViewController: UIViewController {
                                      tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
-    func configureUserInfo () {
+    private func configureUserInfo () {
         self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
         self.promise.text = UserDefaults.standard.string(forKey: "promise")
         
@@ -132,11 +126,10 @@ class MyPageViewController: UIViewController {
         let no = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(yes)
         alert.addAction(no)
-
+        
         self.present(alert, animated: false)
     
      }
-
 }
 
 extension MyPageViewController: UITableViewDataSource {
@@ -152,7 +145,6 @@ extension MyPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 57
     }
-  
 }
 
 extension MyPageViewController: UITableViewDelegate {
@@ -197,15 +189,11 @@ extension MyPageViewController: UITableViewDelegate {
             if let controller = self.storyboard?.instantiateViewController(withIdentifier: "WithdrawalViewController"){
                 self.navigationController?.pushViewController(controller, animated: true)
         }
-            
         default:
-            
             return
-            
         }
     }
 }
-
 
 func shadowing(view : UIView) {
     view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor

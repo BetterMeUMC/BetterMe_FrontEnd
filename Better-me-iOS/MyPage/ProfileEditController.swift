@@ -9,13 +9,10 @@ import UIKit
 import AVFoundation
 import Photos
 
-
-
-
 class ProfileEditController: UIViewController{
     
     //MARK: - Properties
-
+    
     @IBOutlet weak var profileView: UIView!
     
     @IBAction func editBtn(_ sender: Any) {
@@ -31,7 +28,7 @@ class ProfileEditController: UIViewController{
     
     let imagePickerController = UIImagePickerController()
     let alertController = UIAlertController(title: "올릴 방식을 선택하세요", message: "사진 찍기 또는 앨범에서 선택", preferredStyle: .actionSheet)
-
+    
     lazy var saveBtn : UIBarButtonItem = {
         let view = UIButton()
         view.backgroundColor = UIColor(red: 0.984, green: 0.078, blue: 0, alpha: 1)
@@ -49,7 +46,7 @@ class ProfileEditController: UIViewController{
         return UIBarButtonItem(customView: view)
     }()
     
-
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +56,7 @@ class ProfileEditController: UIViewController{
         
         navigationBarUI()
         configureProfileUI()
-
+        
         textFieldCustom(textField: nameTextField)
         textFieldCustom(textField: messageTextField)
         enrollAlertEvent()
@@ -67,7 +64,7 @@ class ProfileEditController: UIViewController{
     
     //MARK: - Helpers
     @objc func clickedSavedBtn(_ sender: UIButton) {
-
+        
         guard let newImageData = photoImageView.image!.pngData() else{return}
         print(newImageData)
         ProfileImageDataManager().patchProfilePhoto(imgData: newImageData)
@@ -121,47 +118,47 @@ class ProfileEditController: UIViewController{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-     
-          self.view.endEditing(true)
-     
+        
+        self.view.endEditing(true)
+        
     }
     
     //MARK: - Camera
     func enrollAlertEvent() {
-            let photoLibraryAlertAction = UIAlertAction(title: "사진 앨범", style: .default) {
-                (action) in
-                self.openAlbum()
-            }
-            let cameraAlertAction = UIAlertAction(title: "카메라", style: .default) {(action) in
-                self.openCamera()
-            }
-            let cancelAlertAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-            self.alertController.addAction(photoLibraryAlertAction)
-            self.alertController.addAction(cameraAlertAction)
-            self.alertController.addAction(cancelAlertAction)
-            guard let alertControllerPopoverPresentationController
-                    = alertController.popoverPresentationController
-            else {return}
-            prepareForPopoverPresentation(alertControllerPopoverPresentationController)
+        let photoLibraryAlertAction = UIAlertAction(title: "사진 앨범", style: .default) {
+            (action) in
+            self.openAlbum()
+        }
+        let cameraAlertAction = UIAlertAction(title: "카메라", style: .default) {(action) in
+            self.openCamera()
+        }
+        let cancelAlertAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        self.alertController.addAction(photoLibraryAlertAction)
+        self.alertController.addAction(cameraAlertAction)
+        self.alertController.addAction(cancelAlertAction)
+        guard let alertControllerPopoverPresentationController
+                = alertController.popoverPresentationController
+        else {return}
+        prepareForPopoverPresentation(alertControllerPopoverPresentationController)
     }
     
-  
+    
     
     func openAlbum() {
-            self.imagePickerController.sourceType = .photoLibrary
-            present(self.imagePickerController, animated: false, completion: nil)
+        self.imagePickerController.sourceType = .photoLibrary
+        present(self.imagePickerController, animated: false, completion: nil)
     }
     
     func openCamera() {
-            if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
-                self.imagePickerController.sourceType = .camera
-                present(self.imagePickerController, animated: false, completion: nil)
-            }
-            else {
-                print ("Camera's not available as for now.")
-            }
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            self.imagePickerController.sourceType = .camera
+            present(self.imagePickerController, animated: false, completion: nil)
         }
-
+        else {
+            print ("Camera's not available as for now.")
+        }
+    }
+    
     
 }
 
@@ -169,7 +166,7 @@ class ProfileEditController: UIViewController{
 extension ProfileEditController: UIPopoverPresentationControllerDelegate {
     func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
         if let popoverPresentationController =
-      self.alertController.popoverPresentationController {
+            self.alertController.popoverPresentationController {
             popoverPresentationController.sourceView = self.view
             popoverPresentationController.sourceRect
             = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)

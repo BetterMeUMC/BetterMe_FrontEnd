@@ -43,7 +43,7 @@ class TipsData {
         "  2.   습관 계약을 하라. 나쁜 습관의 대가를 공적이고\n     고통스러운 것으로 만들어라."]
     
     
-
+    
     
     func getGoodTips (index : Int) -> String {
         var str = "\n"
@@ -132,5 +132,5 @@ class TipsData {
         }
     }
     
-
+    
 }

@@ -43,7 +43,4 @@ class MyPageCell: UITableViewCell {
             menuLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 19)])
     }
     
-    
-
-    
 }

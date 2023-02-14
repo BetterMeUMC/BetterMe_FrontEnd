@@ -30,7 +30,7 @@ class MyPageTableHeaderView: UIView {
         view.titleLabel?.numberOfLines = 2
         view.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 15)
         view.setTitleColor(.black, for: .normal)
-
+        
         return view
     }()
     
@@ -69,7 +69,7 @@ class MyPageTableHeaderView: UIView {
         
     }
     func configureButton() {
-    
+        
         addSubview(button1)
         button1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([button1.topAnchor.constraint(equalTo: headLabel.bottomAnchor, constant: 22),
@@ -85,5 +85,5 @@ class MyPageTableHeaderView: UIView {
                                      button2.widthAnchor.constraint(equalToConstant: 155),
                                      button2.heightAnchor.constraint(equalToConstant: 90)])
     }
-
+    
 }
