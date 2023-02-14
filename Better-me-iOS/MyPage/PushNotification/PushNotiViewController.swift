@@ -14,7 +14,9 @@ class PushNotiViewController: UIViewController {
                          "습관 초대를 받을경우 알림을 보냅니다",
                          "친구 요청을 수신하거나 \n보낸 친구 요청이 수락되었을 때 알림을 보냅니다",
                          "친구가 어워드를 획득할 경우 알림을 보냅니다"]
+    
     var isExpanded = false
+    var selectedTime: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,21 @@ class PushNotiViewController: UIViewController {
         self.title = "푸시알림 설정"
     }
 
+    
+    @IBAction func notificationTime(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            selectedTime = dateFormatter.string(from: sender.date)
+    }
+    
+
+    @IBAction func notificationTimeSaved(_ sender: UIButton) {
+        print(selectedTime ?? "")
+        let alret = UIAlertController(title: "저장!", message: "습관체크 알림 시간이 저장 되었습니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alret.addAction(ok)
+        self.present(alret, animated: true, completion: nil)
+    }
     
     
 }
