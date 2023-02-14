@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 
 class MyPageViewController: UIViewController {
@@ -15,7 +14,7 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
-    
+
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var promise: UILabel!
     
@@ -37,17 +36,15 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDataManager().getUserInfoData()
-        // Do any additional setup after loading the view.
+ 
         configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
-//        print(UserDefaults.standard.string(forKey: "userIdx"))
-//        print(UserDefaults.standard.string(forKey: "token"))
+        print(UserDefaults.standard.string(forKey: "userIdx")!)
+        print(UserDefaults.standard.string(forKey: "token")!)
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
-        self.promise.text = UserDefaults.standard.string(forKey: "promise")
-        // self.photoImageView.kf.setImage(with: UserDefaults.standard.url(forKey: "photoURL"))
+        configureUserInfo()
     }
     
 
@@ -73,18 +70,7 @@ class MyPageViewController: UIViewController {
         shadowing(view: profileView)
         photoImageView.layer.cornerRadius = photoImageView.frame.width/2
         shadowing(view: photoImageView)
-        
-        self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
-        self.promise.text = UserDefaults.standard.string(forKey: "promise")
-        
-        guard let url = UserDefaults.standard.url(forKey: "photoURL") else { return }
-        if let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.photoImageView.image = image
-                }
-            }
-        }
+        configureUserInfo()
     }
     
     func configureTableViewUI() {
@@ -99,6 +85,26 @@ class MyPageViewController: UIViewController {
                                      tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
                                      tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
                                      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+    }
+    func configureUserInfo () {
+        self.nickName.text = (UserDefaults.standard.string(forKey: "nickName") ?? " ") + " 님"
+        self.promise.text = UserDefaults.standard.string(forKey: "promise")
+        
+        if UserDefaults.standard.string(forKey: "photo") == "server x" {
+            self.photoImageView.image = UIImage(named: "defaultPhoto")
+        }
+        else {
+            guard let photoURL = URL(string: UserDefaults.standard.string(forKey: "photo") ?? "") else { return }
+            DispatchQueue.global().async {
+                if let photoData = try? Data(contentsOf: photoURL) {
+                    if let image = UIImage(data: photoData) {
+                        DispatchQueue.main.async {
+                            self.photoImageView.image = image
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @objc func btn1Clicked(_ sender: UIButton) {

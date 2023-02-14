@@ -34,11 +34,13 @@ class UserDataManager {
                 print(response.result.photo)
                 UserDefaults.standard.setValue(response.result.nickName, forKey: "nickName")
                 UserDefaults.standard.setValue(response.result.promise, forKey: "promise")
-               
-                let photoURL = URL(string: response.result.photo)
-                UserDefaults.standard.setValue(photoURL, forKey: "photoURL")
+                UserDefaults.standard.setValue(response.result.photo, forKey: "photo")
                 
             case .failure(let error):
+                UserDefaults.standard.setValue("회원", forKey: "nickName")
+                UserDefaults.standard.setValue("나의 다짐을 적어 보아요!", forKey: "promise")
+                UserDefaults.standard.setValue("server x", forKey: "photo")
+                
                 print(error)
                 
             }

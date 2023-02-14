@@ -21,14 +21,14 @@ class ProfileImageDataManager {
     
         
         AF.upload(multipartFormData: { multipartFormData in
-                multipartFormData.append(imgData, withName: "images", fileName: "ProfileImage.png", mimeType: "image/png")
+                multipartFormData.append(imgData, withName: "profile", fileName: "photo.png", mimeType: "image/png")
         }, to: url, method: .patch, headers: header)
         .validate()
         .responseDecodable(of: patchUserResponseStruct.self) { response in
             switch response.result {
             case .success(let result):
                 if result.isSuccess{
-                    UserDefaults.standard.setValue(imgData, forKey: "photoURL")
+                    print("Photo 서버 디렉토리 저장")
                 } else {
                     print(result.message)
                 }
@@ -37,6 +37,5 @@ class ProfileImageDataManager {
             }
         }
     }
-    
     
 }

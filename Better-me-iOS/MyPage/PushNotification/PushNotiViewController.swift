@@ -14,7 +14,7 @@ class PushNotiViewController: UIViewController {
                          "습관 초대를 받을경우 알림을 보냅니다",
                          "친구 요청을 수신하거나 \n보낸 친구 요청이 수락되었을 때 알림을 보냅니다",
                          "친구가 어워드를 획득할 경우 알림을 보냅니다"]
-    var selectedIndexPath: IndexPath?
+    var isExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,8 @@ extension PushNotiViewController: UITableViewDataSource , UITableViewDelegate{
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath == selectedIndexPath {
-            return 180
+        if indexPath.row == 0  && isExpanded {
+            return 150
         } else {
             return 94
         }
@@ -50,21 +50,24 @@ extension PushNotiViewController: UITableViewDataSource , UITableViewDelegate{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlertTableViewCell", for: indexPath) as? AlertTableViewCell else { return UITableViewCell() }
         cell.alertTitleLabel.text = alertTitle[indexPath.row]
         cell.alertSubTitleLabel.text = alertSubTitle[indexPath.row]
+        cell.selectionStyle = .none
                return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-             selectedIndexPath = indexPath
+             isExpanded = true
             UIView.animate(withDuration: 0.3) {
                 tableView.performBatchUpdates(nil)
             }
          }
        }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        selectedIndexPath =
-        UIView.animate(withDuration: 0.3) {
-            tableView.performBatchUpdates(nil)
+        if indexPath.row == 0 {
+            isExpanded = false
+            UIView.animate(withDuration: 0.3) {
+                tableView.performBatchUpdates(nil)
+            }
         }
-      }
+    }
 }
 

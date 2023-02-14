@@ -22,7 +22,7 @@ class ProfileEditController: UIViewController{
         self.present(alertController, animated: true, completion: nil)
         
     }
-    @IBOutlet weak var userCommentImageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -68,9 +68,9 @@ class ProfileEditController: UIViewController{
     //MARK: - Helpers
     @objc func clickedSavedBtn(_ sender: UIButton) {
 
-        guard let newImageData = self.userCommentImageView.image?.pngData() else { return }
+        guard let newImageData = photoImageView.image!.pngData() else{return}
+        print(newImageData)
         ProfileImageDataManager().patchProfilePhoto(imgData: newImageData)
-        
         UserDataManager().patchUserData(nickName: self.nameTextField.text ?? "", promise: self.messageTextField.text ?? "",viewController: self)
         
     }
@@ -86,20 +86,11 @@ class ProfileEditController: UIViewController{
     func configureProfileUI(){
         shadowing(view: profileView)
         profileView.layer.cornerRadius = profileView.frame.height/2
-        userCommentImageView.layer.cornerRadius = userCommentImageView.frame.height/2
-        userCommentImageView.layer.borderWidth = 1
-        userCommentImageView.clipsToBounds = true
-        userCommentImageView.layer.borderColor = UIColor.clear.cgColor
-        
-        self.nameTextField.text = UserDefaults.standard.string(forKey: "nickName")
-        self.messageTextField.text = UserDefaults.standard.string(forKey: "promise")
-        
-        guard let url = UserDefaults.standard.url(forKey: "photoURL") else { return }
-        if let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
-                self.userCommentImageView.image = image
-            }
-        }
+        photoImageView.layer.cornerRadius = photoImageView.frame.height/2
+        photoImageView.layer.borderWidth = 1
+        photoImageView.clipsToBounds = true
+        photoImageView.layer.borderColor = UIColor.clear.cgColor
+        configureUserInfo()
     }
     func textFieldCustom (textField: UITextField) {
         textField.clearsOnBeginEditing = false
@@ -108,7 +99,26 @@ class ProfileEditController: UIViewController{
         textField.layer.borderColor = UIColor(red: 0.679, green: 0.679, blue: 0.679, alpha: 1).cgColor
     }
     
-
+    func configureUserInfo() {
+        self.nameTextField.text = UserDefaults.standard.string(forKey: "nickName")
+        self.messageTextField.text = UserDefaults.standard.string(forKey: "promise")
+        
+        if UserDefaults.standard.string(forKey: "photo") == "server x" {
+            self.photoImageView.image = UIImage(named: "defaultPhoto")
+        }
+        else {
+            guard let photoURL = URL(string: UserDefaults.standard.string(forKey: "photo") ?? "") else { return }
+            DispatchQueue.global().async {
+                if let photoData = try? Data(contentsOf: photoURL) {
+                    if let image = UIImage(data: photoData) {
+                        DispatchQueue.main.async {
+                            self.photoImageView.image = image
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
      
@@ -181,7 +191,7 @@ extension ProfileEditController: UIImagePickerControllerDelegate, UINavigationCo
         } else {
             print("error detected in didFinishPickinMediaWithInfo method")
         }
-        self.userCommentImageView.image = newImage
+        self.photoImageView.image = newImage
         
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
     }
