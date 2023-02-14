@@ -35,8 +35,6 @@ class MyPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDataManager().getUserInfoData()
- 
         configureNaviBar()
         configureProfileViewUI()
         configureTableViewUI()
@@ -44,6 +42,7 @@ class MyPageViewController: UIViewController {
         print(UserDefaults.standard.string(forKey: "token")!)
     }
     override func viewWillAppear(_ animated: Bool) {
+        UserDataManager().getUserInfoData()
         configureUserInfo()
     }
     
