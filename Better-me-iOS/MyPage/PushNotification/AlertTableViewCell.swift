@@ -19,7 +19,7 @@ class AlertTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        switchView.isOn = false
         // Initialization code
     }
     
@@ -38,14 +38,18 @@ class AlertTableViewCell: UITableViewCell {
             case 0:
                 if switchState {
                     print("Switch 1 is on")
+                    NotificationManager().patchHabitCheckOn()
                 } else {
                     print("Switch 1 is off")
+                    NotificationManager().patchHabitCheckOff()
                 }
             case 1:
                 if switchState {
                     print("Switch 2 is on")
+                    NotificationManager().patchHabitInviteCheckOn()
                 } else {
                     print("Switch 2 is off")
+                    NotificationManager().patchHabitInviteCheckOff()
                 }
             case 2:
                 if switchState {

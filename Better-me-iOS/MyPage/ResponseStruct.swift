@@ -14,6 +14,7 @@ struct getUserResponseStruct: Codable {
     let message : String
     let result: User
 }
+
 struct patchUserResponseStruct: Codable {
     let message : String
     let code: Int
