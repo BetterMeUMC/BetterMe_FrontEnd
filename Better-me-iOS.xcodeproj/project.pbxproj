@@ -20,6 +20,9 @@
 		28EFD48F298A79EF0092E210 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48E298A79EF0092E210 /* GoodHabitTipsViewController.swift */; };
 		28EFD496298AA2FC0092E210 /* PushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */; };
 		28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD497298AAB620092E210 /* AlertTableViewCell.swift */; };
+		5E31F9BA299CC49100EB1297 /* AwardMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31F9B9299CC49100EB1297 /* AwardMainViewController.swift */; };
+		5E31F9BC299D117900EB1297 /* AwardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31F9BB299D117900EB1297 /* AwardImageViewController.swift */; };
+		5E31F9BE299D607700EB1297 /* AwardBadHabitImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E31F9BD299D607700EB1297 /* AwardBadHabitImageViewController.swift */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
 		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
@@ -59,6 +62,9 @@
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
 		28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlertViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		5E31F9B9299CC49100EB1297 /* AwardMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardMainViewController.swift; sourceTree = "<group>"; };
+		5E31F9BB299D117900EB1297 /* AwardImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardImageViewController.swift; sourceTree = "<group>"; };
+		5E31F9BD299D607700EB1297 /* AwardBadHabitImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardBadHabitImageViewController.swift; sourceTree = "<group>"; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +164,9 @@
 				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
 				BE82D332298D191A003EFE44 /* EditViewController.swift */,
 				280F5E542983B23A000A30B3 /* MyPage */,
+				5E31F9B9299CC49100EB1297 /* AwardMainViewController.swift */,
+				5E31F9BB299D117900EB1297 /* AwardImageViewController.swift */,
+				5E31F9BD299D607700EB1297 /* AwardBadHabitImageViewController.swift */,
 			);
 			path = "Better-me-iOS";
 			sourceTree = "<group>";
@@ -237,12 +246,15 @@
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE250298B83A700176731 /* GoodTipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
+				5E31F9BE299D607700EB1297 /* AwardBadHabitImageViewController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */,
+				5E31F9BC299D117900EB1297 /* AwardImageViewController.swift in Sources */,
+				5E31F9BA299CC49100EB1297 /* AwardMainViewController.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
