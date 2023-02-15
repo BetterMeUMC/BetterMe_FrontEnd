@@ -8,17 +8,17 @@
 import Foundation
 
 struct SearchName: Codable, Hashable{
-    var followee: Int
-    var nickName: String
+    let followee: Int
+    let nickName: String
 //    var photo: String
-    var stars: Int
+    let stars: Int
 }
 
 struct SearchNameResponse: Codable{
-    var isSuccess: Bool
-    var result: [SearchName]
-    var code: Int
-    var message: String
+    let isSuccess: Bool
+    let result: [SearchName]
+    let code: Int
+    let message: String
 }
 
 

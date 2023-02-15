@@ -29,6 +29,7 @@
 		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
 		2871C4FE299D00D400D02A2E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871C4FD299D00D400D02A2E /* NotificationManager.swift */; };
+		2871C501299D33DB00D02A2E /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871C500299D33DB00D02A2E /* SearchManager.swift */; };
 		28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */; };
 		28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */; };
 		28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */; };
@@ -115,6 +116,7 @@
 		282C46932997F62A006E1E13 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		2871C4FD299D00D400D02A2E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		2871C500299D33DB00D02A2E /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCellView.swift; sourceTree = "<group>"; };
 		28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitTipsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,14 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		2871C4FF299D339500D02A2E /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				2871C500299D33DB00D02A2E /* SearchManager.swift */,
+			);
+			name = NetWorking;
+			sourceTree = "<group>";
+		};
 		28BFE253298BA58000176731 /* MypageTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +290,7 @@
 		3B77F384299CC747001F7BB3 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				2871C4FF299D339500D02A2E /* NetWorking */,
 				3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */,
 				3B77F3BA299CC971001F7BB3 /* SwiftUIView.swift */,
 				3B77F385299CC7A0001F7BB3 /* Data */,
@@ -574,6 +585,7 @@
 				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
+				2871C501299D33DB00D02A2E /* SearchManager.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
 				3B77F3AD299CC957001F7BB3 /* SearchNameModel.swift in Sources */,

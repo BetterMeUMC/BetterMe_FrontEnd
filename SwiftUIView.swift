@@ -809,7 +809,6 @@ struct SearchView: View {
         NavigationView {
             VStack {
 //                SearchBar(text: $searchText)
-
                     HStack {
                         TextField("친구 찾기", text: $text)
                             .underlineTextField()
@@ -826,7 +825,7 @@ struct SearchView: View {
                         }
                         
                         Button(action: {
-                            data.fetchRandomUsers()
+                            SearchManager().getSearchName(searchNameText: text)
                         }, label: {
                             Image(systemName: "magnifyingglass")
                         })
