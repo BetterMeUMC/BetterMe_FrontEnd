@@ -9,16 +9,10 @@ import UIKit
 import SwiftUI
 
 class SocialViewController: UIViewController {
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureNaviBar()
         // Do any additional setup after loading the view.
     }
     
@@ -30,7 +24,20 @@ class SocialViewController: UIViewController {
 //    @IBSegueAction func addSwiftUIView(_ coder: NSCoder) -> UIViewController? {
 //        return UIHostingController(coder: coder, rootView: ContentView())
 //    }
+    private func dateToString(date: Date) -> String{
+        let formmater = DateFormatter()
+        formmater.dateFormat = "M월 d일 E요일"
+        formmater.locale = Locale(identifier: "ko-KR")
+        return formmater.string(from: date)
+    }
     
+    private func configureNaviBar() {
+        let image = UIImage(named: "BetterMeLogo")
+        let date = dateToString(date: Date())
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: date, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = .black
+    }
 
     /*
     // MARK: - Navigation

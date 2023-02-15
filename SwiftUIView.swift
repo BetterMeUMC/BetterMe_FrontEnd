@@ -1176,14 +1176,14 @@ struct ContentView: View {
         
         NavigationView() {
             VStack(alignment: .leading){
-                Rectangle().frame(height: 0)
-                Button(action: {
-                    print("홈으로 이동")
-                }, label: {
-                    Image("BetterMe")
-                        .padding(.top, 17.0).padding(.leading, 18).padding(.bottom, 28)
-                })
-                
+//                Rectangle().frame(height: 0)
+//                Button(action: {
+//                    print(Token().token)
+//                    print(String(Token().userIdx))
+//                }, label: {
+//                    Image("BetterMe")
+//                        .padding(.top, 17.0).padding(.leading, 18).padding(.bottom, 28)
+//                }) 
                 VStack{
                     CustomTopTabBar(tabIndex: $tabIndex)
                     if tabIndex == 0 {
