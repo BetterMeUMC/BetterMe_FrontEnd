@@ -40,6 +40,34 @@
 		28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48C298A3ABE0092E210 /* WithdrawalViewController.swift */; };
 		28EFD496298AA2FC0092E210 /* PushNotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */; };
 		28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD497298AAB620092E210 /* AlertTableViewCell.swift */; };
+		3B77F39E299CC957001F7BB3 /* HabitDisagreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F386299CC956001F7BB3 /* HabitDisagreeModel.swift */; };
+		3B77F39F299CC957001F7BB3 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F387299CC956001F7BB3 /* NewPerson.swift */; };
+		3B77F3A0299CC957001F7BB3 /* NewPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F388299CC956001F7BB3 /* NewPersonModel.swift */; };
+		3B77F3A1299CC957001F7BB3 /* Request_Friend_PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F389299CC956001F7BB3 /* Request_Friend_PostModel.swift */; };
+		3B77F3A2299CC957001F7BB3 /* FriendDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38A299CC957001F7BB3 /* FriendDelete.swift */; };
+		3B77F3A3299CC957001F7BB3 /* Request_Friend_Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38B299CC957001F7BB3 /* Request_Friend_Post.swift */; };
+		3B77F3A4299CC957001F7BB3 /* Request_FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38C299CC957001F7BB3 /* Request_FriendModel.swift */; };
+		3B77F3A5299CC957001F7BB3 /* SearchEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38D299CC957001F7BB3 /* SearchEmail.swift */; };
+		3B77F3A6299CC957001F7BB3 /* Agree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38E299CC957001F7BB3 /* Agree.swift */; };
+		3B77F3A7299CC957001F7BB3 /* RequestStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F38F299CC957001F7BB3 /* RequestStatusModel.swift */; };
+		3B77F3A8299CC957001F7BB3 /* SearchName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F390299CC957001F7BB3 /* SearchName.swift */; };
+		3B77F3A9299CC957001F7BB3 /* SearchEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F391299CC957001F7BB3 /* SearchEmailModel.swift */; };
+		3B77F3AA299CC957001F7BB3 /* InviteHabitPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F392299CC957001F7BB3 /* InviteHabitPost.swift */; };
+		3B77F3AB299CC957001F7BB3 /* HabitAgree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F393299CC957001F7BB3 /* HabitAgree.swift */; };
+		3B77F3AC299CC957001F7BB3 /* AgreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F394299CC957001F7BB3 /* AgreeModel.swift */; };
+		3B77F3AD299CC957001F7BB3 /* SearchNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F395299CC957001F7BB3 /* SearchNameModel.swift */; };
+		3B77F3AE299CC957001F7BB3 /* InviteHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F396299CC957001F7BB3 /* InviteHabit.swift */; };
+		3B77F3AF299CC957001F7BB3 /* InviteHabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F397299CC957001F7BB3 /* InviteHabitModel.swift */; };
+		3B77F3B0299CC957001F7BB3 /* Request_Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F398299CC957001F7BB3 /* Request_Friend.swift */; };
+		3B77F3B1299CC957001F7BB3 /* FriendDeleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F399299CC957001F7BB3 /* FriendDeleteModel.swift */; };
+		3B77F3B2299CC957001F7BB3 /* RequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F39A299CC957001F7BB3 /* RequestStatus.swift */; };
+		3B77F3B3299CC957001F7BB3 /* HabitAgreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F39B299CC957001F7BB3 /* HabitAgreeModel.swift */; };
+		3B77F3B4299CC957001F7BB3 /* InviteHabitPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F39C299CC957001F7BB3 /* InviteHabitPostModel.swift */; };
+		3B77F3B5299CC957001F7BB3 /* HabitDisagree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F39D299CC957001F7BB3 /* HabitDisagree.swift */; };
+		3B77F3B8299CC965001F7BB3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3B6299CC965001F7BB3 /* Person.swift */; };
+		3B77F3B9299CC965001F7BB3 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3B7299CC965001F7BB3 /* PersonModel.swift */; };
+		3B77F3BB299CC971001F7BB3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3BA299CC971001F7BB3 /* SwiftUIView.swift */; };
+		3B77F3BD299CCB70001F7BB3 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
 		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
@@ -99,6 +127,34 @@
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
 		28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotiViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		3B77F386299CC956001F7BB3 /* HabitDisagreeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDisagreeModel.swift; sourceTree = "<group>"; };
+		3B77F387299CC956001F7BB3 /* NewPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
+		3B77F388299CC956001F7BB3 /* NewPersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPersonModel.swift; sourceTree = "<group>"; };
+		3B77F389299CC956001F7BB3 /* Request_Friend_PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_Friend_PostModel.swift; sourceTree = "<group>"; };
+		3B77F38A299CC957001F7BB3 /* FriendDelete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDelete.swift; sourceTree = "<group>"; };
+		3B77F38B299CC957001F7BB3 /* Request_Friend_Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_Friend_Post.swift; sourceTree = "<group>"; };
+		3B77F38C299CC957001F7BB3 /* Request_FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_FriendModel.swift; sourceTree = "<group>"; };
+		3B77F38D299CC957001F7BB3 /* SearchEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmail.swift; sourceTree = "<group>"; };
+		3B77F38E299CC957001F7BB3 /* Agree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agree.swift; sourceTree = "<group>"; };
+		3B77F38F299CC957001F7BB3 /* RequestStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestStatusModel.swift; sourceTree = "<group>"; };
+		3B77F390299CC957001F7BB3 /* SearchName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchName.swift; sourceTree = "<group>"; };
+		3B77F391299CC957001F7BB3 /* SearchEmailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmailModel.swift; sourceTree = "<group>"; };
+		3B77F392299CC957001F7BB3 /* InviteHabitPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabitPost.swift; sourceTree = "<group>"; };
+		3B77F393299CC957001F7BB3 /* HabitAgree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitAgree.swift; sourceTree = "<group>"; };
+		3B77F394299CC957001F7BB3 /* AgreeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreeModel.swift; sourceTree = "<group>"; };
+		3B77F395299CC957001F7BB3 /* SearchNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNameModel.swift; sourceTree = "<group>"; };
+		3B77F396299CC957001F7BB3 /* InviteHabit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabit.swift; sourceTree = "<group>"; };
+		3B77F397299CC957001F7BB3 /* InviteHabitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabitModel.swift; sourceTree = "<group>"; };
+		3B77F398299CC957001F7BB3 /* Request_Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request_Friend.swift; sourceTree = "<group>"; };
+		3B77F399299CC957001F7BB3 /* FriendDeleteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDeleteModel.swift; sourceTree = "<group>"; };
+		3B77F39A299CC957001F7BB3 /* RequestStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestStatus.swift; sourceTree = "<group>"; };
+		3B77F39B299CC957001F7BB3 /* HabitAgreeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitAgreeModel.swift; sourceTree = "<group>"; };
+		3B77F39C299CC957001F7BB3 /* InviteHabitPostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteHabitPostModel.swift; sourceTree = "<group>"; };
+		3B77F39D299CC957001F7BB3 /* HabitDisagree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitDisagree.swift; sourceTree = "<group>"; };
+		3B77F3B6299CC965001F7BB3 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3B77F3B7299CC965001F7BB3 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		3B77F3BA299CC971001F7BB3 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +274,50 @@
 			path = PushNotification;
 			sourceTree = "<group>";
 		};
+		3B77F384299CC747001F7BB3 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */,
+				3B77F3BA299CC971001F7BB3 /* SwiftUIView.swift */,
+				3B77F385299CC7A0001F7BB3 /* Data */,
+			);
+			name = Social;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3B77F385299CC7A0001F7BB3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B77F3B6299CC965001F7BB3 /* Person.swift */,
+				3B77F3B7299CC965001F7BB3 /* PersonModel.swift */,
+				3B77F38E299CC957001F7BB3 /* Agree.swift */,
+				3B77F394299CC957001F7BB3 /* AgreeModel.swift */,
+				3B77F38A299CC957001F7BB3 /* FriendDelete.swift */,
+				3B77F399299CC957001F7BB3 /* FriendDeleteModel.swift */,
+				3B77F393299CC957001F7BB3 /* HabitAgree.swift */,
+				3B77F39B299CC957001F7BB3 /* HabitAgreeModel.swift */,
+				3B77F39D299CC957001F7BB3 /* HabitDisagree.swift */,
+				3B77F386299CC956001F7BB3 /* HabitDisagreeModel.swift */,
+				3B77F396299CC957001F7BB3 /* InviteHabit.swift */,
+				3B77F397299CC957001F7BB3 /* InviteHabitModel.swift */,
+				3B77F392299CC957001F7BB3 /* InviteHabitPost.swift */,
+				3B77F39C299CC957001F7BB3 /* InviteHabitPostModel.swift */,
+				3B77F387299CC956001F7BB3 /* NewPerson.swift */,
+				3B77F388299CC956001F7BB3 /* NewPersonModel.swift */,
+				3B77F38B299CC957001F7BB3 /* Request_Friend_Post.swift */,
+				3B77F389299CC956001F7BB3 /* Request_Friend_PostModel.swift */,
+				3B77F398299CC957001F7BB3 /* Request_Friend.swift */,
+				3B77F38C299CC957001F7BB3 /* Request_FriendModel.swift */,
+				3B77F39A299CC957001F7BB3 /* RequestStatus.swift */,
+				3B77F38F299CC957001F7BB3 /* RequestStatusModel.swift */,
+				3B77F38D299CC957001F7BB3 /* SearchEmail.swift */,
+				3B77F391299CC957001F7BB3 /* SearchEmailModel.swift */,
+				3B77F390299CC957001F7BB3 /* SearchName.swift */,
+				3B77F395299CC957001F7BB3 /* SearchNameModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		BECC4B2C296C3AB60037807F = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +339,7 @@
 		BECC4B37296C3AB60037807F /* Better-me-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3B77F384299CC747001F7BB3 /* Social */,
 				1ADA5F282994DFD900FE90AD /* Login */,
 				28EFD490298A9A930092E210 /* Better-me-iOS.entitlements */,
 				BECC4B38296C3AB60037807F /* AppDelegate.swift */,
@@ -407,7 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B77F3A9299CC957001F7BB3 /* SearchEmailModel.swift in Sources */,
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
+				3B77F3B1299CC957001F7BB3 /* FriendDeleteModel.swift in Sources */,
 				28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */,
 				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
@@ -415,44 +518,70 @@
 				28BFE250298B83A700176731 /* TipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
+				3B77F3A6299CC957001F7BB3 /* Agree.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				1ADA5F402994DFD900FE90AD /* PostDataManager.swift in Sources */,
+				3B77F3AC299CC957001F7BB3 /* AgreeModel.swift in Sources */,
+				3B77F3A5299CC957001F7BB3 /* SearchEmail.swift in Sources */,
 				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
 				28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */,
 				28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */,
 				1ADA5F432994DFD900FE90AD /* GetMsgDataManager.swift in Sources */,
+				3B77F3B3299CC957001F7BB3 /* HabitAgreeModel.swift in Sources */,
 				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
 				28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				1ADA5F372994DFD900FE90AD /* LoginFirstViewController.swift in Sources */,
 				28EFD48D298A3ABE0092E210 /* WithdrawalViewController.swift in Sources */,
+				3B77F3B4299CC957001F7BB3 /* InviteHabitPostModel.swift in Sources */,
+				3B77F3BB299CC971001F7BB3 /* SwiftUIView.swift in Sources */,
+				3B77F3A0299CC957001F7BB3 /* NewPersonModel.swift in Sources */,
 				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
 				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
 				1ADA5F412994DFD900FE90AD /* UserDataModel.swift in Sources */,
+				3B77F3A8299CC957001F7BB3 /* SearchName.swift in Sources */,
+				3B77F3AA299CC957001F7BB3 /* InviteHabitPost.swift in Sources */,
+				3B77F3AE299CC957001F7BB3 /* InviteHabit.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */,
+				3B77F3B8299CC965001F7BB3 /* Person.swift in Sources */,
 				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
+				3B77F3AB299CC957001F7BB3 /* HabitAgree.swift in Sources */,
 				1ADA5F3C2994DFD900FE90AD /* nicknameViewController.swift in Sources */,
+				3B77F3A3299CC957001F7BB3 /* Request_Friend_Post.swift in Sources */,
 				1ADA5F3B2994DFD900FE90AD /* passwordFindViewController.swift in Sources */,
 				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
+				3B77F3B9299CC965001F7BB3 /* PersonModel.swift in Sources */,
 				1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */,
 				1ADA5F3A2994DFD900FE90AD /* MainViewController.swift in Sources */,
+				3B77F3A1299CC957001F7BB3 /* Request_Friend_PostModel.swift in Sources */,
 				28EFD496298AA2FC0092E210 /* PushNotiViewController.swift in Sources */,
 				1ADA5F392994DFD900FE90AD /* JoinViewController.swift in Sources */,
 				1ADA5F382994DFD900FE90AD /* UIColorExtension.swift in Sources */,
 				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
+				3B77F3BD299CCB70001F7BB3 /* SocialViewController.swift in Sources */,
 				BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */,
+				3B77F39F299CC957001F7BB3 /* NewPerson.swift in Sources */,
 				BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */,
 				1ADA5F3E2994DFD900FE90AD /* ResponseModel.swift in Sources */,
 				1ADA5F3D2994DFD900FE90AD /* wordViewController.swift in Sources */,
 				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
+				3B77F39E299CC957001F7BB3 /* HabitDisagreeModel.swift in Sources */,
 				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
 				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
 				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
+				3B77F3AD299CC957001F7BB3 /* SearchNameModel.swift in Sources */,
+				3B77F3A2299CC957001F7BB3 /* FriendDelete.swift in Sources */,
+				3B77F3A4299CC957001F7BB3 /* Request_FriendModel.swift in Sources */,
+				3B77F3A7299CC957001F7BB3 /* RequestStatusModel.swift in Sources */,
 				BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
+				3B77F3B5299CC957001F7BB3 /* HabitDisagree.swift in Sources */,
+				3B77F3B2299CC957001F7BB3 /* RequestStatus.swift in Sources */,
+				3B77F3B0299CC957001F7BB3 /* Request_Friend.swift in Sources */,
+				3B77F3AF299CC957001F7BB3 /* InviteHabitModel.swift in Sources */,
 				286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */,
 				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
 			);

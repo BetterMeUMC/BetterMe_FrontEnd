@@ -1039,13 +1039,22 @@
             </objects>
             <point key="canvasLocation" x="1036" y="-863"/>
         </scene>
-        <!--View Controller-->
+        <!--Social View Controller-->
         <scene sceneID="MSy-wr-MTX">
             <objects>
-                <viewController id="Nqi-bM-7mJ" sceneMemberID="viewController">
+                <viewController id="Nqi-bM-7mJ" customClass="SocialViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hHE-Gu-fgj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOt-K7-meb">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="D8Y-Ta-Y2B" kind="embed" destinationCreationSelector="addSwiftUIView:" id="Lhb-zJ-dhp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cZh-3i-Mup"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -1053,7 +1062,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoP-gY-6si" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.38931297709917" y="1055.6338028169014"/>
+            <point key="canvasLocation" x="1000.763358778626" y="1054.9295774647887"/>
+        </scene>
+        <!--Content View-->
+        <scene sceneID="83L-w4-aDM">
+            <objects>
+                <hostingController id="D8Y-Ta-Y2B" customClass="ContentView" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wf7-jn-cqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="1103"/>
         </scene>
         <!--좋은 습관 만들기-->
         <scene sceneID="btS-4h-SSP">
