@@ -28,6 +28,7 @@
 		282C4690299548F4006E1E13 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 282C468F299548F4006E1E13 /* PopupView */; };
 		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
+		2871C4FE299D00D400D02A2E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871C4FD299D00D400D02A2E /* NotificationManager.swift */; };
 		28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */; };
 		28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */; };
 		28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */; };
@@ -113,6 +114,7 @@
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
 		282C46932997F62A006E1E13 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
+		2871C4FD299D00D400D02A2E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCellView.swift; sourceTree = "<group>"; };
 		28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitTipsViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			children = (
 				28EFD495298AA2FC0092E210 /* PushNotiViewController.swift */,
 				28EFD497298AAB620092E210 /* AlertTableViewCell.swift */,
+				2871C4FD299D00D400D02A2E /* NotificationManager.swift */,
 			);
 			path = PushNotification;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
 				3B77F3B1299CC957001F7BB3 /* FriendDeleteModel.swift in Sources */,
 				28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */,
+				2871C4FE299D00D400D02A2E /* NotificationManager.swift in Sources */,
 				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */,

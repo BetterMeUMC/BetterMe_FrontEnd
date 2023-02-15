@@ -14,7 +14,7 @@ class PushNotiViewController: UIViewController {
                                  "습관 초대를 받을경우 알림을 보냅니다",
                                  "친구 요청을 수신하거나 \n보낸 친구 요청이 수락되었을 때 알림을 보냅니다",
                                  "친구가 어워드를 획득할 경우 알림을 보냅니다"]
-    
+
     var isExpanded = false
     var selectedTime: String?
     
@@ -46,6 +46,7 @@ class PushNotiViewController: UIViewController {
     }
     
     
+    
 }
 
 
@@ -62,14 +63,6 @@ extension PushNotiViewController: UITableViewDataSource , UITableViewDelegate{
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlertTableViewCell", for: indexPath) as? AlertTableViewCell else { return UITableViewCell() }
-        cell.alertTitleLabel.text = alertTitle[indexPath.row]
-        cell.alertSubTitleLabel.text = alertSubTitle[indexPath.row]
-        cell.selectionStyle = .none
-        return cell
-    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             isExpanded = true
@@ -86,5 +79,17 @@ extension PushNotiViewController: UITableViewDataSource , UITableViewDelegate{
             }
         }
     }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlertTableViewCell", for: indexPath) as? AlertTableViewCell else { return UITableViewCell() }
+        cell.alertTitleLabel.text = alertTitle[indexPath.row]
+        cell.alertSubTitleLabel.text = alertSubTitle[indexPath.row]
+        cell.selectionStyle = .none
+
+        cell.index = indexPath.row
+        
+        return cell
+    }
+
 }
 

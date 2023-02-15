@@ -1852,6 +1852,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-ST-shO">
                                                     <rect key="frame" x="326" y="36" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.98431372549999996" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="lGu-z9-HyZ" eventType="valueChanged" id="wfm-Zf-FcY"/>
+                                                    </connections>
                                                 </switch>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="AED-Tw-zOK">
                                                     <rect key="frame" x="19" y="86" width="109" height="53"/>
@@ -1886,6 +1889,7 @@
                                         <connections>
                                             <outlet property="alertSubTitleLabel" destination="EhD-7P-RCS" id="PRa-5B-jMs"/>
                                             <outlet property="alertTitleLabel" destination="Wdn-Wz-VZc" id="SzL-xG-gD1"/>
+                                            <outlet property="switchView" destination="XaS-ST-shO" id="H94-El-fUs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2665,7 +2669,7 @@
         <image name="WorldButton.fill" width="27.333333969116211" height="27.333333969116211"/>
         <image name="YellowStar" width="18.333333969116211" height="17.333333969116211"/>
         <image name="comment" width="170.66667175292969" height="53.333332061767578"/>
-        <image name="defaultPhoto" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="defaultPhoto" width="512" height="512"/>
         <image name="google" width="170.66667175292969" height="170.66667175292969"/>
         <image name="image 101" width="57" height="57"/>
         <image name="image 121" width="64" height="64"/>
