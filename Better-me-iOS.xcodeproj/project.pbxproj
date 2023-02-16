@@ -20,6 +20,7 @@
 		28EFD48F298A79EF0092E210 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD48E298A79EF0092E210 /* GoodHabitTipsViewController.swift */; };
 		28EFD496298AA2FC0092E210 /* PushAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */; };
 		28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EFD497298AAB620092E210 /* AlertTableViewCell.swift */; };
+		33698C46F4290F32D64936EF /* Pods_Better_me_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB1277DEB0E8BCF8E3E55AA /* Pods_Better_me_iOS.framework */; };
 		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
 		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
 		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
@@ -59,6 +60,8 @@
 		28EFD493298A9FD50092E210 /* second.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = second.apn; sourceTree = "<group>"; };
 		28EFD495298AA2FC0092E210 /* PushAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAlertViewController.swift; sourceTree = "<group>"; };
 		28EFD497298AAB620092E210 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		6FB1277DEB0E8BCF8E3E55AA /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825ACE6AB2754E50DC10DA42 /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		BEF940BD2972827900D0F1FD /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitDetailViewController.swift; sourceTree = "<group>"; };
 		BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitCell.swift; sourceTree = "<group>"; };
+		E7FE8F45973096A0544EE2F8 /* Pods-Better-me-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.release.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33698C46F4290F32D64936EF /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,11 +121,21 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		48730CE0E6B645C162E75F00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FB1277DEB0E8BCF8E3E55AA /* Pods_Better_me_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BECC4B2C296C3AB60037807F = {
 			isa = PBXGroup;
 			children = (
 				BECC4B37296C3AB60037807F /* Better-me-iOS */,
 				BECC4B36296C3AB60037807F /* Products */,
+				DA77A67B5B9114601BC9F20A /* Pods */,
+				48730CE0E6B645C162E75F00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +177,16 @@
 			path = "Better-me-iOS";
 			sourceTree = "<group>";
 		};
+		DA77A67B5B9114601BC9F20A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				825ACE6AB2754E50DC10DA42 /* Pods-Better-me-iOS.debug.xcconfig */,
+				E7FE8F45973096A0544EE2F8 /* Pods-Better-me-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BECC4B49296C3AB80037807F /* Build configuration list for PBXNativeTarget "Better-me-iOS" */;
 			buildPhases = (
+				0E5EAF2C09782C6C8A4F92B8 /* [CP] Check Pods Manifest.lock */,
 				BECC4B31296C3AB60037807F /* Sources */,
 				BECC4B32296C3AB60037807F /* Frameworks */,
 				BECC4B33296C3AB60037807F /* Resources */,
@@ -227,6 +253,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E5EAF2C09782C6C8A4F92B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Better-me-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BECC4B31296C3AB60037807F /* Sources */ = {
@@ -404,6 +455,7 @@
 		};
 		BECC4B4A296C3AB80037807F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825ACE6AB2754E50DC10DA42 /* Pods-Better-me-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +485,7 @@
 		};
 		BECC4B4B296C3AB80037807F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7FE8F45973096A0544EE2F8 /* Pods-Better-me-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
