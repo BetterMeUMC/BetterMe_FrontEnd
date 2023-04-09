@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLQ-ci-gXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLQ-ci-gXA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -2656,6 +2657,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6c-4k-xK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5866.4122137404574" y="540.84507042253529"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="Vdf-Y6-EBF">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" hidesBottomBarWhenPushed="YES" id="Jp4-lU-wTc" customClass="EditViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6tM-CC-T4e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-Aq-0O6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="539"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="tapBackButton:" destination="Jp4-lU-wTc" eventType="touchUpInside" id="0Bf-sv-FL8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tN-2U-2Ad">
+                                <rect key="frame" x="0.0" y="598" width="393" height="254"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-wT-k59">
+                                        <rect key="frame" x="18" y="52" width="357" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="AVP-Pl-lui"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="수정">
+                                            <color key="baseForegroundColor" red="0.98431372549999996" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapEditButton:" destination="Jp4-lU-wTc" eventType="touchUpInside" id="6f0-UR-YXE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5Y-lT-egV">
+                                        <rect key="frame" x="0.0" y="174" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VyI-yx-cKa"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapCancelButton:" destination="Jp4-lU-wTc" eventType="touchUpInside" id="is5-fi-lYp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVb-xX-aUO">
+                                        <rect key="frame" x="18" y="107" width="357" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Ao7-is-fLT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="삭제" cornerStyle="capsule">
+                                            <color key="baseBackgroundColor" red="0.98431372549999996" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapDeleteButton:" destination="Jp4-lU-wTc" eventType="touchUpInside" id="S89-dH-cnk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KVb-xX-aUO" firstAttribute="leading" secondItem="3tN-2U-2Ad" secondAttribute="leading" constant="18" id="CaT-ZS-hHU"/>
+                                    <constraint firstItem="A5Y-lT-egV" firstAttribute="leading" secondItem="3tN-2U-2Ad" secondAttribute="leading" id="Red-6R-kf7"/>
+                                    <constraint firstItem="KVb-xX-aUO" firstAttribute="top" secondItem="MEu-wT-k59" secondAttribute="bottom" constant="12" id="Rnc-WQ-zjF"/>
+                                    <constraint firstItem="A5Y-lT-egV" firstAttribute="top" secondItem="KVb-xX-aUO" secondAttribute="bottom" constant="24" id="T8j-4v-Q1S"/>
+                                    <constraint firstAttribute="trailing" secondItem="MEu-wT-k59" secondAttribute="trailing" constant="18" id="UiS-4m-QPW"/>
+                                    <constraint firstAttribute="bottom" secondItem="A5Y-lT-egV" secondAttribute="bottom" constant="30" id="XQX-n6-EJS"/>
+                                    <constraint firstAttribute="trailing" secondItem="A5Y-lT-egV" secondAttribute="trailing" id="elD-Ae-sFq"/>
+                                    <constraint firstItem="MEu-wT-k59" firstAttribute="top" secondItem="3tN-2U-2Ad" secondAttribute="top" constant="52" id="fxX-4e-t1A"/>
+                                    <constraint firstItem="MEu-wT-k59" firstAttribute="leading" secondItem="3tN-2U-2Ad" secondAttribute="leading" constant="18" id="iH2-Hb-jjw"/>
+                                    <constraint firstAttribute="trailing" secondItem="KVb-xX-aUO" secondAttribute="trailing" constant="18" id="rmd-Jn-Xv3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v80-Za-GqR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3tN-2U-2Ad" secondAttribute="bottom" id="1SV-gH-QNq"/>
+                            <constraint firstItem="OkJ-Aq-0O6" firstAttribute="leading" secondItem="v80-Za-GqR" secondAttribute="leading" id="8Ii-fK-xYp"/>
+                            <constraint firstItem="v80-Za-GqR" firstAttribute="trailing" secondItem="3tN-2U-2Ad" secondAttribute="trailing" id="OXt-cY-jwI"/>
+                            <constraint firstItem="3tN-2U-2Ad" firstAttribute="top" secondItem="OkJ-Aq-0O6" secondAttribute="bottom" id="Tew-eH-HBV"/>
+                            <constraint firstItem="OkJ-Aq-0O6" firstAttribute="top" secondItem="v80-Za-GqR" secondAttribute="top" id="YSc-b8-uKX"/>
+                            <constraint firstItem="v80-Za-GqR" firstAttribute="trailing" secondItem="OkJ-Aq-0O6" secondAttribute="trailing" id="kX0-J9-r4d"/>
+                            <constraint firstItem="3tN-2U-2Ad" firstAttribute="leading" secondItem="v80-Za-GqR" secondAttribute="leading" id="wzh-74-zjL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="A5Y-lT-egV" id="INi-F2-asL"/>
+                        <outlet property="deleteButton" destination="KVb-xX-aUO" id="VIF-ai-1E0"/>
+                        <outlet property="editButton" destination="MEu-wT-k59" id="idN-dP-Ebd"/>
+                        <outlet property="editView" destination="3tN-2U-2Ad" id="ZuQ-qo-T8Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLn-Cq-qw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="-173"/>
         </scene>
     </scenes>
     <resources>
