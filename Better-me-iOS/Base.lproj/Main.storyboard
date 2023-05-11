@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLQ-ci-gXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLQ-ci-gXA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -476,7 +475,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-fn-8Be">
-                                <rect key="frame" x="-23" y="59" width="385" height="44"/>
+                                <rect key="frame" x="-35" y="59" width="384" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -849,21 +848,116 @@
             </objects>
             <point key="canvasLocation" x="8.3969465648854964" y="353.52112676056339"/>
         </scene>
-        <!--View Controller-->
+        <!--Award View Controller-->
         <scene sceneID="HkT-Mj-ueX">
             <objects>
-                <viewController id="GrP-Sx-epD" sceneMemberID="viewController">
+                <viewController id="GrP-Sx-epD" customClass="AwardViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FdV-kQ-Xf4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="김유니 님은 2개의 상장을 받았어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hs-Yh-Chb">
+                                <rect key="frame" x="21" y="84" width="228" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2VM-gA-25n">
+                                <rect key="frame" x="0.0" y="428" width="393" height="424"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6ZW-zc-vt8">
+                                    <size key="itemSize" width="145" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AwardViewCell" id="wH7-uN-zUR" customClass="AwardViewCell" customModule="Better_me_iOS">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L0X-pP-UoH" customClass="AwardViewCell" customModule="Better_me_iOS">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AwardAward" translatesAutoresizingMaskIntoConstraints="NO" id="coP-ht-Scs">
+                                                    <rect key="frame" x="8" y="0.0" width="137" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="158" id="doe-1j-84p"/>
+                                                        <constraint firstAttribute="width" constant="93" id="eiw-cq-lPr"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="coP-ht-Scs" firstAttribute="leading" secondItem="L0X-pP-UoH" secondAttribute="leading" constant="8" id="LuJ-lV-X5q"/>
+                                                <constraint firstAttribute="trailing" secondItem="coP-ht-Scs" secondAttribute="trailing" id="Ocv-c4-jlc"/>
+                                                <constraint firstAttribute="bottom" secondItem="coP-ht-Scs" secondAttribute="bottom" id="R3E-0N-GFV"/>
+                                                <constraint firstItem="coP-ht-Scs" firstAttribute="top" secondItem="L0X-pP-UoH" secondAttribute="top" id="pLL-2W-vmc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="145" height="200"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="coP-ht-Scs" id="U20-rD-Ude"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="GrP-Sx-epD" id="GC3-Cq-IRb"/>
+                                    <outlet property="delegate" destination="GrP-Sx-epD" id="vtA-v1-TFU"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘보다 빛나는 내가 되자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-Kd-rjR">
+                                <rect key="frame" x="99" y="345" width="195" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98823529480000005" green="0.92941176889999999" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.21960783" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AwardImage" translatesAutoresizingMaskIntoConstraints="NO" id="kD6-pp-5tE">
+                                <rect key="frame" x="110" y="171" width="173" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o3c-Ra-Hbi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2VM-gA-25n" firstAttribute="leading" secondItem="o3c-Ra-Hbi" secondAttribute="leading" id="eBD-lM-vBf"/>
+                            <constraint firstItem="2VM-gA-25n" firstAttribute="bottom" secondItem="o3c-Ra-Hbi" secondAttribute="bottom" constant="83" id="hfQ-nL-UOJ"/>
+                            <constraint firstItem="o3c-Ra-Hbi" firstAttribute="trailing" secondItem="2VM-gA-25n" secondAttribute="trailing" id="pus-TF-laG"/>
+                            <constraint firstItem="2VM-gA-25n" firstAttribute="top" secondItem="o3c-Ra-Hbi" secondAttribute="top" constant="325" id="tgN-Ln-KVn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m3Q-6u-C0D"/>
+                    <connections>
+                        <outlet property="personalMessage" destination="IeL-Kd-rjR" id="iep-Yf-hPx"/>
+                        <outlet property="titleLabel" destination="3hs-Yh-Chb" id="PQf-hD-2Gz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uG-hm-9zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.38931297709917" y="353.52112676056339"/>
+            <point key="canvasLocation" x="2538.1679389312976" y="523.94366197183103"/>
+        </scene>
+        <!--Award Content View Controller-->
+        <scene sceneID="BqJ-ES-lxv">
+            <objects>
+                <viewController id="7J9-bk-ka9" customClass="AwardContentViewController" customModule="Better_me_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lMk-cZ-aOC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-8K-uSN">
+                                <rect key="frame" x="-2" y="59" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9kp-qk-9Ys"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ln1-q1-Xmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3450" y="541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K5I-fQ-Ex3">
@@ -1049,7 +1143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOt-K7-meb">
-                                <rect key="frame" x="-1" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="-11" y="-8" width="394" height="856"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="D8Y-Ta-Y2B" kind="embed" destinationCreationSelector="addSwiftUIView:" id="Lhb-zJ-dhp"/>
@@ -1166,7 +1260,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-8S-PM6">
-                                <rect key="frame" x="-29" y="59" width="392" height="44"/>
+                                <rect key="frame" x="-42" y="59" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-Aq-spj">
@@ -1323,7 +1417,7 @@
                                 </subviews>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-v8-4xn">
-                                <rect key="frame" x="-22" y="59" width="385" height="44"/>
+                                <rect key="frame" x="-34" y="59" width="384" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mm5-G8-rgC">
@@ -2756,8 +2850,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AwardAward" width="186" height="316"/>
         <image name="AwardButton" width="21.666666030883789" height="28.333333969116211"/>
         <image name="AwardButton.fill" width="21.666666030883789" height="28.333333969116211"/>
+        <image name="AwardImage" width="173" height="162"/>
         <image name="FriendButton" width="18.333333969116211" height="25"/>
         <image name="FriendButton.fill" width="18.333333969116211" height="25"/>
         <image name="HomeButton" width="24" height="27"/>

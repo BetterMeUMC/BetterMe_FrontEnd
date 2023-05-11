@@ -25,6 +25,7 @@
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
 		280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E582983B25F000A30B3 /* ProfileEditController.swift */; };
 		280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E592983B25F000A30B3 /* PWEditController.swift */; };
+		280FF9D329E665F500D4380A /* AwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280FF9D229E665F500D4380A /* AwardViewController.swift */; };
 		282C4690299548F4006E1E13 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 282C468F299548F4006E1E13 /* PopupView */; };
 		282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C46932997F62A006E1E13 /* ResponseStruct.swift */; };
 		286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286F6ABB298EBD8C0089936D /* TipsData.swift */; };
@@ -113,6 +114,7 @@
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
 		280F5E582983B25F000A30B3 /* ProfileEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditController.swift; sourceTree = "<group>"; };
 		280F5E592983B25F000A30B3 /* PWEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWEditController.swift; sourceTree = "<group>"; };
+		280FF9D229E665F500D4380A /* AwardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardViewController.swift; sourceTree = "<group>"; };
 		282C46932997F62A006E1E13 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
 		286F6ABB298EBD8C0089936D /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		2871C4FD299D00D400D02A2E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -247,6 +249,14 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		280FF9CF29E6659800D4380A /* Award */ = {
+			isa = PBXGroup;
+			children = (
+				280FF9D229E665F500D4380A /* AwardViewController.swift */,
+			);
+			path = Award;
+			sourceTree = "<group>";
+		};
 		2871C4FF299D339500D02A2E /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
 				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
 				BE82D332298D191A003EFE44 /* EditViewController.swift */,
+				280FF9CF29E6659800D4380A /* Award */,
 				280F5E542983B23A000A30B3 /* MyPage */,
 			);
 			path = "Better-me-iOS";
@@ -526,6 +537,7 @@
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
 				3B77F3B1299CC957001F7BB3 /* FriendDeleteModel.swift in Sources */,
 				28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */,
+				280FF9D329E665F500D4380A /* AwardViewController.swift in Sources */,
 				2871C4FE299D00D400D02A2E /* NotificationManager.swift in Sources */,
 				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
 				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
