@@ -33,6 +33,13 @@
 		28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */; };
 		28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */; };
 		28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */; };
+		28B92D8B2A49EE4600F1C92B /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D8A2A49EE4600F1C92B /* NewHomeViewController.swift */; };
+		28B92D8F2A49EF1400F1C92B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D8E2A49EF1400F1C92B /* HomeView.swift */; };
+		28B92D912A49F4C500F1C92B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D902A49F4C500F1C92B /* HomeViewModel.swift */; };
+		28B92D932A49F83000F1C92B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D922A49F83000F1C92B /* AddHabitView.swift */; };
+		28B92D952A4A164F00F1C92B /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D942A4A164F00F1C92B /* HabitDetailView.swift */; };
+		28B92D982A4A25BE00F1C92B /* HabitCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D972A4A25BE00F1C92B /* HabitCellView.swift */; };
+		28B92D9A2A4A272200F1C92B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D992A4A272200F1C92B /* Habit.swift */; };
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
 		28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */; };
@@ -70,26 +77,12 @@
 		3B77F3B9299CC965001F7BB3 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3B7299CC965001F7BB3 /* PersonModel.swift */; };
 		3B77F3BB299CC971001F7BB3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3BA299CC971001F7BB3 /* SwiftUIView.swift */; };
 		3B77F3BD299CCB70001F7BB3 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */; };
-		BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26CD07297805A900E97A05 /* AlertViewController.swift */; };
-		BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */; };
-		BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */; };
 		BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC3296D9E080064A93C /* Quote.swift */; };
-		BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */; };
-		BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */; };
-		BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6AF7F1296ED62400C236F8 /* Friend.swift */; };
-		BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82D332298D191A003EFE44 /* EditViewController.swift */; };
 		BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B38296C3AB60037807F /* AppDelegate.swift */; };
 		BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3A296C3AB60037807F /* SceneDelegate.swift */; };
-		BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B3C296C3AB60037807F /* HomeViewController.swift */; };
 		BECC4B40296C3AB60037807F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B3E296C3AB60037807F /* Main.storyboard */; };
 		BECC4B42296C3AB80037807F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B41296C3AB80037807F /* Assets.xcassets */; };
 		BECC4B45296C3AB80037807F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECC4B43296C3AB80037807F /* LaunchScreen.storyboard */; };
-		BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */; };
-		BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC4B61296C6B010037807F /* EmojiTextField.swift */; };
-		BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */; };
-		BEF940BE2972827900D0F1FD /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BD2972827900D0F1FD /* Habit.swift */; };
-		BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */; };
-		BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */; };
 		D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +113,13 @@
 		28AAB1FE298FCBF900B58C12 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		28AAB2002992D9CB00B58C12 /* CustomTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCellView.swift; sourceTree = "<group>"; };
 		28AAB202299395E800B58C12 /* GoodHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitTipsViewController.swift; sourceTree = "<group>"; };
+		28B92D8A2A49EE4600F1C92B /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
+		28B92D8E2A49EF1400F1C92B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		28B92D902A49F4C500F1C92B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		28B92D922A49F83000F1C92B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
+		28B92D942A4A164F00F1C92B /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		28B92D972A4A25BE00F1C92B /* HabitCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCellView.swift; sourceTree = "<group>"; };
+		28B92D992A4A272200F1C92B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageDataManager.swift; sourceTree = "<group>"; };
@@ -161,28 +161,14 @@
 		3B77F3BC299CCB70001F7BB3 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		6868E3C3CEFCFABB0444CD2D /* Pods-Better-me-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better-me-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Better-me-iOS/Pods-Better-me-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8A9CB66B1A0BF0FB3839524B /* Pods_Better_me_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Better_me_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE26CD07297805A900E97A05 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitDetailViewController.swift; sourceTree = "<group>"; };
-		BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveBadHabitViewController.swift; sourceTree = "<group>"; };
 		BE5F4EC3296D9E080064A93C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewController.swift; sourceTree = "<group>"; };
-		BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
-		BE6AF7F1296ED62400C236F8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		BE82D332298D191A003EFE44 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		BECC4B35296C3AB60037807F /* Better-me-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better-me-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECC4B38296C3AB60037807F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECC4B3A296C3AB60037807F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BECC4B3C296C3AB60037807F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BECC4B3F296C3AB60037807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BECC4B41296C3AB80037807F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BECC4B44296C3AB80037807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BECC4B46296C3AB80037807F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoodHabitViewController.swift; sourceTree = "<group>"; };
-		BECC4B61296C6B010037807F /* EmojiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTextField.swift; sourceTree = "<group>"; };
-		BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitCell.swift; sourceTree = "<group>"; };
-		BEF940BD2972827900D0F1FD /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
-		BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodHabitDetailViewController.swift; sourceTree = "<group>"; };
-		BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +239,29 @@
 				2871C500299D33DB00D02A2E /* SearchManager.swift */,
 			);
 			name = NetWorking;
+			sourceTree = "<group>";
+		};
+		28B92D892A49EE2300F1C92B /* NewHome */ = {
+			isa = PBXGroup;
+			children = (
+				28B92D8A2A49EE4600F1C92B /* NewHomeViewController.swift */,
+				28B92D8E2A49EF1400F1C92B /* HomeView.swift */,
+				28B92D972A4A25BE00F1C92B /* HabitCellView.swift */,
+				28B92D922A49F83000F1C92B /* AddHabitView.swift */,
+				28B92D942A4A164F00F1C92B /* HabitDetailView.swift */,
+				28B92D902A49F4C500F1C92B /* HomeViewModel.swift */,
+				28B92D962A4A1B0700F1C92B /* Model */,
+			);
+			path = NewHome;
+			sourceTree = "<group>";
+		};
+		28B92D962A4A1B0700F1C92B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F4EC3296D9E080064A93C /* Quote.swift */,
+				28B92D992A4A272200F1C92B /* Habit.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		28BFE253298BA58000176731 /* MypageTableView */ = {
@@ -353,30 +362,16 @@
 		BECC4B37296C3AB60037807F /* Better-me-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3B77F384299CC747001F7BB3 /* Social */,
-				1ADA5F282994DFD900FE90AD /* Login */,
 				28EFD490298A9A930092E210 /* Better-me-iOS.entitlements */,
 				BECC4B38296C3AB60037807F /* AppDelegate.swift */,
 				BECC4B3A296C3AB60037807F /* SceneDelegate.swift */,
-				BECC4B3C296C3AB60037807F /* HomeViewController.swift */,
 				BECC4B3E296C3AB60037807F /* Main.storyboard */,
 				BECC4B41296C3AB80037807F /* Assets.xcassets */,
 				BECC4B43296C3AB80037807F /* LaunchScreen.storyboard */,
 				BECC4B46296C3AB80037807F /* Info.plist */,
-				BECC4B4C296C3E1F0037807F /* AddGoodHabitViewController.swift */,
-				BEF940BF29753F8500D0F1FD /* GoodHabitDetailViewController.swift */,
-				BE5F4EC1296D8F640064A93C /* RemoveBadHabitViewController.swift */,
-				BE532E732975A41800DDA6EA /* BadHabitDetailViewController.swift */,
-				BE5F4EC5296E7CC90064A93C /* SearchFriendViewController.swift */,
-				BECC4B61296C6B010037807F /* EmojiTextField.swift */,
-				BE6AF7EF296ED4EF00C236F8 /* FriendCell.swift */,
-				BE6AF7F1296ED62400C236F8 /* Friend.swift */,
-				BE5F4EC3296D9E080064A93C /* Quote.swift */,
-				BEF940BB29727FC600D0F1FD /* GoodHabitCell.swift */,
-				BEF940BD2972827900D0F1FD /* Habit.swift */,
-				BEF940C1297561FB00D0F1FD /* BadHabitCell.swift */,
-				BE26CD07297805A900E97A05 /* AlertViewController.swift */,
-				BE82D332298D191A003EFE44 /* EditViewController.swift */,
+				1ADA5F282994DFD900FE90AD /* Login */,
+				28B92D892A49EE2300F1C92B /* NewHome */,
+				3B77F384299CC747001F7BB3 /* Social */,
 				280F5E542983B23A000A30B3 /* MyPage */,
 			);
 			path = "Better-me-iOS";
@@ -523,27 +518,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B77F3A9299CC957001F7BB3 /* SearchEmailModel.swift in Sources */,
+				28B92D932A49F83000F1C92B /* AddHabitView.swift in Sources */,
 				28EFD498298AAB620092E210 /* AlertTableViewCell.swift in Sources */,
 				3B77F3B1299CC957001F7BB3 /* FriendDeleteModel.swift in Sources */,
 				28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */,
 				2871C4FE299D00D400D02A2E /* NotificationManager.swift in Sources */,
 				1ADA5F3F2994DFD900FE90AD /* LoginModel.swift in Sources */,
-				BE5F4EC6296E7CC90064A93C /* SearchFriendViewController.swift in Sources */,
 				28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */,
 				28BFE250298B83A700176731 /* TipsCell.swift in Sources */,
 				280F5E5E2983B25F000A30B3 /* PWEditController.swift in Sources */,
 				280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */,
 				3B77F3A6299CC957001F7BB3 /* Agree.swift in Sources */,
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
+				28B92D8F2A49EF1400F1C92B /* HomeView.swift in Sources */,
 				1ADA5F402994DFD900FE90AD /* PostDataManager.swift in Sources */,
 				3B77F3AC299CC957001F7BB3 /* AgreeModel.swift in Sources */,
 				3B77F3A5299CC957001F7BB3 /* SearchEmail.swift in Sources */,
-				BEF940C029753F8500D0F1FD /* GoodHabitDetailViewController.swift in Sources */,
+				28B92D952A4A164F00F1C92B /* HabitDetailView.swift in Sources */,
 				28AAB1FF298FCBF900B58C12 /* UserDataManager.swift in Sources */,
 				28AAB203299395E800B58C12 /* GoodHabitTipsViewController.swift in Sources */,
 				1ADA5F432994DFD900FE90AD /* GetMsgDataManager.swift in Sources */,
 				3B77F3B3299CC957001F7BB3 /* HabitAgreeModel.swift in Sources */,
-				BECC4B4D296C3E1F0037807F /* AddGoodHabitViewController.swift in Sources */,
 				28AAB2012992D9CB00B58C12 /* CustomTableCellView.swift in Sources */,
 				280F5E5D2983B25F000A30B3 /* ProfileEditController.swift in Sources */,
 				1ADA5F372994DFD900FE90AD /* LoginFirstViewController.swift in Sources */,
@@ -551,21 +546,19 @@
 				3B77F3B4299CC957001F7BB3 /* InviteHabitPostModel.swift in Sources */,
 				3B77F3BB299CC971001F7BB3 /* SwiftUIView.swift in Sources */,
 				3B77F3A0299CC957001F7BB3 /* NewPersonModel.swift in Sources */,
-				BECC4B3D296C3AB60037807F /* HomeViewController.swift in Sources */,
-				BE26CD08297805A900E97A05 /* AlertViewController.swift in Sources */,
 				BECC4B39296C3AB60037807F /* AppDelegate.swift in Sources */,
 				1ADA5F412994DFD900FE90AD /* UserDataModel.swift in Sources */,
 				3B77F3A8299CC957001F7BB3 /* SearchName.swift in Sources */,
 				3B77F3AA299CC957001F7BB3 /* InviteHabitPost.swift in Sources */,
 				3B77F3AE299CC957001F7BB3 /* InviteHabit.swift in Sources */,
+				28B92D912A49F4C500F1C92B /* HomeViewModel.swift in Sources */,
 				280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */,
 				3B77F3B8299CC965001F7BB3 /* Person.swift in Sources */,
-				BEF940BC29727FC600D0F1FD /* GoodHabitCell.swift in Sources */,
 				3B77F3AB299CC957001F7BB3 /* HabitAgree.swift in Sources */,
 				1ADA5F3C2994DFD900FE90AD /* nicknameViewController.swift in Sources */,
+				28B92D8B2A49EE4600F1C92B /* NewHomeViewController.swift in Sources */,
 				3B77F3A3299CC957001F7BB3 /* Request_Friend_Post.swift in Sources */,
 				1ADA5F3B2994DFD900FE90AD /* passwordFindViewController.swift in Sources */,
-				BE6AF7F0296ED4EF00C236F8 /* FriendCell.swift in Sources */,
 				3B77F3B9299CC965001F7BB3 /* PersonModel.swift in Sources */,
 				1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */,
 				1ADA5F3A2994DFD900FE90AD /* MainViewController.swift in Sources */,
@@ -573,33 +566,28 @@
 				28EFD496298AA2FC0092E210 /* PushNotiViewController.swift in Sources */,
 				1ADA5F392994DFD900FE90AD /* JoinViewController.swift in Sources */,
 				1ADA5F382994DFD900FE90AD /* UIColorExtension.swift in Sources */,
-				BEF940BE2972827900D0F1FD /* Habit.swift in Sources */,
 				3B77F3BD299CCB70001F7BB3 /* SocialViewController.swift in Sources */,
-				BE5F4EC2296D8F640064A93C /* RemoveBadHabitViewController.swift in Sources */,
 				3B77F39F299CC957001F7BB3 /* NewPerson.swift in Sources */,
 				BECC4B3B296C3AB60037807F /* SceneDelegate.swift in Sources */,
 				1ADA5F3E2994DFD900FE90AD /* ResponseModel.swift in Sources */,
 				1ADA5F3D2994DFD900FE90AD /* wordViewController.swift in Sources */,
-				BEF940C2297561FB00D0F1FD /* BadHabitCell.swift in Sources */,
 				3B77F39E299CC957001F7BB3 /* HabitDisagreeModel.swift in Sources */,
 				282C46942997F62A006E1E13 /* ResponseStruct.swift in Sources */,
-				BE6AF7F2296ED62400C236F8 /* Friend.swift in Sources */,
+				28B92D9A2A4A272200F1C92B /* Habit.swift in Sources */,
 				BE5F4EC4296D9E090064A93C /* Quote.swift in Sources */,
 				2871C501299D33DB00D02A2E /* SearchManager.swift in Sources */,
 				28EFD4892987AE140092E210 /* MyPageTableFooterView.swift in Sources */,
-				BE532E742975A41800DDA6EA /* BadHabitDetailViewController.swift in Sources */,
 				3B77F3AD299CC957001F7BB3 /* SearchNameModel.swift in Sources */,
 				3B77F3A2299CC957001F7BB3 /* FriendDelete.swift in Sources */,
 				3B77F3A4299CC957001F7BB3 /* Request_FriendModel.swift in Sources */,
 				3B77F3A7299CC957001F7BB3 /* RequestStatusModel.swift in Sources */,
-				BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
 				3B77F3B5299CC957001F7BB3 /* HabitDisagree.swift in Sources */,
 				3B77F3B2299CC957001F7BB3 /* RequestStatus.swift in Sources */,
 				3B77F3B0299CC957001F7BB3 /* Request_Friend.swift in Sources */,
 				3B77F3AF299CC957001F7BB3 /* InviteHabitModel.swift in Sources */,
+				28B92D982A4A25BE00F1C92B /* HabitCellView.swift in Sources */,
 				286F6ABC298EBD8C0089936D /* TipsData.swift in Sources */,
-				BECC4B62296C6B010037807F /* EmojiTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
