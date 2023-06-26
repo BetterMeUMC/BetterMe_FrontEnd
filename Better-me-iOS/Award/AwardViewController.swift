@@ -50,6 +50,8 @@ extension AwardViewController : UICollectionViewDelegate, UICollectionViewDataSo
 //    }
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             // Handle cell selection
+            let pushVC = AwardContentViewController()
+            self.navigationController?.pushViewController(pushVC, animated: true)
         }
 
 }

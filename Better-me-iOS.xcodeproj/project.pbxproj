@@ -20,6 +20,7 @@
 		1ADA5F412994DFD900FE90AD /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F342994DFD900FE90AD /* UserDataModel.swift */; };
 		1ADA5F422994DFD900FE90AD /* GetUserIdxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F352994DFD900FE90AD /* GetUserIdxModel.swift */; };
 		1ADA5F432994DFD900FE90AD /* GetMsgDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA5F362994DFD900FE90AD /* GetMsgDataManager.swift */; };
+		280698AC2A1DD7E5006D9A9A /* AwardContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280698AB2A1DD7E5006D9A9A /* AwardContentViewController.swift */; };
 		280F5E5A2983B25F000A30B3 /* MyPageTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */; };
 		280F5E5B2983B25F000A30B3 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E562983B25E000A30B3 /* MyPageViewController.swift */; };
 		280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F5E572983B25F000A30B3 /* MyPageCell.swift */; };
@@ -109,6 +110,7 @@
 		1ADA5F342994DFD900FE90AD /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		1ADA5F352994DFD900FE90AD /* GetUserIdxModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserIdxModel.swift; sourceTree = "<group>"; };
 		1ADA5F362994DFD900FE90AD /* GetMsgDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMsgDataManager.swift; sourceTree = "<group>"; };
+		280698AB2A1DD7E5006D9A9A /* AwardContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardContentViewController.swift; sourceTree = "<group>"; };
 		280F5E552983B25E000A30B3 /* MyPageTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableHeaderView.swift; sourceTree = "<group>"; };
 		280F5E562983B25E000A30B3 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		280F5E572983B25F000A30B3 /* MyPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageCell.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				280FF9D229E665F500D4380A /* AwardViewController.swift */,
+				280698AB2A1DD7E5006D9A9A /* AwardContentViewController.swift */,
 			);
 			path = Award;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				3B77F3A4299CC957001F7BB3 /* Request_FriendModel.swift in Sources */,
 				3B77F3A7299CC957001F7BB3 /* RequestStatusModel.swift in Sources */,
 				BE82D333298D191A003EFE44 /* EditViewController.swift in Sources */,
+				280698AC2A1DD7E5006D9A9A /* AwardContentViewController.swift in Sources */,
 				28EFD48B2987B5190092E210 /* FeedBackController.swift in Sources */,
 				3B77F3B5299CC957001F7BB3 /* HabitDisagree.swift in Sources */,
 				3B77F3B2299CC957001F7BB3 /* RequestStatus.swift in Sources */,
