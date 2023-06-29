@@ -8,17 +8,41 @@
 
 import Combine
 import Foundation
+import EmojiPicker
 
 class HomeViewModel: ObservableObject {
     @Published var habitList : [Habit] = []
-    var todayDate : String{
-        let formmater = DateFormatter()
-        formmater.dateFormat = "M월 d일 E요일"
-        formmater.locale = Locale(identifier: "ko-KR")
-        return formmater.string(from: Date())
+                        
+    func formattedDate(date : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M월 d일 E요일"
+        dateFormatter.locale = Locale(identifier: "ko-KR")
+        return dateFormatter.string(from: date)
+    }
+    func formattedDate2(date : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd"
+        dateFormatter.locale = Locale(identifier: "ko-KR")
+        return dateFormatter.string(from: date)
+    }
+    func editHabit(_ editedHabit: Habit) {
+        if let index = habitList.firstIndex(where: { $0.id == editedHabit.id }) {
+            // Modify the element at the found index
+            habitList[index].title = editedHabit.title
+            habitList[index].contents = editedHabit.contents
+            habitList[index].emoji = editedHabit.emoji
+            // Modify other properties as needed
+        }
     }
     
-    
+    func addHabitToList(_ habit: Habit) {
+        habitList.append(habit)
+    }
+    func deleteHabit (_ habitID : UUID) {
+        if let index = habitList.firstIndex(where: { $0.id == habitID }) {
+            habitList.remove(at: index)
+        }
+    }
     let quotes = [
         Quote(contents: "습관이란 인간으로 하여금 그 어떤 일도 할 수 있게 만들어준다.", name: "- 도스토옙스키"),
         Quote(contents: "가난과 부, 실패와 성공은 모두 습관 때문이다.", name: "- 중국 속담"),

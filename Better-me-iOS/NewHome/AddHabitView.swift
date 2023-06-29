@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import EmojiPicker
 
 struct AddHabitView: View {
     @State private var habitName = ""
@@ -13,6 +14,12 @@ struct AddHabitView: View {
     @State private var habitContent = ""
     @State private var isPublic = false
     @State private var inviteFriends = ""
+    @State var selectedEmoji: Emoji?
+    @State private var displayEmojiPicker = false
+    @State private var displayRecomandedView = false
+    
+    let viewModel : HomeViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView {
@@ -24,19 +31,20 @@ struct AddHabitView: View {
                         .fontWeight(.bold)
                         .padding(.leading)
                     Spacer()
-                    Button(action: {}) {
-                        // Add button action
-                        Text("emoji")
-                            .foregroundColor(.white)
-                            .padding(8)
-                            .background(Color.gray)
-                            .cornerRadius(8)
-                            .font(.system(size: 15))
-                    }
+                    Button {
+                                displayEmojiPicker = true
+                                } label: {
+                                    Text(selectedEmoji?.value ?? "🏆")
+                                        .foregroundColor(.white)
+                                        .padding(8)
+                                        .background(Color.gray)
+                                        .cornerRadius(8)
+                                        .font(.system(size: 15))
+                                }
+        
                     Spacer()
                     Spacer()
-                    Button(action: {}) {
-                        // Add button action
+                    Button{displayRecomandedView = true} label: {
                         Text("추천 습관 보기")
                             .underline()
                             .foregroundColor(.black)
@@ -46,6 +54,21 @@ struct AddHabitView: View {
                     }
                     
                 }
+                .sheet(isPresented: $displayEmojiPicker) {
+                    NavigationView {
+                        EmojiPickerView(selectedEmoji: $selectedEmoji, selectedColor: .orange)
+                            .navigationTitle("Emojis")
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                }
+                .sheet(isPresented: $displayRecomandedView) {
+                    NavigationView {
+                        RecomandedHabitsModalView()
+                            .navigationTitle("추천 습관")
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                }
+                
                 
                 Divider().frame(height: 8).background(Color.gray.opacity(0.3)) // Updated divider color
                 
@@ -117,7 +140,6 @@ struct AddHabitView: View {
                     }
                     isPublic ? Text("공개") : Text("비공개")
                         .font(.system(size: 15, weight: .regular))
-                        .fontWeight(.bold)
                     
                     Toggle(isOn: $isPublic) {
                         // Toggle action
@@ -172,7 +194,7 @@ struct AddHabitView: View {
             trailing:
                 Button(action: saveHabit) {
                     // Save button action
-                    Text("Save")
+                    Text("등록")
                         .font(.system(size: 15))
                         .foregroundColor(.white)
                         .padding(8)
@@ -184,9 +206,14 @@ struct AddHabitView: View {
     }
     
     func saveHabit() {
-        // Function implementation to save the habit
+        
+        let habit = Habit(id: UUID(),hNum: 0, isCheck: false, date: Date(), emoji: selectedEmoji ?? Emoji(value: "🏆", name: "default"), title: habitName, category: category, contents: habitContent, isPublic: isPublic, with: [])
+        viewModel.addHabitToList(habit)
+        presentationMode.wrappedValue.dismiss()
+        print(viewModel.habitList)
     }
-    
+
+
 }
 
 struct AddHabitView_Previews: PreviewProvider {

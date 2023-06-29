@@ -5,10 +5,10 @@
 //  Created by Phil on 2023/06/27.
 //
 import SwiftUI
+import EmojiPicker
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
-    
     @State private var isAddingHabit = false
     var randomQuote: Quote {
             viewModel.quotes.randomElement() ?? Quote(contents: "", name: "")
@@ -35,7 +35,7 @@ struct HomeView: View {
                         )
                         .padding()
                     
-                    Text(viewModel.todayDate)
+                    Text(viewModel.formattedDate(date: Date()))
                         .font(.system(size: 15))
                         .fontWeight(.bold)
                         .foregroundColor(.black)
@@ -49,12 +49,13 @@ struct HomeView: View {
                         .foregroundColor(.red)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
-                    
-                    List {
-                        
-                    }
-                    
-                    NavigationLink(destination: AddHabitView()) {
+                
+
+                        ForEach(viewModel.habitList, id: \.id) {
+                            habit in HabitCellView(viewModel: viewModel, habit: habit)
+                        }
+
+                    NavigationLink(destination: AddHabitView(viewModel: viewModel)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundColor(Color(red: 1, green: 0.5, blue: 0.5))
@@ -73,6 +74,7 @@ struct HomeView: View {
                     .resizable()
                     .frame(width: 127, height: 28)
                 )
+                
             }
         }
     }

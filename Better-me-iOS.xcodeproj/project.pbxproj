@@ -40,6 +40,8 @@
 		28B92D952A4A164F00F1C92B /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D942A4A164F00F1C92B /* HabitDetailView.swift */; };
 		28B92D982A4A25BE00F1C92B /* HabitCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D972A4A25BE00F1C92B /* HabitCellView.swift */; };
 		28B92D9A2A4A272200F1C92B /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D992A4A272200F1C92B /* Habit.swift */; };
+		28B92D9D2A4CA50300F1C92B /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 28B92D9C2A4CA50300F1C92B /* EmojiPicker */; };
+		28B92D9F2A4D75FB00F1C92B /* RecomandedHabitsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B92D9E2A4D75FB00F1C92B /* RecomandedHabitsModalView.swift */; };
 		28BFE250298B83A700176731 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE24F298B83A700176731 /* TipsCell.swift */; };
 		28BFE25A298BA9CF00176731 /* BadHabitTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */; };
 		28E5ABC2299906CE009EB65C /* ProfileImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */; };
@@ -120,6 +122,7 @@
 		28B92D942A4A164F00F1C92B /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 		28B92D972A4A25BE00F1C92B /* HabitCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCellView.swift; sourceTree = "<group>"; };
 		28B92D992A4A272200F1C92B /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		28B92D9E2A4D75FB00F1C92B /* RecomandedHabitsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandedHabitsModalView.swift; sourceTree = "<group>"; };
 		28BFE24F298B83A700176731 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		28BFE259298BA6AA00176731 /* BadHabitTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadHabitTipsViewController.swift; sourceTree = "<group>"; };
 		28E5ABC1299906CE009EB65C /* ProfileImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageDataManager.swift; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28E5ABFF299958B1009EB65C /* Alamofire in Frameworks */,
+				28B92D9D2A4CA50300F1C92B /* EmojiPicker in Frameworks */,
 				282C4690299548F4006E1E13 /* PopupView in Frameworks */,
 				D9EBCD222E907382D1A2D0FD /* Pods_Better_me_iOS.framework in Frameworks */,
 			);
@@ -247,6 +251,7 @@
 				28B92D8A2A49EE4600F1C92B /* NewHomeViewController.swift */,
 				28B92D8E2A49EF1400F1C92B /* HomeView.swift */,
 				28B92D972A4A25BE00F1C92B /* HabitCellView.swift */,
+				28B92D9E2A4D75FB00F1C92B /* RecomandedHabitsModalView.swift */,
 				28B92D922A49F83000F1C92B /* AddHabitView.swift */,
 				28B92D942A4A164F00F1C92B /* HabitDetailView.swift */,
 				28B92D902A49F4C500F1C92B /* HomeViewModel.swift */,
@@ -415,6 +420,7 @@
 			packageProductDependencies = (
 				28AAB1FC298FC78400B58C12 /* Alamofire */,
 				282C468F299548F4006E1E13 /* PopupView */,
+				28B92D9C2A4CA50300F1C92B /* EmojiPicker */,
 			);
 			productName = "Better-me-iOS";
 			productReference = BECC4B35296C3AB60037807F /* Better-me-iOS.app */;
@@ -447,6 +453,7 @@
 			packageReferences = (
 				28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				282C468E299548F4006E1E13 /* XCRemoteSwiftPackageReference "PopupView" */,
+				28B92D9B2A4CA50300F1C92B /* XCRemoteSwiftPackageReference "EmojiPicker" */,
 			);
 			productRefGroup = BECC4B36296C3AB60037807F /* Products */;
 			projectDirPath = "";
@@ -532,6 +539,7 @@
 				280F5E5C2983B25F000A30B3 /* MyPageCell.swift in Sources */,
 				28B92D8F2A49EF1400F1C92B /* HomeView.swift in Sources */,
 				1ADA5F402994DFD900FE90AD /* PostDataManager.swift in Sources */,
+				28B92D9F2A4D75FB00F1C92B /* RecomandedHabitsModalView.swift in Sources */,
 				3B77F3AC299CC957001F7BB3 /* AgreeModel.swift in Sources */,
 				3B77F3A5299CC957001F7BB3 /* SearchEmail.swift in Sources */,
 				28B92D952A4A164F00F1C92B /* HabitDetailView.swift in Sources */,
@@ -831,6 +839,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		28B92D9B2A4CA50300F1C92B /* XCRemoteSwiftPackageReference "EmojiPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kelvas09/EmojiPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -843,6 +859,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28AAB1FB298FC78400B58C12 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		28B92D9C2A4CA50300F1C92B /* EmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28B92D9B2A4CA50300F1C92B /* XCRemoteSwiftPackageReference "EmojiPicker" */;
+			productName = EmojiPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
