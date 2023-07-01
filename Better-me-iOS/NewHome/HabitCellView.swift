@@ -11,8 +11,9 @@ import EmojiPicker
 struct HabitCellView: View {
     let viewModel : HomeViewModel
     let habit : Habit
-    @State private var isChecked = false
+    
         
+    let maxComplete : Double = 30
     var body: some View {
         NavigationLink(destination: HabitDetailView(viewModel : viewModel, habit: habit)) {
             ZStack {
@@ -29,16 +30,31 @@ struct HabitCellView: View {
                         Text(habit.title)
                             .font(.system(size: 16))
                             .foregroundColor(.black)
-                            
-                        Text(viewModel.formattedDate2(date: habit.date))
-                            .font(.system(size: 11))
-                            .foregroundColor(.gray)
+                        HStack{
+                            Text(viewModel.formattedDate2(date: habit.date))
+                                .font(.system(size: 11))
+                                .foregroundColor(.gray)
+                            GaugeBar(maxValue: maxComplete, currentValue: Double(habit.hNum))
+                        }
                     }
                     Spacer()
-                    CheckboxView(isChecked: $isChecked)
-                        .frame(width: 27, height: 27)
-                        .cornerRadius(5)
-                        .foregroundColor(.gray)
+                    Button(action: {
+                        viewModel.checkUpdate(habit.id)
+                    }) {
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: 27, height: 27)
+                            .foregroundColor(.gray)
+                            .overlay(
+                                Group {
+                                    if habit.isCheck {
+                                        Image(systemName: "checkmark")
+                                            .foregroundColor(.white)
+                                    } else {
+                                        EmptyView()
+                                    }
+                                }
+                            )
+                    }
                 }
                 .padding()
                 
@@ -46,28 +62,58 @@ struct HabitCellView: View {
         }
     }
 }
-struct CheckboxView: View {
-    @Binding var isChecked: Bool
+
+
+
+
+//struct CheckboxView: View {
+//    @Binding var isChecked: Bool
+//    let viewModel : HomeViewModel
+//    var body: some View {
+//        Button(action: {
+//            isChecked.toggle()
+//            viewModel.checkH(<#T##habitID: UUID##UUID#>)
+//        }) {
+//            RoundedRectangle(cornerRadius: 5)
+//                .frame(width: 27, height: 27)
+//                .foregroundColor(.gray)
+//                .overlay(
+//                    Group {
+//                        if isChecked {
+//                            Image(systemName: "checkmark")
+//                                .foregroundColor(.white)
+//                        } else {
+//                            EmptyView()
+//                        }
+//                    }
+//                )
+//        }
+//    }
+//}
+
+struct GaugeBar: View {
+    let maxValue: Double
+    let currentValue: Double
     
     var body: some View {
-        Button(action: {
-            isChecked.toggle()
-        }) {
+        ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 5)
-                .frame(width: 27, height: 27)
-                .foregroundColor(.gray)
-                .overlay(
-                    Group {
-                        if isChecked {
-                            Image(systemName: "checkmark")
-                                .foregroundColor(.white)
-                        } else {
-                            EmptyView()
-                        }
-                    }
-                )
+                .foregroundColor(Color.gray)
+                .frame(width: 107,height: 5)
+            
+            RoundedRectangle(cornerRadius: 5)
+                .foregroundColor(Color.red)
+                .frame(width: calculateGaugeWidth(), height: 5)
+                
         }
     }
+    
+    private func calculateGaugeWidth() -> CGFloat {
+        let percentage = currentValue / maxValue
+        return CGFloat(percentage) * 107
+    }
+    
+
 }
 
 

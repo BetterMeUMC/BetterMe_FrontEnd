@@ -43,6 +43,23 @@ class HomeViewModel: ObservableObject {
             habitList.remove(at: index)
         }
     }
+    func checkUpdate (_ habitID : UUID) {
+        if let index = habitList.firstIndex(where: { $0.id == habitID }) {
+            habitList[index].isCheck.toggle()
+            if habitList[index].isCheck {
+                habitList[index].hNum += 5
+            }
+            else {
+                habitList[index].hNum -= 5
+            }
+        }
+    }
+    //체크 true -> nNum +1
+    // Date 바뀌면 모든 habitList 의 check 가 false 로 변함
+    // 
+    
+    
+    
     let quotes = [
         Quote(contents: "습관이란 인간으로 하여금 그 어떤 일도 할 수 있게 만들어준다.", name: "- 도스토옙스키"),
         Quote(contents: "가난과 부, 실패와 성공은 모두 습관 때문이다.", name: "- 중국 속담"),
