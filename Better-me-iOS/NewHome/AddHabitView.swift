@@ -23,21 +23,20 @@ struct AddHabitView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 24){
+            VStack(alignment:.leading, spacing: 24){
                 Spacer()
                 HStack {
                     Text("대표 이모지")
                         .font(.system(size: 18, weight: .regular)) // Updated font
-                        .fontWeight(.bold)
+                       
                         .padding(.leading)
                     Spacer()
                     Button {
                                 displayEmojiPicker = true
                                 } label: {
                                     Text(selectedEmoji?.value ?? "🏆")
-                                        .foregroundColor(.white)
-                                        .padding(8)
-                                        .background(Color.gray)
+                                        .frame(width: 50,height: 30)
+                                        .background(Color("custom_gray"))
                                         .cornerRadius(8)
                                         .font(.system(size: 15))
                                 }
@@ -70,36 +69,49 @@ struct AddHabitView: View {
                 }
                 
                 
-                Divider().frame(height: 8).background(Color.gray.opacity(0.3)) // Updated divider color
+                Rectangle()
+                    .foregroundColor(Color("custom_gray"))
+                    .frame(height: 8)
                 
                 HStack {
                     Text("습관명")
                         .font(.system(size: 18, weight: .regular)) // Updated font
-                        .fontWeight(.bold)
                         .padding(.leading)
                     TextField("습관명을 입력해주세요.", text: $habitName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.trailing)
+                        .padding()
+                        .frame(height: 35)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.horizontal)
                 }
                 HStack {
                     Text("카테고리")
                         .font(.system(size: 18, weight: .regular)) // Updated font
-                        .fontWeight(.bold)
                         .padding(.leading)
                     TextField("여기를 눌러 카테고리를 선택하세요.", text: $category)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.trailing)
+                        .padding()
+                        .frame( height: 35)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray, lineWidth: 1)
+                            
+                        )
+                        .padding(.horizontal)
+                    
                 }
                 VStack {
                     HStack{
                         Text("습관 내용")
                             .font(.system(size: 18, weight: .regular)) // Updated font
-                            .fontWeight(.bold)
                             .padding(.leading)
                         Spacer()
                     }
                     
                     TextField("습관 내용을 입력하세요.", text: $habitContent)
+                        .padding()
+                        .padding(.bottom)
                         .frame(height: 80)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
@@ -109,13 +121,14 @@ struct AddHabitView: View {
                         .padding(.bottom)
                 }
                 
-                Divider().frame(height: 8).background(Color.gray.opacity(0.3))
+                Rectangle()
+                    .foregroundColor(Color("custom_gray"))
+                    .frame(height: 8)
                 
                 VStack (spacing: 24) {
                     HStack{
                         Text("반복주기")
                             .font(.system(size: 18, weight: .regular))
-                            .fontWeight(.bold)
                             .padding(.leading)
                         Spacer()
                     }
@@ -124,13 +137,15 @@ struct AddHabitView: View {
                     // e.g., DatePicker, Picker, or Stepper
                 }
                 
-                Divider().frame(height: 8).background(Color.gray.opacity(0.3))
+                Rectangle()
+                    .foregroundColor(Color("custom_gray"))
+                    .frame(height: 8)
+                
             }
             VStack{
                 HStack {
                     Text("공개 설정")
                         .font(.system(size: 18, weight: .regular))
-                        .fontWeight(.bold)
                         .padding(.leading)
                     Button(action: {}) {
                         Image(systemName: "questionmark.circle")
@@ -148,39 +163,50 @@ struct AddHabitView: View {
                     .toggleStyle(SwitchToggleStyle(tint: .red))
                 }
                 
-                Divider().frame(height: 8).background(Color.gray.opacity(0.3))
+                Rectangle()
+                    .foregroundColor(Color("custom_gray"))
+                    .frame(height: 8)
                 
-                VStack {
+                VStack(alignment: .leading){
                     HStack {
                         Text("친구 초대")
                             .font(.system(size: 18, weight: .regular))
-                            .fontWeight(.bold)
                             .padding()
                         Spacer()
                     }
                     HStack {
                         TextField("친구 초대하기", text: $inviteFriends)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.trailing)
+                            .padding()
+                            .frame(height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray, lineWidth: 1)
+                            )
+                            .padding(.horizontal)
+                            
+                        Spacer()
                         Button(action: {}) {
                             Text("찾아보기")
                                 .foregroundColor(.white)
                                 .padding()
-                                .background(Color.red)
+                                .frame(height: 35)
+                                .background(Color("Pink"))
                                 .cornerRadius(5)
                         }
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
-                    
+                    .padding(.bottom)
                     
                 }
-                Divider().frame(height: 8).background(Color.gray.opacity(0.3))
+                
+                Rectangle()
+                    .foregroundColor(Color("custom_gray"))
+                    .frame(height: 8)
                 
                 VStack (spacing: 24) {
                     HStack{
                         Text("테마 선택")
                             .font(.system(size: 18, weight: .regular))
-                            .fontWeight(.bold)
                             .padding()
                         // Replace `ThemeView()` with your custom implementation
                         // or use a built-in SwiftUI view for theme selection
@@ -189,7 +215,7 @@ struct AddHabitView: View {
                     }
                 }
             }
-        }
+        }.fontWeight(.regular)
         .navigationBarItems(
             trailing:
                 Button(action: saveHabit) {
@@ -198,8 +224,9 @@ struct AddHabitView: View {
                         .font(.system(size: 15))
                         .foregroundColor(.white)
                         .padding(8)
-                        .background(Color.red)
-                        .cornerRadius(8)
+                        .frame(width: 55,height: 31)
+                        .background(Color("custom_red"))
+                        .cornerRadius(15)
                 }
         )
         .navigationBarTitle("습관 만들기", displayMode: .inline)
@@ -219,5 +246,6 @@ struct AddHabitView: View {
 struct AddHabitView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+//        AddHabitView(viewModel: HomeViewModel())
     }
 }

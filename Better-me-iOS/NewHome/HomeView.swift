@@ -20,15 +20,17 @@ struct HomeView: View {
                 VStack(spacing: 20) {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 340, height: 60)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color("custom_gray"))
                         .overlay(
                             HStack{
                                 Text(randomQuote.contents)
                                     .font(.system(size: 14))
+                                    .fontWeight(.light)
                                     .foregroundColor(.black)
+                                Spacer()
                                 Text(randomQuote.name)
                                     .font(.system(size: 12))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.gray)
                                     .padding(.top)
                             }
                             .padding(.horizontal)
@@ -37,7 +39,7 @@ struct HomeView: View {
                     
                     Text(viewModel.formattedDate(date: Date()))
                         .font(.system(size: 15))
-                        .fontWeight(.bold)
+                        .fontWeight(.semibold)
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -46,7 +48,8 @@ struct HomeView: View {
                     
                     Text("습관 목록")
                         .font(.system(size: 18))
-                        .foregroundColor(.red)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("Pink"))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                 
@@ -58,11 +61,11 @@ struct HomeView: View {
                     NavigationLink(destination: AddHabitView(viewModel: viewModel)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color(red: 1, green: 0.5, blue: 0.5))
+                                .foregroundColor(Color("LightPink"))
                                 .frame(width: 340, height: 60)
                             
-                            Image(systemName: "plus")
-                                .foregroundColor(.red)
+                            Image(systemName: "plus.circle")
+                                .foregroundColor(Color("Pink"))
                         }
                     }
                     

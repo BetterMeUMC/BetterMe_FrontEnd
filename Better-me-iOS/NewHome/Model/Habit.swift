@@ -20,5 +20,4 @@ struct Habit: Identifiable {
     var period:[Int] = Array<Int>(repeating: -1, count: 7)
     var isPublic: Bool
     var with:[Person]
-    // var theme: Theme
 }

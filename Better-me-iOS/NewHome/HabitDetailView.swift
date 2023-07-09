@@ -30,7 +30,7 @@ struct HabitDetailView: View {
                 HStack {
                     Text("대표 이모지")
                         .font(.system(size: 18, weight: .regular)) // Updated font
-                        .fontWeight(.bold)
+                        .fontWeight(.regular)
                         .padding(.leading)
                     Spacer()
                     Button {
@@ -133,6 +133,6 @@ struct HabitDetailView: View {
 struct HabitDetailView_Previews: PreviewProvider {
 
     static var previews: some View {
-        HomeView()
+        HabitDetailView(viewModel: HomeViewModel(), habit: Habit(id: UUID(), hNum: 0, isCheck: false, date: Date(), emoji: Emoji(value: "", name: ""), title: "", category: "", contents: "", isPublic: false, with: []))
     }
 }
