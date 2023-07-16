@@ -22,6 +22,8 @@ struct AddHabitView: View {
     let viewModel : HomeViewModel
     @Environment(\.presentationMode) var presentationMode
     
+    let options = ["운동", "건강", "생활", "공부","취미" , "자기계발", "취미","재테크" , "독서"]
+    
     var body: some View {
         ScrollView {
             VStack(alignment:.leading, spacing: 24){
@@ -91,15 +93,21 @@ struct AddHabitView: View {
                     Text("카테고리")
                         .font(.system(size: 18, weight: .regular)) // Updated font
                         .padding(.leading)
-                    TextField("여기를 눌러 카테고리를 선택하세요.", text: $category)
-                        .padding()
-                        .frame( height: 35)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray, lineWidth: 1)
-                            
-                        )
-                        .padding(.horizontal)
+                    Picker("여기를 눌러 카테고리를 선택하세요.", selection: $category) {
+                                    ForEach(options, id: \.self) { option in
+                                        Text(option)
+                                    }
+                                }
+                    .pickerStyle(MenuPickerStyle())
+//                    TextField("여기를 눌러 카테고리를 선택하세요.", text: $category)
+//                        .padding()
+//                        .frame( height: 35)
+//                        .overlay(
+//                            RoundedRectangle(cornerRadius: 8)
+//                                .stroke(Color.gray, lineWidth: 1)
+//
+//                        )
+//                        .padding(.horizontal)
                     
                 }
                 VStack {
