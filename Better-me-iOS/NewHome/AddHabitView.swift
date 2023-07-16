@@ -17,6 +17,7 @@ struct AddHabitView: View {
     @State var selectedEmoji: Emoji?
     @State private var displayEmojiPicker = false
     @State private var displayRecomandedView = false
+    @State private var displayPeriod = [0,0,0,0,0,0,0]
     
     let viewModel : HomeViewModel
     @Environment(\.presentationMode) var presentationMode
@@ -132,9 +133,16 @@ struct AddHabitView: View {
                             .padding(.leading)
                         Spacer()
                     }
-                    // Replace `periodView()` with your custom implementation
-                    // or use a built-in SwiftUI view for the period selection
-                    // e.g., DatePicker, Picker, or Stepper
+                    HStack{
+                        periodCellView(displayPeriod: $displayPeriod, week: "월", index: 0)
+                        periodCellView(displayPeriod: $displayPeriod, week: "화", index: 1)
+                        periodCellView(displayPeriod: $displayPeriod, week: "수", index: 2)
+                        periodCellView(displayPeriod: $displayPeriod, week: "목", index: 3)
+                        periodCellView(displayPeriod: $displayPeriod, week: "금", index: 4)
+                        periodCellView(displayPeriod: $displayPeriod, week: "토", index: 5)
+                        periodCellView(displayPeriod: $displayPeriod, week: "일", index: 6)
+                    }
+                    .padding(.horizontal)
                 }
                 
                 Rectangle()
@@ -241,6 +249,31 @@ struct AddHabitView: View {
     }
 
 
+}
+
+struct periodCellView : View {
+    @State private var isSelected = false
+    @Binding var displayPeriod : [Int]
+    let week : String
+    let index  : Int
+    
+    var body : some View {
+        Circle()
+            .fill(isSelected ? .white : Color("Pink"))
+            .overlay(
+                Text(week)
+                    .foregroundColor(isSelected ? Color("Pink") : .white)
+                
+            )
+            .overlay(
+                Circle()
+                    .stroke(Color("Pink"), lineWidth: 2) // Set the border color to "Pink"
+            )
+            .onTapGesture {
+                isSelected.toggle()
+                displayPeriod[index] = isSelected ? 1: 0
+            }
+    }
 }
 
 struct AddHabitView_Previews: PreviewProvider {
