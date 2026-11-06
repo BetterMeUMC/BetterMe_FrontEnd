@@ -732,7 +732,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Better-me-iOS/Better-me-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5KK58WJ55T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Better-me-iOS/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "프로필 사진 변경을 위해 카메라 접근 권한이 필요합니다. 허용 하시겠습니까?";
@@ -742,6 +742,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -764,7 +765,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Better-me-iOS/Better-me-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9S44MNK86W;
+				DEVELOPMENT_TEAM = RB8M73U232;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Better-me-iOS/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "프로필 사진 변경을 위해 카메라 접근 권한이 필요합니다. 허용 하시겠습니까?";
@@ -774,6 +775,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
